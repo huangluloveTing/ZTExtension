@@ -32,12 +32,12 @@ typedef void(^TapLeftBarButtonItemsEventBlock)(UIBarButtonItem *barButtonItem , 
 
 // push
 - (void) pushWhenPushedHiddenBottomTabbarToVC:(UIViewController *)vc Animation:(BOOL)animation;
+//push 一个新的控制器，关闭当前控制器
+- (void) pushWhenPushedHiddenBottomTabbarAndDestoryCurrentToVC:(UIViewController *)vc Animation:(BOOL)animation;
 
 //pop
 - (void) popViewControllerAnimation:(BOOL)animation;
-
 - (void) popViewControllerAtIndex:(NSInteger)index Animation:(BOOL)animation;
-
 - (void) popToRootViewControllerAnimation:(BOOL)animation;
 
 //添加navigationItem -- right

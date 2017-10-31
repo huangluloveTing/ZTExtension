@@ -39,6 +39,16 @@
     }
 }
 
+- (void) pushWhenPushedHiddenBottomTabbarAndDestoryCurrentToVC:(UIViewController *)vc Animation:(BOOL)animation {
+    if (self.navigationController) {
+        [self pushWhenPushedHiddenBottomTabbarToVC:vc Animation:animation];
+        UIViewController *currentVC = self;
+        NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+        [viewControllers removeObject:currentVC];
+        self.navigationController.viewControllers = viewControllers;
+    }
+}
+
 - (void) popViewControllerAnimation:(BOOL)animation {
     if (self.navigationController && self.navigationController.viewControllers.count > 1) {
         [self.navigationController popViewControllerAnimated:animation];

@@ -19,6 +19,11 @@
 		703AC0A61FA2BCE700C9AD42 /* UIControl+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC09E1FA2BCE700C9AD42 /* UIControl+Extension.m */; };
 		703AC0A71FA2BCE700C9AD42 /* UIView+ZTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0A01FA2BCE700C9AD42 /* UIView+ZTExtension.m */; };
 		703AC0A81FA2BCE700C9AD42 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0A21FA2BCE700C9AD42 /* UIViewController+Extension.m */; };
+		703AC0AC1FA2C6C500C9AD42 /* ZTAnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0AB1FA2C6C500C9AD42 /* ZTAnimationUtil.m */; };
+		703AC0AF1FA2C6E400C9AD42 /* ZTAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0AE1FA2C6E400C9AD42 /* ZTAnimation.m */; };
+		706984CD1FA8203000193388 /* NSObject+ZTSwzzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 706984CC1FA8203000193388 /* NSObject+ZTSwzzling.m */; };
+		706984D01FA8228D00193388 /* UIViewController+ZTHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 706984CF1FA8228D00193388 /* UIViewController+ZTHook.m */; };
+		706984D31FA82AE300193388 /* ZTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706984D21FA82AE300193388 /* ZTViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +50,17 @@
 		703AC0A01FA2BCE700C9AD42 /* UIView+ZTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZTExtension.m"; sourceTree = "<group>"; };
 		703AC0A11FA2BCE700C9AD42 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
 		703AC0A21FA2BCE700C9AD42 /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		703AC0AA1FA2C6C500C9AD42 /* ZTAnimationUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTAnimationUtil.h; sourceTree = "<group>"; };
+		703AC0AB1FA2C6C500C9AD42 /* ZTAnimationUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTAnimationUtil.m; sourceTree = "<group>"; };
+		703AC0AD1FA2C6E400C9AD42 /* ZTAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTAnimation.h; sourceTree = "<group>"; };
+		703AC0AE1FA2C6E400C9AD42 /* ZTAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTAnimation.m; sourceTree = "<group>"; };
+		703AC0B31FA2C71B00C9AD42 /* ZTAnimationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTAnimationHeader.h; sourceTree = "<group>"; };
+		706984CB1FA8203000193388 /* NSObject+ZTSwzzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZTSwzzling.h"; sourceTree = "<group>"; };
+		706984CC1FA8203000193388 /* NSObject+ZTSwzzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZTSwzzling.m"; sourceTree = "<group>"; };
+		706984CE1FA8228D00193388 /* UIViewController+ZTHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZTHook.h"; sourceTree = "<group>"; };
+		706984CF1FA8228D00193388 /* UIViewController+ZTHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZTHook.m"; sourceTree = "<group>"; };
+		706984D11FA82AE300193388 /* ZTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTViewController.h; sourceTree = "<group>"; };
+		706984D21FA82AE300193388 /* ZTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +93,14 @@
 		703AC07E1FA2BCDB00C9AD42 /* ZTExtension */ = {
 			isa = PBXGroup;
 			children = (
+				703AC0A91FA2C6A000C9AD42 /* AnimationUtil */,
 				703AC0951FA2BCE700C9AD42 /* HZExtension */,
 				703AC07F1FA2BCDB00C9AD42 /* AppDelegate.h */,
 				703AC0801FA2BCDB00C9AD42 /* AppDelegate.m */,
 				703AC0821FA2BCDB00C9AD42 /* ViewController.h */,
 				703AC0831FA2BCDB00C9AD42 /* ViewController.m */,
+				706984D11FA82AE300193388 /* ZTViewController.h */,
+				706984D21FA82AE300193388 /* ZTViewController.m */,
 				703AC0851FA2BCDB00C9AD42 /* Main.storyboard */,
 				703AC0881FA2BCDB00C9AD42 /* Assets.xcassets */,
 				703AC08A1FA2BCDB00C9AD42 /* LaunchScreen.storyboard */,
@@ -107,8 +126,24 @@
 				703AC0A01FA2BCE700C9AD42 /* UIView+ZTExtension.m */,
 				703AC0A11FA2BCE700C9AD42 /* UIViewController+Extension.h */,
 				703AC0A21FA2BCE700C9AD42 /* UIViewController+Extension.m */,
+				706984CB1FA8203000193388 /* NSObject+ZTSwzzling.h */,
+				706984CC1FA8203000193388 /* NSObject+ZTSwzzling.m */,
+				706984CE1FA8228D00193388 /* UIViewController+ZTHook.h */,
+				706984CF1FA8228D00193388 /* UIViewController+ZTHook.m */,
 			);
 			path = HZExtension;
+			sourceTree = "<group>";
+		};
+		703AC0A91FA2C6A000C9AD42 /* AnimationUtil */ = {
+			isa = PBXGroup;
+			children = (
+				703AC0B31FA2C71B00C9AD42 /* ZTAnimationHeader.h */,
+				703AC0AA1FA2C6C500C9AD42 /* ZTAnimationUtil.h */,
+				703AC0AB1FA2C6C500C9AD42 /* ZTAnimationUtil.m */,
+				703AC0AD1FA2C6E400C9AD42 /* ZTAnimation.h */,
+				703AC0AE1FA2C6E400C9AD42 /* ZTAnimation.m */,
+			);
+			path = AnimationUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +172,7 @@
 		703AC0741FA2BCDB00C9AD42 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZT;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = huanglu;
 				TargetAttributes = {
@@ -185,11 +221,16 @@
 				703AC0A51FA2BCE700C9AD42 /* UIBarButtonItem+Extension.m in Sources */,
 				703AC0A41FA2BCE700C9AD42 /* NSDictionary+Extension.m in Sources */,
 				703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */,
+				703AC0AF1FA2C6E400C9AD42 /* ZTAnimation.m in Sources */,
 				703AC0A81FA2BCE700C9AD42 /* UIViewController+Extension.m in Sources */,
 				703AC08F1FA2BCDB00C9AD42 /* main.m in Sources */,
+				706984D31FA82AE300193388 /* ZTViewController.m in Sources */,
 				703AC0A61FA2BCE700C9AD42 /* UIControl+Extension.m in Sources */,
 				703AC0A31FA2BCE700C9AD42 /* NSArray+Extension.m in Sources */,
 				703AC0A71FA2BCE700C9AD42 /* UIView+ZTExtension.m in Sources */,
+				706984CD1FA8203000193388 /* NSObject+ZTSwzzling.m in Sources */,
+				703AC0AC1FA2C6C500C9AD42 /* ZTAnimationUtil.m in Sources */,
+				706984D01FA8228D00193388 /* UIViewController+ZTHook.m in Sources */,
 				703AC0811FA2BCDB00C9AD42 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +307,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -315,6 +356,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -328,6 +370,7 @@
 				DEVELOPMENT_TEAM = 2F85MS5QM7;
 				INFOPLIST_FILE = ZTExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.biz-uinitedT.SFA.ZTExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,6 +385,7 @@
 				DEVELOPMENT_TEAM = 2F85MS5QM7;
 				INFOPLIST_FILE = ZTExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.biz-uinitedT.SFA.ZTExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

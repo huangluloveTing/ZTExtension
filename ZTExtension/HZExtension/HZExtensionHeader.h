@@ -15,12 +15,21 @@
 #import "UIControl+Extension.h"
 #import "UIBarButtonItem+Extension.h"
 #import "UIView+ZTExtension.h"
+#import "UIViewController+ZTHook.h"
 
 #define HZ_Weakify(self) \
 __weak typeof(self) weak_##_self = self;
 
 #define HZ_Strongify(self) \
 __strong typeof(weak_##_self) self = weak_##_self;
+
+#ifdef DEBUG
+#define ZTLog(logInfo) NSLog(@"__function:%s , __line:%c , __class:%@ \n%@" , __FUNCTION__ , __LINE__ , NSStringFromClass([self class]) ,logInfo)
+#else
+#define ZTLog(logInfo)
+#endif
+
+
 
 
 

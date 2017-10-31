@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "HZExtensionHeader.h"
 #import "UIView+ZTExtension.h"
+#import "ZTViewController.h"
 
 @interface ViewController ()
 
@@ -27,8 +28,7 @@
         HZ_Strongify(self);
         if (index == 0) {
             barButtonItem.title = @"taped";
-            UIViewController *itemVC = [[UIViewController alloc] init];
-            itemVC.view.backgroundColor = [UIColor redColor];
+            ZTViewController *itemVC = [[ZTViewController alloc] init];
             [self pushWhenPushedHiddenBottomTabbarToVC:itemVC Animation:YES];
         }
         else {
@@ -76,6 +76,11 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void) ZT_viewDidLoad:(BOOL)animation {
+    [super ZT_viewDidLoad:animation];
+    ZTLog(@" ovrride ");
 }
 
 

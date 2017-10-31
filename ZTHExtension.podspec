@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "ZTExtension"
+  s.name         = "ZTHExtension"
   s.version      = "1.0.0"
   s.summary      = "常用类的扩展， 方便开发 ！"
 
@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
  
   s.requires_arc = true
  
-  s.source_files = 'ZTExtension/**/*' 
+  s.source_files = 'ZTExtension/HZExtension/*' 
 
 end
