@@ -28,6 +28,11 @@
 		70E04CA11FBE7ED400EEB106 /* UIViewController+ZTHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CA01FBE7ED400EEB106 /* UIViewController+ZTHUD.m */; };
 		70E04CA41FBE82C100EEB106 /* YLMessageHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CA31FBE82C100EEB106 /* YLMessageHUD.m */; };
 		70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CAB1FBE93AB00EEB106 /* UIColor+ZTHex.m */; };
+		70E04CB01FBEB68A00EEB106 /* NSString+ZTRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CAF1FBEB68A00EEB106 /* NSString+ZTRegex.m */; };
+		70E04CB31FBEB6F800EEB106 /* NSString+ZTConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CB21FBEB6F800EEB106 /* NSString+ZTConvert.m */; };
+		70E04CB61FBEB7B000EEB106 /* UIResponder+ZTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CB51FBEB7B000EEB106 /* UIResponder+ZTRouter.m */; };
+		70E04CB91FBEB80800EEB106 /* UITableView+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CB81FBEB80800EEB106 /* UITableView+ZTCategory.m */; };
+		70E04CBC1FBEB8D300EEB106 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CBB1FBEB8D300EEB106 /* NSDate+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +76,16 @@
 		70E04CA31FBE82C100EEB106 /* YLMessageHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLMessageHUD.m; sourceTree = "<group>"; };
 		70E04CAA1FBE93AB00EEB106 /* UIColor+ZTHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZTHex.h"; sourceTree = "<group>"; };
 		70E04CAB1FBE93AB00EEB106 /* UIColor+ZTHex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZTHex.m"; sourceTree = "<group>"; };
+		70E04CAE1FBEB68A00EEB106 /* NSString+ZTRegex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZTRegex.h"; sourceTree = "<group>"; };
+		70E04CAF1FBEB68A00EEB106 /* NSString+ZTRegex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZTRegex.m"; sourceTree = "<group>"; };
+		70E04CB11FBEB6F800EEB106 /* NSString+ZTConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZTConvert.h"; sourceTree = "<group>"; };
+		70E04CB21FBEB6F800EEB106 /* NSString+ZTConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZTConvert.m"; sourceTree = "<group>"; };
+		70E04CB41FBEB7B000EEB106 /* UIResponder+ZTRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+ZTRouter.h"; sourceTree = "<group>"; };
+		70E04CB51FBEB7B000EEB106 /* UIResponder+ZTRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+ZTRouter.m"; sourceTree = "<group>"; };
+		70E04CB71FBEB80800EEB106 /* UITableView+ZTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+ZTCategory.h"; sourceTree = "<group>"; };
+		70E04CB81FBEB80800EEB106 /* UITableView+ZTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ZTCategory.m"; sourceTree = "<group>"; };
+		70E04CBA1FBEB8D200EEB106 /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
+		70E04CBB1FBEB8D300EEB106 /* NSDate+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Category.m"; sourceTree = "<group>"; };
 		7FE5C9A6FEBA09A3DD010B7B /* libPods-ZTExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZTExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4946EAF3177F53F848A7AD /* Pods-ZTExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		CF347988B14E2C9558C15BA3 /* Pods-ZTExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +184,16 @@
 				70E04CA01FBE7ED400EEB106 /* UIViewController+ZTHUD.m */,
 				70E04CA21FBE82C100EEB106 /* YLMessageHUD.h */,
 				70E04CA31FBE82C100EEB106 /* YLMessageHUD.m */,
+				70E04CAE1FBEB68A00EEB106 /* NSString+ZTRegex.h */,
+				70E04CAF1FBEB68A00EEB106 /* NSString+ZTRegex.m */,
+				70E04CB11FBEB6F800EEB106 /* NSString+ZTConvert.h */,
+				70E04CB21FBEB6F800EEB106 /* NSString+ZTConvert.m */,
+				70E04CB41FBEB7B000EEB106 /* UIResponder+ZTRouter.h */,
+				70E04CB51FBEB7B000EEB106 /* UIResponder+ZTRouter.m */,
+				70E04CB71FBEB80800EEB106 /* UITableView+ZTCategory.h */,
+				70E04CB81FBEB80800EEB106 /* UITableView+ZTCategory.m */,
+				70E04CBA1FBEB8D200EEB106 /* NSDate+Category.h */,
+				70E04CBB1FBEB8D300EEB106 /* NSDate+Category.m */,
 			);
 			path = HZExtension;
 			sourceTree = "<group>";
@@ -314,15 +339,20 @@
 				703AC0A51FA2BCE700C9AD42 /* UIBarButtonItem+Extension.m in Sources */,
 				703AC0A41FA2BCE700C9AD42 /* NSDictionary+Extension.m in Sources */,
 				703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */,
+				70E04CB61FBEB7B000EEB106 /* UIResponder+ZTRouter.m in Sources */,
 				703AC0AF1FA2C6E400C9AD42 /* ZTAnimation.m in Sources */,
 				70E04CA41FBE82C100EEB106 /* YLMessageHUD.m in Sources */,
 				703AC0A81FA2BCE700C9AD42 /* UIViewController+Extension.m in Sources */,
 				703AC08F1FA2BCDB00C9AD42 /* main.m in Sources */,
+				70E04CBC1FBEB8D300EEB106 /* NSDate+Category.m in Sources */,
+				70E04CB31FBEB6F800EEB106 /* NSString+ZTConvert.m in Sources */,
+				70E04CB01FBEB68A00EEB106 /* NSString+ZTRegex.m in Sources */,
 				70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */,
 				706984D31FA82AE300193388 /* ZTViewController.m in Sources */,
 				703AC0A61FA2BCE700C9AD42 /* UIControl+Extension.m in Sources */,
 				703AC0A31FA2BCE700C9AD42 /* NSArray+Extension.m in Sources */,
 				703AC0A71FA2BCE700C9AD42 /* UIView+ZTExtension.m in Sources */,
+				70E04CB91FBEB80800EEB106 /* UITableView+ZTCategory.m in Sources */,
 				706984CD1FA8203000193388 /* NSObject+ZTSwzzling.m in Sources */,
 				703AC0AC1FA2C6C500C9AD42 /* ZTAnimationUtil.m in Sources */,
 				706984D01FA8228D00193388 /* UIViewController+ZTHook.m in Sources */,
