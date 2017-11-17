@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1616E0532EFB0EBB3E0AD022 /* libPods-ZTExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE5C9A6FEBA09A3DD010B7B /* libPods-ZTExtension.a */; };
 		703AC0811FA2BCDB00C9AD42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0801FA2BCDB00C9AD42 /* AppDelegate.m */; };
 		703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0831FA2BCDB00C9AD42 /* ViewController.m */; };
 		703AC0871FA2BCDB00C9AD42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703AC0851FA2BCDB00C9AD42 /* Main.storyboard */; };
@@ -24,6 +25,9 @@
 		706984CD1FA8203000193388 /* NSObject+ZTSwzzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 706984CC1FA8203000193388 /* NSObject+ZTSwzzling.m */; };
 		706984D01FA8228D00193388 /* UIViewController+ZTHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 706984CF1FA8228D00193388 /* UIViewController+ZTHook.m */; };
 		706984D31FA82AE300193388 /* ZTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706984D21FA82AE300193388 /* ZTViewController.m */; };
+		70E04CA11FBE7ED400EEB106 /* UIViewController+ZTHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CA01FBE7ED400EEB106 /* UIViewController+ZTHUD.m */; };
+		70E04CA41FBE82C100EEB106 /* YLMessageHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CA31FBE82C100EEB106 /* YLMessageHUD.m */; };
+		70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CAB1FBE93AB00EEB106 /* UIColor+ZTHex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +65,15 @@
 		706984CF1FA8228D00193388 /* UIViewController+ZTHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZTHook.m"; sourceTree = "<group>"; };
 		706984D11FA82AE300193388 /* ZTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTViewController.h; sourceTree = "<group>"; };
 		706984D21FA82AE300193388 /* ZTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTViewController.m; sourceTree = "<group>"; };
+		70E04C9F1FBE7ED400EEB106 /* UIViewController+ZTHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZTHUD.h"; sourceTree = "<group>"; };
+		70E04CA01FBE7ED400EEB106 /* UIViewController+ZTHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZTHUD.m"; sourceTree = "<group>"; };
+		70E04CA21FBE82C100EEB106 /* YLMessageHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLMessageHUD.h; sourceTree = "<group>"; };
+		70E04CA31FBE82C100EEB106 /* YLMessageHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLMessageHUD.m; sourceTree = "<group>"; };
+		70E04CAA1FBE93AB00EEB106 /* UIColor+ZTHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZTHex.h"; sourceTree = "<group>"; };
+		70E04CAB1FBE93AB00EEB106 /* UIColor+ZTHex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZTHex.m"; sourceTree = "<group>"; };
+		7FE5C9A6FEBA09A3DD010B7B /* libPods-ZTExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZTExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF4946EAF3177F53F848A7AD /* Pods-ZTExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		CF347988B14E2C9558C15BA3 /* Pods-ZTExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,17 +81,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1616E0532EFB0EBB3E0AD022 /* libPods-ZTExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1D17DFDDF90AC1CBCC6857 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF4946EAF3177F53F848A7AD /* Pods-ZTExtension.debug.xcconfig */,
+				CF347988B14E2C9558C15BA3 /* Pods-ZTExtension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A32B92BDC31D136F22C474C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FE5C9A6FEBA09A3DD010B7B /* libPods-ZTExtension.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		703AC0731FA2BCDB00C9AD42 = {
 			isa = PBXGroup;
 			children = (
 				703AC07E1FA2BCDB00C9AD42 /* ZTExtension */,
 				703AC07D1FA2BCDB00C9AD42 /* Products */,
+				4D1D17DFDDF90AC1CBCC6857 /* Pods */,
+				6A32B92BDC31D136F22C474C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +149,8 @@
 				703AC0961FA2BCE700C9AD42 /* HZExtensionHeader.h */,
 				703AC0971FA2BCE700C9AD42 /* NSArray+Extension.h */,
 				703AC0981FA2BCE700C9AD42 /* NSArray+Extension.m */,
+				70E04CAA1FBE93AB00EEB106 /* UIColor+ZTHex.h */,
+				70E04CAB1FBE93AB00EEB106 /* UIColor+ZTHex.m */,
 				703AC0991FA2BCE700C9AD42 /* NSDictionary+Extension.h */,
 				703AC09A1FA2BCE700C9AD42 /* NSDictionary+Extension.m */,
 				703AC09B1FA2BCE700C9AD42 /* UIBarButtonItem+Extension.h */,
@@ -130,6 +165,10 @@
 				706984CC1FA8203000193388 /* NSObject+ZTSwzzling.m */,
 				706984CE1FA8228D00193388 /* UIViewController+ZTHook.h */,
 				706984CF1FA8228D00193388 /* UIViewController+ZTHook.m */,
+				70E04C9F1FBE7ED400EEB106 /* UIViewController+ZTHUD.h */,
+				70E04CA01FBE7ED400EEB106 /* UIViewController+ZTHUD.m */,
+				70E04CA21FBE82C100EEB106 /* YLMessageHUD.h */,
+				70E04CA31FBE82C100EEB106 /* YLMessageHUD.m */,
 			);
 			path = HZExtension;
 			sourceTree = "<group>";
@@ -153,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 703AC0921FA2BCDB00C9AD42 /* Build configuration list for PBXNativeTarget "ZTExtension" */;
 			buildPhases = (
+				55521985FBFB075721D48D67 /* [CP] Check Pods Manifest.lock */,
 				703AC0781FA2BCDB00C9AD42 /* Sources */,
 				703AC0791FA2BCDB00C9AD42 /* Frameworks */,
 				703AC07A1FA2BCDB00C9AD42 /* Resources */,
+				57AE3D4F7C3AC68C7B06931F /* [CP] Embed Pods Frameworks */,
+				4AC85CC00D1C73C3F940C19B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +255,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4AC85CC00D1C73C3F940C19B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55521985FBFB075721D48D67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZTExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57AE3D4F7C3AC68C7B06931F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		703AC0781FA2BCDB00C9AD42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -222,8 +315,10 @@
 				703AC0A41FA2BCE700C9AD42 /* NSDictionary+Extension.m in Sources */,
 				703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */,
 				703AC0AF1FA2C6E400C9AD42 /* ZTAnimation.m in Sources */,
+				70E04CA41FBE82C100EEB106 /* YLMessageHUD.m in Sources */,
 				703AC0A81FA2BCE700C9AD42 /* UIViewController+Extension.m in Sources */,
 				703AC08F1FA2BCDB00C9AD42 /* main.m in Sources */,
+				70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */,
 				706984D31FA82AE300193388 /* ZTViewController.m in Sources */,
 				703AC0A61FA2BCE700C9AD42 /* UIControl+Extension.m in Sources */,
 				703AC0A31FA2BCE700C9AD42 /* NSArray+Extension.m in Sources */,
@@ -232,6 +327,7 @@
 				703AC0AC1FA2C6C500C9AD42 /* ZTAnimationUtil.m in Sources */,
 				706984D01FA8228D00193388 /* UIViewController+ZTHook.m in Sources */,
 				703AC0811FA2BCDB00C9AD42 /* AppDelegate.m in Sources */,
+				70E04CA11FBE7ED400EEB106 /* UIViewController+ZTHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +460,7 @@
 		};
 		703AC0931FA2BCDB00C9AD42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF4946EAF3177F53F848A7AD /* Pods-ZTExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,6 +476,7 @@
 		};
 		703AC0941FA2BCDB00C9AD42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF347988B14E2C9558C15BA3 /* Pods-ZTExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

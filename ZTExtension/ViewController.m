@@ -10,6 +10,7 @@
 #import "HZExtensionHeader.h"
 #import "UIView+ZTExtension.h"
 #import "ZTViewController.h"
+#import "UIViewController+ZTHUD.h"
 
 @interface ViewController ()
 
@@ -27,16 +28,11 @@
     [self addLeftBarbuttonItemsWithTitles:@[@"haha", @"hehe"] TapBlock:^(UIBarButtonItem *barButtonItem, NSInteger index) {
         HZ_Strongify(self);
         if (index == 0) {
-            barButtonItem.title = @"taped";
-            ZTViewController *itemVC = [[ZTViewController alloc] init];
-            [self pushWhenPushedHiddenBottomTabbarToVC:itemVC Animation:YES];
+            [self hiddenHUD];
         }
         else {
             NSLog(@"点击了第二个");
-            barButtonItem.title = @"taped";
-            [self.redView updateLeftConstraint:30 animation:YES];
-            [self.redView updateBottomConstraint:200 animation:YES];
-            [self.yellowView updateWidthConstraint:350 animation:YES];
+            [self showSuccessWithTitle:@"hahah"];
         }
     }];
     
