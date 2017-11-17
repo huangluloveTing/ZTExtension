@@ -33,6 +33,7 @@
 		70E04CB61FBEB7B000EEB106 /* UIResponder+ZTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CB51FBEB7B000EEB106 /* UIResponder+ZTRouter.m */; };
 		70E04CB91FBEB80800EEB106 /* UITableView+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CB81FBEB80800EEB106 /* UITableView+ZTCategory.m */; };
 		70E04CBC1FBEB8D300EEB106 /* NSDate+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CBB1FBEB8D300EEB106 /* NSDate+Category.m */; };
+		70E04CBF1FBEBA6900EEB106 /* NSDateFormatter+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CBD1FBEBA6800EEB106 /* NSDateFormatter+Category.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,8 @@
 		70E04CB81FBEB80800EEB106 /* UITableView+ZTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ZTCategory.m"; sourceTree = "<group>"; };
 		70E04CBA1FBEB8D200EEB106 /* NSDate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Category.h"; sourceTree = "<group>"; };
 		70E04CBB1FBEB8D300EEB106 /* NSDate+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Category.m"; sourceTree = "<group>"; };
+		70E04CBD1FBEBA6800EEB106 /* NSDateFormatter+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Category.m"; sourceTree = "<group>"; };
+		70E04CBE1FBEBA6800EEB106 /* NSDateFormatter+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Category.h"; sourceTree = "<group>"; };
 		7FE5C9A6FEBA09A3DD010B7B /* libPods-ZTExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZTExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4946EAF3177F53F848A7AD /* Pods-ZTExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		CF347988B14E2C9558C15BA3 /* Pods-ZTExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 				70E04CB81FBEB80800EEB106 /* UITableView+ZTCategory.m */,
 				70E04CBA1FBEB8D200EEB106 /* NSDate+Category.h */,
 				70E04CBB1FBEB8D300EEB106 /* NSDate+Category.m */,
+				70E04CBE1FBEBA6800EEB106 /* NSDateFormatter+Category.h */,
+				70E04CBD1FBEBA6800EEB106 /* NSDateFormatter+Category.m */,
 			);
 			path = HZExtension;
 			sourceTree = "<group>";
@@ -240,7 +245,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ZT;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = huanglu;
 				TargetAttributes = {
 					703AC07B1FA2BCDB00C9AD42 = {
@@ -345,6 +350,7 @@
 				703AC0A81FA2BCE700C9AD42 /* UIViewController+Extension.m in Sources */,
 				703AC08F1FA2BCDB00C9AD42 /* main.m in Sources */,
 				70E04CBC1FBEB8D300EEB106 /* NSDate+Category.m in Sources */,
+				70E04CBF1FBEBA6900EEB106 /* NSDateFormatter+Category.m in Sources */,
 				70E04CB31FBEB6F800EEB106 /* NSString+ZTConvert.m in Sources */,
 				70E04CB01FBEB68A00EEB106 /* NSString+ZTRegex.m in Sources */,
 				70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */,
@@ -433,7 +439,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;

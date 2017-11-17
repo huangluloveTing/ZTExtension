@@ -46,7 +46,7 @@
 /**
  *  先把base64转为文本。然后再DES解密
  *
- *  @param withKey:NSString* 被解密的字符串
+ *  @param base64 被解密的字符串
  *  @param key  加密的key
  *
  *  @return 解密后的字符串
@@ -111,8 +111,6 @@
 
 /**
  *  根据传入的表情代码，获得包括图片真实路径的内容
- *
- *  @param emojCode 表情代码
  *
  *  @return 包括真实表情图片的内容
  */

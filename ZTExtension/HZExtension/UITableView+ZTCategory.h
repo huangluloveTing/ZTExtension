@@ -38,7 +38,7 @@
 /**
  *  为指定cell设定高度值
  *
- *  @param height    高度
+ *  @param cacheHeight    高度
  *  @param indexPath 索引
  */
 -(void) setCacheHeight:(CGFloat) cacheHeight forIndexPath:(NSIndexPath *) indexPath;

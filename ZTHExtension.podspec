@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ZTHExtension"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "常用类的扩展， 方便开发 ！"
 
   s.homepage     = "https://github.com/huangluloveTing/ZTExtension.git"
@@ -16,5 +16,11 @@ Pod::Spec.new do |s|
   s.source_files = 'ZTExtension/HZExtension/*' 
 
   s.dependency 'MBProgressHUD', '~> 1.0.0'
+
+  # 提交命令
+   # 语法验证
+   # pod spec lint ZTHExtension.podspec --use-libraries --allow-warnings --verbose
+   # 提交 
+   # pod trunk push ZTHExtension.podspec --use-libraries --allow-warnings --verbose
 
 end
