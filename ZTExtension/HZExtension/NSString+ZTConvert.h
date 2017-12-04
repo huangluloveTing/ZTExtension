@@ -43,6 +43,7 @@
  *  @return 加密后的字符串
  */
 + (NSString *)base64StringFromText:(NSString *)text withKey:(NSString*)key;
+
 /**
  *  先把base64转为文本。然后再DES解密
  *
@@ -51,8 +52,8 @@
  *
  *  @return 解密后的字符串
  */
-
 + (NSString *)textFromBase64String:(NSString *)base64 withKey:(NSString*)key;
+
 /**
  *  文本数据进行DES加密
  *
@@ -62,6 +63,7 @@
  *  @return 加密后的字符串
  */
 + (NSData *)DESEncrypt:(NSData *)data WithKey:(NSString *)key;
+
 /**
  *  文本数据进行DES解密
  *
@@ -71,6 +73,7 @@
  *  @return 解密后的字符串
  */
 + (NSData *)DESDecrypt:(NSData *)data WithKey:(NSString *)key;
+
 /**
  *  字符串base64加密
  *
@@ -185,5 +188,6 @@
  */
 //-------------------------如果调用报错,请查看消息内部内容----------------------------------------------------
 + (NSString *)replaceUnicode:(NSString *)unicodeStr;
+
 
 @end

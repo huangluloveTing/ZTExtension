@@ -11,6 +11,7 @@
 #import "UIView+ZTExtension.h"
 #import "ZTViewController.h"
 #import "UIViewController+ZTHUD.h"
+#import "ZTHUD.h"
 
 @interface ViewController ()
 
@@ -28,11 +29,15 @@
     [self addLeftBarbuttonItemsWithTitles:@[@"haha", @"hehe"] TapBlock:^(UIBarButtonItem *barButtonItem, NSInteger index) {
         HZ_Strongify(self);
         if (index == 0) {
-            [self hiddenHUD];
+            [[ZTHUD sharedHUD] hiddenForView:self.view animation:YES];
         }
         else {
             NSLog(@"点击了第二个");
-            [self showSuccessWithTitle:@"hahah"];
+            [[ZTHUD sharedHUD] showCustomFailed:[UIImage imageNamed:@"timg.gif"] ToView:nil ForTitle:@"jjj"];
+            
+            [[ZTHUD sharedHUD] hiddenForView:nil delay:5 animation:YES completion:^{
+                NSLog(@"HUD 隐藏");
+            }];
         }
     }];
     
