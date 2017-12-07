@@ -36,12 +36,14 @@
 - (void) pushWhenPushedHiddenBottomTabbarToVC:(UIViewController *)vc Animation:(BOOL)animation{
     if (self.navigationController) {
         vc.hidesBottomBarWhenPushed = YES;
+        self.pushAnimation = animation;
         [self.navigationController pushViewController:vc animated:animation];
     }
 }
 
 - (void) pushWhenPushedHiddenBottomTabbarAndDestoryCurrentToVC:(UIViewController *)vc Animation:(BOOL)animation {
     if (self.navigationController) {
+        self.pushAnimation = animation;
         [self pushWhenPushedHiddenBottomTabbarToVC:vc Animation:animation];
         UIViewController *currentVC = self;
         NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
@@ -54,6 +56,10 @@
     if (self.navigationController && self.navigationController.viewControllers.count > 1) {
         [self.navigationController popViewControllerAnimated:animation];
     }
+}
+
+- (void) popViewControllerLikePush {
+    [self popViewControllerAnimation:self.pushAnimation];
 }
 
 - (void) popViewControllerAtIndex:(NSInteger )index Animation:(BOOL)animation{
@@ -334,4 +340,11 @@
     
 }
 
+- (void) setPushAnimation:(BOOL)pushAnimation {
+    objc_setAssociatedObject(self, @selector(setPushAnimation:), @(pushAnimation), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (BOOL) pushAnimation {
+    return [objc_getAssociatedObject(self, @selector(setPushAnimation:)) boolValue];
+}
 @end

@@ -18,6 +18,8 @@ typedef void(^TapLeftBarButtonItemsEventBlock)(UIBarButtonItem *barButtonItem , 
 
 @interface UIViewController (Extension)
 
+@property (nonatomic , assign) BOOL pushAnimation;//push 是否带动画
+
 @property (nonatomic ,copy) ReturnBlock returnBlock;
 
 @property (nonatomic , copy) TapRightBarButtonItemEventBlock tapRightBlock;
@@ -37,6 +39,7 @@ typedef void(^TapLeftBarButtonItemsEventBlock)(UIBarButtonItem *barButtonItem , 
 
 //pop
 - (void) popViewControllerAnimation:(BOOL)animation;
+- (void) popViewControllerLikePush; //pop 按照 push 方式， 有动画push ， pop 也有动画，没有则都没有
 - (void) popViewControllerAtIndex:(NSInteger)index Animation:(BOOL)animation;
 - (void) popToRootViewControllerAnimation:(BOOL)animation;
 
