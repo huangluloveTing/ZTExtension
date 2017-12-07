@@ -32,8 +32,6 @@
 		70725A971FD4FAE400CF7117 /* failed_zt.png in Resources */ = {isa = PBXBuildFile; fileRef = 70725A961FD4FAE400CF7117 /* failed_zt.png */; };
 		70725A991FD4FB7500CF7117 /* Success_zt.png in Resources */ = {isa = PBXBuildFile; fileRef = 70725A981FD4FB7400CF7117 /* Success_zt.png */; };
 		70725A9B1FD50BC300CF7117 /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70725A9A1FD50BC300CF7117 /* timg.gif */; };
-		70E04CA11FBE7ED400EEB106 /* UIViewController+ZTHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CA01FBE7ED400EEB106 /* UIViewController+ZTHUD.m */; };
-		70E04CA41FBE82C100EEB106 /* YLMessageHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CA31FBE82C100EEB106 /* YLMessageHUD.m */; };
 		70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CAB1FBE93AB00EEB106 /* UIColor+ZTHex.m */; };
 		70E04CB01FBEB68A00EEB106 /* NSString+ZTRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CAF1FBEB68A00EEB106 /* NSString+ZTRegex.m */; };
 		70E04CB31FBEB6F800EEB106 /* NSString+ZTConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CB21FBEB6F800EEB106 /* NSString+ZTConvert.m */; };
@@ -87,10 +85,6 @@
 		70725A961FD4FAE400CF7117 /* failed_zt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = failed_zt.png; sourceTree = "<group>"; };
 		70725A981FD4FB7400CF7117 /* Success_zt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Success_zt.png; sourceTree = "<group>"; };
 		70725A9A1FD50BC300CF7117 /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
-		70E04C9F1FBE7ED400EEB106 /* UIViewController+ZTHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZTHUD.h"; sourceTree = "<group>"; };
-		70E04CA01FBE7ED400EEB106 /* UIViewController+ZTHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZTHUD.m"; sourceTree = "<group>"; };
-		70E04CA21FBE82C100EEB106 /* YLMessageHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLMessageHUD.h; sourceTree = "<group>"; };
-		70E04CA31FBE82C100EEB106 /* YLMessageHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLMessageHUD.m; sourceTree = "<group>"; };
 		70E04CAA1FBE93AB00EEB106 /* UIColor+ZTHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZTHex.h"; sourceTree = "<group>"; };
 		70E04CAB1FBE93AB00EEB106 /* UIColor+ZTHex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZTHex.m"; sourceTree = "<group>"; };
 		70E04CAE1FBEB68A00EEB106 /* NSString+ZTRegex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZTRegex.h"; sourceTree = "<group>"; };
@@ -196,10 +190,6 @@
 				706984CC1FA8203000193388 /* NSObject+ZTSwzzling.m */,
 				706984CE1FA8228D00193388 /* UIViewController+ZTHook.h */,
 				706984CF1FA8228D00193388 /* UIViewController+ZTHook.m */,
-				70E04C9F1FBE7ED400EEB106 /* UIViewController+ZTHUD.h */,
-				70E04CA01FBE7ED400EEB106 /* UIViewController+ZTHUD.m */,
-				70E04CA21FBE82C100EEB106 /* YLMessageHUD.h */,
-				70E04CA31FBE82C100EEB106 /* YLMessageHUD.m */,
 				70E04CAE1FBEB68A00EEB106 /* NSString+ZTRegex.h */,
 				70E04CAF1FBEB68A00EEB106 /* NSString+ZTRegex.m */,
 				70E04CB11FBEB6F800EEB106 /* NSString+ZTConvert.h */,
@@ -368,7 +358,6 @@
 				703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */,
 				70E04CB61FBEB7B000EEB106 /* UIResponder+ZTRouter.m in Sources */,
 				703AC0AF1FA2C6E400C9AD42 /* ZTAnimation.m in Sources */,
-				70E04CA41FBE82C100EEB106 /* YLMessageHUD.m in Sources */,
 				703AC0A81FA2BCE700C9AD42 /* UIViewController+Extension.m in Sources */,
 				703AC08F1FA2BCDB00C9AD42 /* main.m in Sources */,
 				70E04CB31FBEB6F800EEB106 /* NSString+ZTConvert.m in Sources */,
@@ -387,7 +376,6 @@
 				700A59DD1FBEBE9800C6AA31 /* NSDate+ZTCategory.m in Sources */,
 				706984D01FA8228D00193388 /* UIViewController+ZTHook.m in Sources */,
 				703AC0811FA2BCDB00C9AD42 /* AppDelegate.m in Sources */,
-				70E04CA11FBE7ED400EEB106 /* UIViewController+ZTHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

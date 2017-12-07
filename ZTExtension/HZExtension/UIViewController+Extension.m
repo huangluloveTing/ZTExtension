@@ -35,6 +35,7 @@
 
 - (void) pushWhenPushedHiddenBottomTabbarToVC:(UIViewController *)vc Animation:(BOOL)animation{
     if (self.navigationController) {
+        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:animation];
     }
 }
@@ -112,7 +113,17 @@
     }
 }
 
-- (void) addLeftBarbuttonItemsWithTitles:(NSArray *)titles TapBlock:(TapRightBarButtonItemsEventBlock)tapBlock {
+- (void) addRightBarbuttonItemWithImage:(UIImage *)image TapBlock:(TapRightBarButtonItemEventBlock)tapBlock {
+    if (self.navigationController) {
+        UIBarButtonItem *rightBat = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(tapRightBarButtonItemAction:)];
+        self.navigationItem.leftBarButtonItem = rightBat;
+        if (tapBlock) {
+            self.tapLeftBlock = tapBlock;
+        }
+    }
+}
+
+- (void) addLeftBarbuttonItemsWithTitles:(NSArray *)titles TapBlock:(TapLeftBarButtonItemsEventBlock)tapBlock {
     if (self.navigationController) {
         NSArray *items = [titles othreArraryWithRegular:^id(NSString * title, NSInteger index) {
             UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(tapLeftBarButtonItemAction:)];
@@ -155,6 +166,17 @@
     }
 }
 
+- (void) addLeftBarbuttonItemWithImage:(UIImage *)image
+                              TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock {
+    if (self.navigationController) {
+        UIBarButtonItem *leftBat = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(tapLeftBarButtonItemAction:)];
+        self.navigationItem.leftBarButtonItem = leftBat;
+        if (tapBlock) {
+            self.tapLeftBlock = tapBlock;
+        }
+    }
+}
+
 
 - (void) tapRightBarButtonItemAction:(UIBarButtonItem *) barButton {
     if (self.tapRightItemsBlock) {
@@ -174,6 +196,8 @@
         self.tapLeftBlock(barButton);
     }
 }
+
+
 
 #pragma mark - Block
 - (void) setReturnBlock:(ReturnBlock)returnBlock {
@@ -216,4 +240,98 @@
 - (TapRightBarButtonItemsEventBlock) tapRightItemsBlock {
     return objc_getAssociatedObject(self, @selector(setTapRightItemsBlock:));
 }
+
+//添加navigationItem -- right ,需要重写 对应的 方法
+- (void) addRightBarbuttonItemWithTitle:(NSString *)rightTitle {
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:rightTitle style:UIBarButtonItemStylePlain target:self action:@selector(zt_rightBarButtonAction:)];
+    if (self.navigationController) {
+        self.navigationItem.rightBarButtonItem = right;
+    }
+}
+- (void) addRightBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle {
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:systemStyle target:self action:@selector(zt_rightBarButtonAction:)];
+    if (self.navigationController) {
+        self.navigationItem.rightBarButtonItem = right;
+    }
+}
+- (void) addRightBarbuttonItemsWithTitles:(NSArray *)titles {
+    NSMutableArray *tempArr = [NSMutableArray array];
+    for (int i = 0 ; i < titles.count ; i ++) {
+        NSString *title =  titles[i];
+        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(multiRightBarButtonAction:)];
+        right.tag = 100 + i;
+        [tempArr addObject:right];
+    }
+    if (self.navigationController) {
+        self.navigationItem.rightBarButtonItems = tempArr;
+    }
+}
+- (void) addRightBarbuttonItemWithImage:(UIImage *)image {
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(zt_rightBarButtonAction:)];
+    if (self.navigationController) {
+        self.navigationItem.rightBarButtonItem = right;
+    }
+}
+
+
+
+//添加navigationItem -- left
+- (void) addLeftBarbuttonItemWithTitle:(NSString *)leftTitle {
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:leftTitle style:UIBarButtonItemStylePlain target:self action:@selector(zt_leftBarButtonAction:)];
+    if (self.navigationController) {
+        self.navigationItem.leftBarButtonItem = left;
+    }
+}
+- (void) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle {
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:systemStyle target:self action:@selector(zt_leftBarButtonAction:)];
+    if (self.navigationController) {
+        self.navigationItem.leftBarButtonItem = left;
+    }
+}
+- (void) addLeftBarbuttonItemsWithTitles:(NSArray *)titles {
+    NSMutableArray *tempArr = [NSMutableArray array];
+    for (int i = 0 ; i < titles.count ; i ++) {
+        NSString *title =  titles[i];
+        UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(multtLeftBarButtonAction:)];
+        right.tag = 100 + i;
+        [tempArr addObject:right];
+    }
+    if (self.navigationController) {
+        self.navigationItem.leftBarButtonItems = tempArr;
+    }
+}
+- (void) addLeftBarbuttonItemWithImage:(UIImage *)image {
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(zt_leftBarButtonAction:)];
+    if (self.navigationController) {
+        self.navigationItem.leftBarButtonItem = left;
+    }
+}
+
+- (void) multiRightBarButtonAction:(UIBarButtonItem *)item {
+    NSInteger tag = item.tag - 100;
+    [self zt_rightBarButtonsAction:item atIndex:tag];
+}
+- (void) multtLeftBarButtonAction:(UIBarButtonItem *)item {
+    NSInteger tag = item.tag - 100;
+    [self zt_leftBarButtonsAction:item atIndex:tag];
+}
+
+
+#pragma mark - Override
+- (void) zt_rightBarButtonAction:(UIBarButtonItem *)sender {
+    
+}
+- (void) zt_leftBarButtonAction:(UIBarButtonItem *)sender {
+    
+}
+
+
+- (void) zt_rightBarButtonsAction:(UIBarButtonItem *)sender atIndex:(NSInteger)index {
+    
+}
+
+- (void) zt_leftBarButtonsAction:(UIBarButtonItem *)sender atIndex:(NSInteger)index {
+    
+}
+
 @end

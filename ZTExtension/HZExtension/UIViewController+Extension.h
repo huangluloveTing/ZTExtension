@@ -48,6 +48,10 @@ typedef void(^TapLeftBarButtonItemsEventBlock)(UIBarButtonItem *barButtonItem , 
                                    TapBlock:(TapRightBarButtonItemEventBlock)tapBlock;
 - (void) addRightBarbuttonItemsWithTitles:(NSArray *)titles
                                  TapBlock:(TapRightBarButtonItemsEventBlock)tapBlock;
+- (void) addRightBarbuttonItemWithImage:(UIImage *)image
+                                 TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock;
+
+
 
 //添加navigationItem -- left
 - (void) addLeftBarbuttonItemWithTitle:(NSString *)rightTitle
@@ -56,5 +60,27 @@ typedef void(^TapLeftBarButtonItemsEventBlock)(UIBarButtonItem *barButtonItem , 
 - (void) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle
                                   TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock;
 - (void) addLeftBarbuttonItemsWithTitles:(NSArray *)titles
-                                 TapBlock:(TapRightBarButtonItemsEventBlock)tapBlock;
+                                 TapBlock:(TapLeftBarButtonItemsEventBlock)tapBlock;
+- (void) addLeftBarbuttonItemWithImage:(UIImage *)image
+                                TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock;
+
+//添加navigationItem -- right ,需要重写 对应的 方法
+- (void) addRightBarbuttonItemWithTitle:(NSString *)rightTitle;
+- (void) addRightBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle;
+- (void) addRightBarbuttonItemsWithTitles:(NSArray *)titles;
+- (void) addRightBarbuttonItemWithImage:(UIImage *)image;
+
+
+
+//添加navigationItem -- left
+- (void) addLeftBarbuttonItemWithTitle:(NSString *)leftTitle;
+- (void) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle;
+- (void) addLeftBarbuttonItemsWithTitles:(NSArray *)titles;
+- (void) addLeftBarbuttonItemWithImage:(UIImage *)image;
+
+#pragma mark - Override
+- (void) zt_rightBarButtonAction:(UIBarButtonItem *)sender;
+- (void) zt_leftBarButtonAction:(UIBarButtonItem *)sender;
+- (void) zt_rightBarButtonsAction:(UIBarButtonItem *)sender atIndex:(NSInteger)index;
+- (void) zt_leftBarButtonsAction:(UIBarButtonItem *)sender atIndex:(NSInteger)index;
 @end
