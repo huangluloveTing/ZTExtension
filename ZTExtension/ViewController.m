@@ -11,6 +11,7 @@
 #import "UIView+ZTExtension.h"
 #import "ZTViewController.h"
 #import "ZTHUD.h"
+#import "ZTUtil.h"
 
 @interface ViewController ()
 
@@ -24,36 +25,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    HZ_Weakify(self);
-    [self addLeftBarbuttonItemsWithTitles:@[@"haha", @"hehe"] TapBlock:^(UIBarButtonItem *barButtonItem, NSInteger index) {
-        HZ_Strongify(self);
-        if (index == 0) {
-            [[ZTHUD sharedHUD] hiddenForView:self.view animation:YES];
-        }
-        else {
-            NSLog(@"点击了第二个");
-            [[ZTHUD sharedHUD] showCustomFailed:[UIImage imageNamed:@"timg.gif"] ToView:nil ForTitle:@"jjj"];
-            
-            [[ZTHUD sharedHUD] hiddenForView:nil delay:5 animation:YES completion:^{
-                NSLog(@"HUD 隐藏");
-            }];
-        }
-    }];
-    
-    [self addRightBarbuttonItemWithTitle:@"title"
-                                TapBlock:^(UIBarButtonItem *barButtonItem) {
-                                    HZ_Strongify(self);
-                                    UIViewController *itemVC = [[UIViewController alloc] init];
-                                    itemVC.view.backgroundColor = [UIColor blueColor];
-                                    [self pushWhenPushedHiddenBottomTabbarToVC:itemVC Animation:YES];
-                                }];
-    self.navigationController.navigationBar.translucent = NO;
     [self.view addSubview:self.redView];
     self.redView.right(100).top(20).bottom(400).left(100);
     
     [self.view addSubview:self.yellowView];
     
-    self.yellowView.equal_left(self.view).equal_bottom(self.view).constrain_Width(200).constrain_Height(200);
+    self.yellowView.left_space_to(self.redView, 10).equal_hori_baseLine(self.redView, 0).constrain_Width(100).constrain_Height(100);
     
 }
 

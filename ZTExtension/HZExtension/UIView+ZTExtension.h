@@ -30,6 +30,14 @@
 @property (nonatomic , copy , readonly) UIView*(^equal_left)(UIView *toView);
 @property (nonatomic , copy , readonly) UIView*(^equal_top)(UIView *toView);
 @property (nonatomic , copy , readonly) UIView*(^equal_bottom)(UIView *toView);
+@property (nonatomic , copy , readonly) UIView*(^equal_width)(UIView *toView , CGFloat offset);
+@property (nonatomic , copy , readonly) UIView*(^equal_height)(UIView *toView , CGFloat offset);
+@property (nonatomic , copy , readonly) UIView*(^top_space_to)(UIView *toView , CGFloat offset); //上部距某个试图
+@property (nonatomic , copy , readonly) UIView*(^bottom_space_to)(UIView *toView , CGFloat offset);
+@property (nonatomic , copy , readonly) UIView*(^equal_hori_baseLine)(UIView *toView , CGFloat offset); //距离另一个试图的水平中线
+@property (nonatomic , copy , readonly) UIView*(^equal_verti_baseLine)(UIView *toView , CGFloat offset);//距离另一个试图的垂直中线
+@property (nonatomic , copy , readonly) UIView*(^left_space_to)(UIView *toView , CGFloat offset);//左边距离
+@property (nonatomic , copy , readonly) UIView*(^right_space_to)(UIView *toView , CGFloat offset); //右边距离
 
 //相对于参照试图 偏移量
 @property (nonatomic , copy , readonly) UIView*(^offsetRight)(UIView *toView , CGFloat offset);

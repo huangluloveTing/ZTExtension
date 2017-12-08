@@ -20,4 +20,5 @@
  */
 + (void) swizzleMethods:(Class)class OriginMethod:(SEL)originSel SwizzledMethod:(SEL)swizzleSel;
 
+
 @end

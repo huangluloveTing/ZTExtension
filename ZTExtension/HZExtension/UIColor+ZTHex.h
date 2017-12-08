@@ -19,4 +19,7 @@
 // 颜色转换三：iOS中十六进制的颜色（以#开头）转换为UIColor
 + (UIColor *) colorWithHexString: (NSString *)color;
 
+//获取图片某一点的颜色
++ (UIColor *) getPixelColorAtLocation:(CGPoint)location inImage:(UIImage *)image;
+
 @end

@@ -148,6 +148,36 @@
     };
 }
 
+-  (UIView *(^)(UIView *toView , CGFloat space)) top_space_to {
+    return ^UIView *(UIView *toView , CGFloat space){
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeTop
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:toView
+                                                               attribute:NSLayoutAttributeBottom
+                                                              multiplier:1.0
+                                                                constant:space];
+        [self.superview addConstraint:con];
+        return self;
+    };
+}
+
+-  (UIView *(^)(UIView *toView , CGFloat space)) bottom_space_to {
+    return ^UIView *(UIView *toView , CGFloat space){
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeBottom
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:toView
+                                                               attribute:NSLayoutAttributeTop
+                                                              multiplier:1.0
+                                                                constant:space];
+        [self.superview addConstraint:con];
+        return self;
+    };
+}
+
 - (UIView *(^)(CGFloat width)) constrain_Width {
     return ^UIView *(CGFloat width) {
         self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -232,6 +262,37 @@
     };
 }
 
+- (UIView *(^)(UIView *toView , CGFloat))left_space_to {
+    return ^UIView *(UIView *toView , CGFloat offset) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeLeft
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:toView
+                                                               attribute:NSLayoutAttributeRight
+                                                              multiplier:1.0
+                                                                constant:offset];
+        [self.superview addConstraint:con];
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView *toView , CGFloat))right_space_to {
+    return ^UIView *(UIView *toView , CGFloat offset) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeRight
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:toView
+                                                               attribute:NSLayoutAttributeLeft
+                                                              multiplier:1.0
+                                                                constant:-offset];
+        [self.superview addConstraint:con];
+        return self;
+    };
+}
+
+
 - (UIView *(^)(UIView * , CGFloat))offsetRight {
     return ^UIView *(UIView *toView , CGFloat offset) {
         self.translatesAutoresizingMaskIntoConstraints = NO;
@@ -257,6 +318,68 @@
                                                                attribute:NSLayoutAttributeBottom
                                                               multiplier:1.0
                                                                 constant:-offset];
+        [self.superview addConstraint:con];
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView *,CGFloat))equal_width {
+    return ^UIView *(UIView *toView , CGFloat offset) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeWidth
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:toView
+                                                               attribute:NSLayoutAttributeWidth
+                                                              multiplier:1.0
+                                                                constant:offset];
+        [self.superview addConstraint:con];
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView *,CGFloat))equal_height {
+    return ^UIView *(UIView *toView , CGFloat offset) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeHeight
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:toView
+                                                               attribute:NSLayoutAttributeHeight
+                                                              multiplier:1.0
+                                                                constant:offset];
+        [self.superview addConstraint:con];
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView * , CGFloat ))equal_hori_baseLine {
+    return ^UIView *(UIView *toView , CGFloat offset) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeCenterY
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:toView
+                                                               attribute:NSLayoutAttributeCenterY
+                                                              multiplier:1.0
+                                                                constant:offset];
+        [self.superview addConstraint:con];
+        return self;
+    };
+}
+
+- (UIView *(^)(UIView * , CGFloat ))equal_verti_baseLine {
+    return ^UIView *(UIView *toView , CGFloat offset) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeCenterX
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:toView
+                                                               attribute:NSLayoutAttributeCenterX
+                                                              multiplier:1.0
+                                                                constant:offset];
         [self.superview addConstraint:con];
         return self;
     };
