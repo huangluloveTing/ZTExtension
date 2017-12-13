@@ -81,7 +81,10 @@ typedef void(^ZTHUDHiddenBlock)(void);
     MBProgressHUD *hud = [self getCurrentHUDForView:targetView];
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView = self.customView;
-    self.customView.contentImage = dFailed_Image_ZT;
+    NSString * bundlePath = [[ NSBundle mainBundle] pathForResource: @ "ZTExtension" ofType :@ "bundle"];
+    NSString *imgPath= [bundlePath stringByAppendingPathComponent :@"failed_zt.png"];
+    UIImage *image=[UIImage imageWithContentsOfFile:imgPath];
+    self.customView.contentImage = image;
     hud.label.text = title;
     [hud showAnimated:YES];
 }
@@ -102,7 +105,10 @@ typedef void(^ZTHUDHiddenBlock)(void);
     MBProgressHUD *hud = [self getCurrentHUDForView:targetView];
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView = self.customView;
-    self.customView.contentImage = dSuccess_Image_ZT;
+    NSString * bundlePath = [[ NSBundle mainBundle] pathForResource: @ "ZTExtension" ofType :@ "bundle"];
+    NSString *imgPath= [bundlePath stringByAppendingPathComponent :@"Success_zt.png"];
+    UIImage *image=[UIImage imageWithContentsOfFile:imgPath];
+    self.customView.contentImage = image;
     hud.label.text = title;
     [hud showAnimated:YES];
 }

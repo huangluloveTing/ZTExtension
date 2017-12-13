@@ -25,12 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:self.redView];
-    self.redView.right(100).top(20).bottom(400).left(100);
-    
-    [self.view addSubview:self.yellowView];
-    
-    self.yellowView.left_space_to(self.redView, 10).equal_hori_baseLine(self.redView, 0).constrain_Width(100).constrain_Height(100);
+    [self addLeftBarbuttonItemWithTitle:@"tap" TapBlock:^(UIBarButtonItem *barButtonItem) {
+       
+        [[ZTHUD sharedHUD] showSuccessdHUDToView:self.view ForTitle:@"success"];
+    }];
     
 }
 

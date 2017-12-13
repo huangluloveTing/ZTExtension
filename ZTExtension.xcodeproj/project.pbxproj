@@ -29,9 +29,8 @@
 		706984D31FA82AE300193388 /* ZTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706984D21FA82AE300193388 /* ZTViewController.m */; };
 		70725A921FD4ED0200CF7117 /* ZTHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70725A911FD4ED0200CF7117 /* ZTHUD.m */; };
 		70725A951FD4F14400CF7117 /* ZTHUDContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70725A941FD4F14400CF7117 /* ZTHUDContentView.m */; };
-		70725A971FD4FAE400CF7117 /* failed_zt.png in Resources */ = {isa = PBXBuildFile; fileRef = 70725A961FD4FAE400CF7117 /* failed_zt.png */; };
-		70725A991FD4FB7500CF7117 /* Success_zt.png in Resources */ = {isa = PBXBuildFile; fileRef = 70725A981FD4FB7400CF7117 /* Success_zt.png */; };
 		70725A9B1FD50BC300CF7117 /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70725A9A1FD50BC300CF7117 /* timg.gif */; };
+		707CFA401FE128CC0086E60B /* ZTExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 707CFA3F1FE128CC0086E60B /* ZTExtension.bundle */; };
 		70B06FFD1FDAE5560083B87B /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B06FFC1FDAE5560083B87B /* NSString+Category.m */; };
 		70B070001FDAE8220083B87B /* UIView+Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B06FFF1FDAE8220083B87B /* UIView+Radius.m */; };
 		70B070031FDAEAAB0083B87B /* ZTUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B070021FDAEAAB0083B87B /* ZTUtil.m */; };
@@ -85,9 +84,8 @@
 		70725A911FD4ED0200CF7117 /* ZTHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTHUD.m; sourceTree = "<group>"; };
 		70725A931FD4F14400CF7117 /* ZTHUDContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTHUDContentView.h; sourceTree = "<group>"; };
 		70725A941FD4F14400CF7117 /* ZTHUDContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTHUDContentView.m; sourceTree = "<group>"; };
-		70725A961FD4FAE400CF7117 /* failed_zt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = failed_zt.png; sourceTree = "<group>"; };
-		70725A981FD4FB7400CF7117 /* Success_zt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Success_zt.png; sourceTree = "<group>"; };
 		70725A9A1FD50BC300CF7117 /* timg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = timg.gif; sourceTree = "<group>"; };
+		707CFA3F1FE128CC0086E60B /* ZTExtension.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZTExtension.bundle; sourceTree = "<group>"; };
 		70B06FFB1FDAE5560083B87B /* NSString+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		70B06FFC1FDAE5560083B87B /* NSString+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		70B06FFE1FDAE8220083B87B /* UIView+Radius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Radius.h"; sourceTree = "<group>"; };
@@ -215,14 +213,13 @@
 				70725A911FD4ED0200CF7117 /* ZTHUD.m */,
 				70725A931FD4F14400CF7117 /* ZTHUDContentView.h */,
 				70725A941FD4F14400CF7117 /* ZTHUDContentView.m */,
-				70725A981FD4FB7400CF7117 /* Success_zt.png */,
-				70725A961FD4FAE400CF7117 /* failed_zt.png */,
 				70B06FFB1FDAE5560083B87B /* NSString+Category.h */,
 				70B06FFC1FDAE5560083B87B /* NSString+Category.m */,
 				70B06FFE1FDAE8220083B87B /* UIView+Radius.h */,
 				70B06FFF1FDAE8220083B87B /* UIView+Radius.m */,
 				70B070011FDAEAAB0083B87B /* ZTUtil.h */,
 				70B070021FDAEAAB0083B87B /* ZTUtil.m */,
+				707CFA3F1FE128CC0086E60B /* ZTExtension.bundle */,
 			);
 			path = HZExtension;
 			sourceTree = "<group>";
@@ -301,11 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				707CFA401FE128CC0086E60B /* ZTExtension.bundle in Resources */,
 				703AC08C1FA2BCDB00C9AD42 /* LaunchScreen.storyboard in Resources */,
 				70725A9B1FD50BC300CF7117 /* timg.gif in Resources */,
 				703AC0891FA2BCDB00C9AD42 /* Assets.xcassets in Resources */,
-				70725A971FD4FAE400CF7117 /* failed_zt.png in Resources */,
-				70725A991FD4FB7500CF7117 /* Success_zt.png in Resources */,
 				703AC0871FA2BCDB00C9AD42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
