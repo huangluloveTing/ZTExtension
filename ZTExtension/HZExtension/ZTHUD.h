@@ -23,11 +23,15 @@
 // Failed
 - (void) showFailedHUDToView:(nullable UIView *)targetView ForTitle:(NSString *_Nullable)title;
 
+- (void) showFailedHUDToView:(nullable UIView *)targetView ForTitle:(NSString *_Nullable)title image:(UIImage *)image;
+
 // Failed 自定义 失败时的图片
 - (void) showCustomFailed:(UIImage *_Nonnull)failedImage ToView:(nullable UIView *)targetView ForTitle:(NSString *_Nullable)title;
 
 // success
 - (void) showSuccessdHUDToView:(nullable UIView *)targetView ForTitle:(NSString *_Nullable)title;
+
+- (void) showSuccessdHUDToView:(nullable UIView *)targetView ForTitle:(NSString *_Nullable)title image:(UIImage *_Nullable)image;
 
 // success 自定义 失败时的图片
 - (void) showCustomSuccess:(UIImage *_Nonnull)successImage ToView:(nullable UIView *)targetView ForTitle:(NSString *_Nullable)title;

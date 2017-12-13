@@ -81,9 +81,18 @@ typedef void(^ZTHUDHiddenBlock)(void);
     MBProgressHUD *hud = [self getCurrentHUDForView:targetView];
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView = self.customView;
-    NSString * bundlePath = [[ NSBundle mainBundle] pathForResource: @ "ZTExtension" ofType :@ "bundle"];
-    NSString *imgPath= [bundlePath stringByAppendingPathComponent :@"failed_zt.png"];
+    NSString * bundlePath = [[ NSBundle mainBundle] pathForResource: @"ZTExtension" ofType :@"bundle"];
+    NSString *imgPath= [bundlePath stringByAppendingPathComponent:@"failed_zt.png"];
     UIImage *image=[UIImage imageWithContentsOfFile:imgPath];
+    self.customView.contentImage = image;
+    hud.label.text = title;
+    [hud showAnimated:YES];
+}
+
+- (void) showFailedHUDToView:(UIView *)targetView ForTitle:(NSString *)title image:(UIImage *)image {
+    MBProgressHUD *hud = [self getCurrentHUDForView:targetView];
+    hud.mode = MBProgressHUDModeCustomView;
+    hud.customView = self.customView;
     self.customView.contentImage = image;
     hud.label.text = title;
     [hud showAnimated:YES];
@@ -105,9 +114,18 @@ typedef void(^ZTHUDHiddenBlock)(void);
     MBProgressHUD *hud = [self getCurrentHUDForView:targetView];
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView = self.customView;
-    NSString * bundlePath = [[ NSBundle mainBundle] pathForResource: @ "ZTExtension" ofType :@ "bundle"];
+    NSString * bundlePath = [[ NSBundle mainBundle] pathForResource: @"ZTExtension" ofType :@"bundle"];
     NSString *imgPath= [bundlePath stringByAppendingPathComponent :@"Success_zt.png"];
     UIImage *image=[UIImage imageWithContentsOfFile:imgPath];
+    self.customView.contentImage = image;
+    hud.label.text = title;
+    [hud showAnimated:YES];
+}
+
+- (void) showSuccessdHUDToView:(UIView *)targetView ForTitle:(NSString *)title image:(UIImage *)image {
+    MBProgressHUD *hud = [self getCurrentHUDForView:targetView];
+    hud.mode = MBProgressHUDModeCustomView;
+    hud.customView = self.customView;
     self.customView.contentImage = image;
     hud.label.text = title;
     [hud showAnimated:YES];
