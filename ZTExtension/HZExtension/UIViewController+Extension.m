@@ -63,7 +63,7 @@
 }
 
 - (void) popViewControllerAtIndex:(NSInteger )index Animation:(BOOL)animation{
-    if (self.navigationController && self.navigationController.viewControllers.count > index - 1) {
+    if (self.navigationController && self.navigationController.viewControllers.count > index) {
         UIViewController *vc = [self.navigationController.viewControllers objectAtIndex:index];
         [self.navigationController popToViewController:vc animated:animation];
     }
@@ -71,7 +71,7 @@
 
 - (void) popToRootViewControllerAnimation:(BOOL)animation {
     if (self.navigationController) {
-        [self.navigationController popToRootViewControllerAnimation:animation];
+        [self.navigationController popToRootViewControllerAnimated:animation];
     }
 }
 
