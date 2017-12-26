@@ -10,6 +10,8 @@
 		1616E0532EFB0EBB3E0AD022 /* libPods-ZTExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE5C9A6FEBA09A3DD010B7B /* libPods-ZTExtension.a */; };
 		700A59DD1FBEBE9800C6AA31 /* NSDate+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 700A59DC1FBEBE9800C6AA31 /* NSDate+ZTCategory.m */; };
 		700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 700A59DF1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m */; };
+		701F1AEC1FF1D98900F707D4 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */; };
+		701F1AED1FF1D98900F707D4 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */; };
 		703AC0811FA2BCDB00C9AD42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0801FA2BCDB00C9AD42 /* AppDelegate.m */; };
 		703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0831FA2BCDB00C9AD42 /* ViewController.m */; };
 		703AC0871FA2BCDB00C9AD42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703AC0851FA2BCDB00C9AD42 /* Main.storyboard */; };
@@ -46,6 +48,10 @@
 		700A59DC1FBEBE9800C6AA31 /* NSDate+ZTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZTCategory.m"; sourceTree = "<group>"; };
 		700A59DE1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+ZTCategory.h"; sourceTree = "<group>"; };
 		700A59DF1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+ZTCategory.m"; sourceTree = "<group>"; };
+		701F1AE81FF1D98800F707D4 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
+		701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
+		701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
+		701F1AEB1FF1D98900F707D4 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		703AC07C1FA2BCDB00C9AD42 /* ZTExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZTExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		703AC07F1FA2BCDB00C9AD42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		703AC0801FA2BCDB00C9AD42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -178,6 +184,10 @@
 		703AC0951FA2BCE700C9AD42 /* HZExtension */ = {
 			isa = PBXGroup;
 			children = (
+				701F1AEB1FF1D98900F707D4 /* WRCustomNavigationBar.h */,
+				701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */,
+				701F1AE81FF1D98800F707D4 /* WRNavigationBar.h */,
+				701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */,
 				703AC0961FA2BCE700C9AD42 /* HZExtensionHeader.h */,
 				703AC0971FA2BCE700C9AD42 /* NSArray+Extension.h */,
 				703AC0981FA2BCE700C9AD42 /* NSArray+Extension.m */,
@@ -374,6 +384,7 @@
 				70B06FFD1FDAE5560083B87B /* NSString+Category.m in Sources */,
 				70B070001FDAE8220083B87B /* UIView+Radius.m in Sources */,
 				70E04CB31FBEB6F800EEB106 /* NSString+ZTConvert.m in Sources */,
+				701F1AED1FF1D98900F707D4 /* WRNavigationBar.m in Sources */,
 				70725A951FD4F14400CF7117 /* ZTHUDContentView.m in Sources */,
 				70725A921FD4ED0200CF7117 /* ZTHUD.m in Sources */,
 				70E04CB01FBEB68A00EEB106 /* NSString+ZTRegex.m in Sources */,
@@ -381,6 +392,7 @@
 				700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */,
 				706984D31FA82AE300193388 /* ZTViewController.m in Sources */,
 				703AC0A61FA2BCE700C9AD42 /* UIControl+Extension.m in Sources */,
+				701F1AEC1FF1D98900F707D4 /* WRCustomNavigationBar.m in Sources */,
 				703AC0A31FA2BCE700C9AD42 /* NSArray+Extension.m in Sources */,
 				703AC0A71FA2BCE700C9AD42 /* UIView+ZTExtension.m in Sources */,
 				70E04CB91FBEB80800EEB106 /* UITableView+ZTCategory.m in Sources */,
