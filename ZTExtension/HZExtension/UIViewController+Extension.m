@@ -76,7 +76,7 @@
 }
 
 
-- (void) addRightBarbuttonItemWithTitle:(NSString *)rightTitle
+- (UIBarButtonItem *) addRightBarbuttonItemWithTitle:(NSString *)rightTitle
                                TapBlock:(TapRightBarButtonItemEventBlock)tapBlock {
     if (self.navigationController) {
         UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithTitle:rightTitle style:UIBarButtonItemStylePlain target:self action:@selector(tapRightBarButtonItemAction:)];
@@ -84,17 +84,21 @@
         if (tapBlock) {
             self.tapRightBlock = tapBlock;
         }
+        return rightBar;
     }
+    return nil;
 }
 
-- (void) addRightBarbuttonItemWithView:(UIView *)view {
+- (UIBarButtonItem *) addRightBarbuttonItemWithView:(UIView *)view {
     if (self.navigationController) {
         UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithCustomView:view];
         self.navigationItem.rightBarButtonItem = rightBar;
+        return rightBar;
     }
+    return nil;
 }
 
-- (void) addRightBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle
+- (UIBarButtonItem *) addRightBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle
                                    TapBlock:(TapRightBarButtonItemEventBlock)tapBlock {
     if (self.navigationController) {
         UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:systemStyle target:self action:@selector(tapRightBarButtonItemAction:)];
@@ -102,10 +106,12 @@
         if (tapBlock) {
             self.tapRightBlock = tapBlock;
         }
+        return rightBar;
     }
+    return nil;
 }
 
-- (void) addRightBarbuttonItemsWithTitles:(NSArray *)titles TapBlock:(TapRightBarButtonItemsEventBlock)tapBlock {
+- (NSArray <UIBarButtonItem *> *) addRightBarbuttonItemsWithTitles:(NSArray *)titles TapBlock:(TapRightBarButtonItemsEventBlock)tapBlock {
     if (self.navigationController) {
         NSArray *items = [titles othreArraryWithRegular:^id(NSString * title, NSInteger index) {
             UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(tapRightBarButtonItemAction:)];
@@ -116,20 +122,24 @@
             self.tapRightItemsBlock = tapBlock;
         }
         self.navigationItem.rightBarButtonItems = items;
+        return items;
     }
+    return nil;
 }
 
-- (void) addRightBarbuttonItemWithImage:(UIImage *)image TapBlock:(TapRightBarButtonItemEventBlock)tapBlock {
+- (UIBarButtonItem *) addRightBarbuttonItemWithImage:(UIImage *)image TapBlock:(TapRightBarButtonItemEventBlock)tapBlock {
     if (self.navigationController) {
         UIBarButtonItem *rightBat = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(tapRightBarButtonItemAction:)];
         self.navigationItem.leftBarButtonItem = rightBat;
         if (tapBlock) {
             self.tapLeftBlock = tapBlock;
         }
+        return rightBat;
     }
+    return nil;
 }
 
-- (void) addLeftBarbuttonItemsWithTitles:(NSArray *)titles TapBlock:(TapLeftBarButtonItemsEventBlock)tapBlock {
+- (NSArray <UIBarButtonItem * >*) addLeftBarbuttonItemsWithTitles:(NSArray *)titles TapBlock:(TapLeftBarButtonItemsEventBlock)tapBlock {
     if (self.navigationController) {
         NSArray *items = [titles othreArraryWithRegular:^id(NSString * title, NSInteger index) {
             UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(tapLeftBarButtonItemAction:)];
@@ -140,10 +150,12 @@
             self.tapLeftItemsBlock = tapBlock;
         }
         self.navigationItem.leftBarButtonItems = items;
+        return items;
     }
+    return nil;
 }
 
-- (void) addLeftBarbuttonItemWithTitle:(NSString *)rightTitle
+- (UIBarButtonItem *) addLeftBarbuttonItemWithTitle:(NSString *)rightTitle
                               TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock {
     if (self.navigationController) {
         UIBarButtonItem *leftBat = [[UIBarButtonItem alloc] initWithTitle:rightTitle style:UIBarButtonItemStylePlain target:self action:@selector(tapLeftBarButtonItemAction:)];
@@ -151,17 +163,21 @@
         if (tapBlock) {
             self.tapLeftBlock = tapBlock;
         }
+        return leftBat;
     }
+    return nil;
 }
 
-- (void) addLeftBarbuttonItemWithView:(UIView *)view {
+- (UIBarButtonItem *) addLeftBarbuttonItemWithView:(UIView *)view {
     if (self.navigationController) {
         UIBarButtonItem *leftBat = [[UIBarButtonItem alloc] initWithCustomView:view];
         self.navigationItem.leftBarButtonItem = leftBat;
+        return leftBat;
     }
+    return nil;
 }
 
-- (void) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle
+- (UIBarButtonItem *) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle
                                   TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock {
     if (self.navigationController) {
         UIBarButtonItem *leftBat = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:systemStyle target:self action:@selector(tapLeftBarButtonItemAction:)];
@@ -169,10 +185,12 @@
         if (tapBlock) {
             self.tapLeftBlock = tapBlock;
         }
+        return leftBat;
     }
+    return nil;
 }
 
-- (void) addLeftBarbuttonItemWithImage:(UIImage *)image
+- (UIBarButtonItem *) addLeftBarbuttonItemWithImage:(UIImage *)image
                               TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock {
     if (self.navigationController) {
         UIBarButtonItem *leftBat = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(tapLeftBarButtonItemAction:)];
@@ -180,7 +198,9 @@
         if (tapBlock) {
             self.tapLeftBlock = tapBlock;
         }
+        return leftBat;
     }
+    return nil;
 }
 
 
@@ -248,19 +268,22 @@
 }
 
 //添加navigationItem -- right ,需要重写 对应的 方法
-- (void) addRightBarbuttonItemWithTitle:(NSString *)rightTitle {
+- (UIBarButtonItem *) addRightBarbuttonItemWithTitle:(NSString *)rightTitle {
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:rightTitle style:UIBarButtonItemStylePlain target:self action:@selector(zt_rightBarButtonAction:)];
     if (self.navigationController) {
         self.navigationItem.rightBarButtonItem = right;
+        return right;
     }
+    return right;
 }
-- (void) addRightBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle {
+- (UIBarButtonItem *) addRightBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle {
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:systemStyle target:self action:@selector(zt_rightBarButtonAction:)];
     if (self.navigationController) {
         self.navigationItem.rightBarButtonItem = right;
     }
+    return right;
 }
-- (void) addRightBarbuttonItemsWithTitles:(NSArray *)titles {
+- (NSArray <UIBarButtonItem *> *) addRightBarbuttonItemsWithTitles:(NSArray *)titles {
     NSMutableArray *tempArr = [NSMutableArray array];
     for (int i = 0 ; i < titles.count ; i ++) {
         NSString *title =  titles[i];
@@ -271,30 +294,34 @@
     if (self.navigationController) {
         self.navigationItem.rightBarButtonItems = tempArr;
     }
+    return tempArr;
 }
-- (void) addRightBarbuttonItemWithImage:(UIImage *)image {
+- (UIBarButtonItem *) addRightBarbuttonItemWithImage:(UIImage *)image {
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(zt_rightBarButtonAction:)];
     if (self.navigationController) {
         self.navigationItem.rightBarButtonItem = right;
     }
+    return right;
 }
 
 
 
 //添加navigationItem -- left
-- (void) addLeftBarbuttonItemWithTitle:(NSString *)leftTitle {
+- (UIBarButtonItem *) addLeftBarbuttonItemWithTitle:(NSString *)leftTitle {
     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithTitle:leftTitle style:UIBarButtonItemStylePlain target:self action:@selector(zt_leftBarButtonAction:)];
     if (self.navigationController) {
         self.navigationItem.leftBarButtonItem = left;
     }
+    return left;
 }
-- (void) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle {
+- (UIBarButtonItem *) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle {
     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:systemStyle target:self action:@selector(zt_leftBarButtonAction:)];
     if (self.navigationController) {
         self.navigationItem.leftBarButtonItem = left;
     }
+    return left;
 }
-- (void) addLeftBarbuttonItemsWithTitles:(NSArray *)titles {
+- (NSArray<UIBarButtonItem*> *) addLeftBarbuttonItemsWithTitles:(NSArray *)titles {
     NSMutableArray *tempArr = [NSMutableArray array];
     for (int i = 0 ; i < titles.count ; i ++) {
         NSString *title =  titles[i];
@@ -305,12 +332,14 @@
     if (self.navigationController) {
         self.navigationItem.leftBarButtonItems = tempArr;
     }
+    return tempArr;
 }
-- (void) addLeftBarbuttonItemWithImage:(UIImage *)image {
+- (UIBarButtonItem *) addLeftBarbuttonItemWithImage:(UIImage *)image {
     UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(zt_leftBarButtonAction:)];
     if (self.navigationController) {
         self.navigationItem.leftBarButtonItem = left;
     }
+    return left;
 }
 
 - (void) multiRightBarButtonAction:(UIBarButtonItem *)item {

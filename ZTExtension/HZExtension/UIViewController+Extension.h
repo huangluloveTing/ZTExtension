@@ -44,42 +44,42 @@ typedef void(^TapLeftBarButtonItemsEventBlock)(UIBarButtonItem *barButtonItem , 
 - (void) popToRootViewControllerAnimation:(BOOL)animation;
 
 //添加navigationItem -- right
-- (void) addRightBarbuttonItemWithTitle:(NSString *)rightTitle
+- (UIBarButtonItem *) addRightBarbuttonItemWithTitle:(NSString *)rightTitle
                                TapBlock:(TapRightBarButtonItemEventBlock)tapBlock;
-- (void) addRightBarbuttonItemWithView:(UIView *)view;
-- (void) addRightBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle
+- (UIBarButtonItem *) addRightBarbuttonItemWithView:(UIView *)view;
+- (UIBarButtonItem *) addRightBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle
                                    TapBlock:(TapRightBarButtonItemEventBlock)tapBlock;
-- (void) addRightBarbuttonItemsWithTitles:(NSArray *)titles
+- (NSArray <UIBarButtonItem *> *) addRightBarbuttonItemsWithTitles:(NSArray *)titles
                                  TapBlock:(TapRightBarButtonItemsEventBlock)tapBlock;
-- (void) addRightBarbuttonItemWithImage:(UIImage *)image
+- (UIBarButtonItem *) addRightBarbuttonItemWithImage:(UIImage *)image
                                  TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock;
 
 
 
 //添加navigationItem -- left
-- (void) addLeftBarbuttonItemWithTitle:(NSString *)rightTitle
+- (UIBarButtonItem *) addLeftBarbuttonItemWithTitle:(NSString *)rightTitle
                               TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock;
-- (void) addLeftBarbuttonItemWithView:(UIView *)view ;
-- (void) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle
+- (UIBarButtonItem *) addLeftBarbuttonItemWithView:(UIView *)view ;
+- (UIBarButtonItem *) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle
                                   TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock;
-- (void) addLeftBarbuttonItemsWithTitles:(NSArray *)titles
+- (NSArray <UIBarButtonItem *> *) addLeftBarbuttonItemsWithTitles:(NSArray *)titles
                                  TapBlock:(TapLeftBarButtonItemsEventBlock)tapBlock;
-- (void) addLeftBarbuttonItemWithImage:(UIImage *)image
+- (UIBarButtonItem *) addLeftBarbuttonItemWithImage:(UIImage *)image
                                 TapBlock:(TapLeftBarButtonItemEventBlock)tapBlock;
 
 //添加navigationItem -- right ,需要重写 对应的 方法
-- (void) addRightBarbuttonItemWithTitle:(NSString *)rightTitle;
-- (void) addRightBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle;
-- (void) addRightBarbuttonItemsWithTitles:(NSArray *)titles;
-- (void) addRightBarbuttonItemWithImage:(UIImage *)image;
+- (UIBarButtonItem *) addRightBarbuttonItemWithTitle:(NSString *)rightTitle;
+- (UIBarButtonItem *) addRightBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle;
+- (UIBarButtonItem *) addRightBarbuttonItemsWithTitles:(NSArray *)titles;
+- (UIBarButtonItem *) addRightBarbuttonItemWithImage:(UIImage *)image;
 
 
 
 //添加navigationItem -- left
-- (void) addLeftBarbuttonItemWithTitle:(NSString *)leftTitle;
-- (void) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle;
-- (void) addLeftBarbuttonItemsWithTitles:(NSArray *)titles;
-- (void) addLeftBarbuttonItemWithImage:(UIImage *)image;
+- (UIBarButtonItem *) addLeftBarbuttonItemWithTitle:(NSString *)leftTitle;
+- (UIBarButtonItem *) addLeftBarbuttonItemWithBarSystem:(UIBarButtonSystemItem)systemStyle;
+- (UIBarButtonItem *) addLeftBarbuttonItemsWithTitles:(NSArray *)titles;
+- (UIBarButtonItem *) addLeftBarbuttonItemWithImage:(UIImage *)image;
 
 #pragma mark - Override
 - (void) zt_rightBarButtonAction:(UIBarButtonItem *)sender;
