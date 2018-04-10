@@ -42,6 +42,7 @@ typedef void(^TapLeftBarButtonItemsEventBlock)(UIBarButtonItem *barButtonItem , 
 - (void) popViewControllerLikePush; //pop 按照 push 方式， 有动画push ， pop 也有动画，没有则都没有
 - (void) popViewControllerAtIndex:(NSInteger)index Animation:(BOOL)animation;
 - (void) popToRootViewControllerAnimation:(BOOL)animation;
+- (void) popViewControllerCurrentBeforeIndes:(NSInteger)index animation:(BOOL)animation;
 
 //添加navigationItem -- right
 - (UIBarButtonItem *) addRightBarbuttonItemWithTitle:(NSString *)rightTitle

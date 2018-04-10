@@ -75,6 +75,17 @@
     }
 }
 
+- (void) popViewControllerCurrentBeforeIndes:(NSInteger)index animation:(BOOL)animation {
+    if (self.navigationController && self.navigationController.viewControllers.count > index) {
+        NSInteger currentIndex = [self.navigationController.viewControllers indexOfObject:self];
+        UIViewController *toVC = nil;
+        if (currentIndex > index) {
+            toVC = [self.navigationController.viewControllers objectAtIndex:(currentIndex - index)];
+        }
+        [self.navigationController popToViewController:toVC animated:YES];
+    }
+}
+
 
 - (UIBarButtonItem *) addRightBarbuttonItemWithTitle:(NSString *)rightTitle
                                TapBlock:(TapRightBarButtonItemEventBlock)tapBlock {
