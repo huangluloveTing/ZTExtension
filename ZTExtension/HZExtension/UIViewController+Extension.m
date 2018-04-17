@@ -141,7 +141,7 @@
 - (UIBarButtonItem *) addRightBarbuttonItemWithImage:(UIImage *)image TapBlock:(TapRightBarButtonItemEventBlock)tapBlock {
     if (self.navigationController) {
         UIBarButtonItem *rightBat = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(tapRightBarButtonItemAction:)];
-        self.navigationItem.leftBarButtonItem = rightBat;
+        self.navigationItem.rightBarButtonItem = rightBat;
         if (tapBlock) {
             self.tapLeftBlock = tapBlock;
         }
