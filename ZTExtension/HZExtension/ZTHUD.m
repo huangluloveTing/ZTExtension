@@ -198,6 +198,7 @@ typedef void(^ZTHUDHiddenBlock)(void);
 - (void) hudWasHidden:(MBProgressHUD *)hud {
     if (self.hiddenBlock) {
         self.hiddenBlock();
+        self.hiddenBlock = nil;
     }
 }
 
