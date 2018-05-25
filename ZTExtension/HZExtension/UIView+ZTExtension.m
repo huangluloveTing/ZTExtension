@@ -193,6 +193,21 @@
     };
 }
 
+- (UIView *(^)(CGFloat width)) constrain_MaxWidth {
+    return ^UIView *(CGFloat width) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeWidth
+                                                               relatedBy:NSLayoutRelationLessThanOrEqual
+                                                                  toItem:nil
+                                                               attribute:NSLayoutAttributeNotAnAttribute
+                                                              multiplier:1.0
+                                                                constant:width];
+        [self addConstraint:con];
+        return self;
+    };
+}
+
 - (UIView *(^)(CGFloat height))constrain_Height {
     return ^UIView *(CGFloat height){
         self.translatesAutoresizingMaskIntoConstraints = NO;

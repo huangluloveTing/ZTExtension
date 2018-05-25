@@ -12,6 +12,7 @@
 #import "ZTViewController.h"
 #import "ZTHUD.h"
 #import "ZTUtil.h"
+#import "ZTToastManager.h"
 
 @interface ViewController ()
 
@@ -25,11 +26,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addLeftBarbuttonItemWithTitle:@"tap" TapBlock:^(UIBarButtonItem *barButtonItem) {
-       
-        [[ZTHUD sharedHUD] showSuccessdHUDToView:self.view ForTitle:@"success"];
-    }];
+    [ZTToastManager toastWithTitle:@"this is toast demo" icon:[UIImage imageNamed:@"tp"] position:ZTToastPosition_Middle duration:5];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [ZTToastManager toastWithTitle:@"this is" icon:[UIImage imageNamed:@"tp"] position:ZTToastPosition_Middle duration:2];
+    });
+    
+    UIButton *butt = [UIButton buttonWithType:UIButtonTypeCustom];
+    butt.frame = CGRectMake(0, 0, 200, 50);
+    [butt setTitle:@"tap " forState:UIControlStateNormal];
+    butt.center = CGPointMake(50, 300);
+    [butt addTarget:self action:@selector(tapbutton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:butt];
+    butt.backgroundColor = [UIColor redColor];
+}
+
+- (void) tapbutton {
+    
+    [ZTToastManager successToastAtBottomWithTitle:@"提交成功" duration:2];
 }
 
 - (UIView *)redView {

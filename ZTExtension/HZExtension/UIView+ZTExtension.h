@@ -25,6 +25,7 @@
 @property (nonatomic , copy , readonly) UIView*(^top)(CGFloat top);
 @property (nonatomic , copy , readonly) UIView*(^constrain_center)(UIView *toView);
 @property (nonatomic , copy , readonly) UIView*(^constrain_Width)(CGFloat width);
+@property (nonatomic , copy , readonly) UIView*(^constrain_MaxWidth)(CGFloat width);
 @property (nonatomic , copy , readonly) UIView*(^constrain_Height)(CGFloat height);
 @property (nonatomic , copy , readonly) UIView*(^equal_right)(UIView *toView);
 @property (nonatomic , copy , readonly) UIView*(^equal_left)(UIView *toView);

@@ -12,6 +12,9 @@
 		700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 700A59DF1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m */; };
 		701F1AEC1FF1D98900F707D4 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */; };
 		701F1AED1FF1D98900F707D4 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */; };
+		7031CB9820B6A99D00C59561 /* ZTToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9720B6A99D00C59561 /* ZTToast.m */; };
+		7031CB9B20B6ABA200C59561 /* ZTToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9A20B6ABA200C59561 /* ZTToastView.m */; };
+		7031CBA020B705C200C59561 /* ZTToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9F20B705C200C59561 /* ZTToastManager.m */; };
 		703AC0811FA2BCDB00C9AD42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0801FA2BCDB00C9AD42 /* AppDelegate.m */; };
 		703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0831FA2BCDB00C9AD42 /* ViewController.m */; };
 		703AC0871FA2BCDB00C9AD42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703AC0851FA2BCDB00C9AD42 /* Main.storyboard */; };
@@ -52,6 +55,13 @@
 		701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
 		701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		701F1AEB1FF1D98900F707D4 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
+		7031CB9720B6A99D00C59561 /* ZTToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTToast.m; sourceTree = "<group>"; };
+		7031CB9920B6ABA200C59561 /* ZTToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTToastView.h; sourceTree = "<group>"; };
+		7031CB9A20B6ABA200C59561 /* ZTToastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTToastView.m; sourceTree = "<group>"; };
+		7031CB9C20B6FBFA00C59561 /* ZTToastHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTToastHeader.h; sourceTree = "<group>"; };
+		7031CB9D20B7059F00C59561 /* ZTToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTToast.h; sourceTree = "<group>"; };
+		7031CB9E20B705C200C59561 /* ZTToastManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTToastManager.h; sourceTree = "<group>"; };
+		7031CB9F20B705C200C59561 /* ZTToastManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTToastManager.m; sourceTree = "<group>"; };
 		703AC07C1FA2BCDB00C9AD42 /* ZTExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZTExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		703AC07F1FA2BCDB00C9AD42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		703AC0801FA2BCDB00C9AD42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -229,7 +239,14 @@
 				70B06FFF1FDAE8220083B87B /* UIView+Radius.m */,
 				70B070011FDAEAAB0083B87B /* ZTUtil.h */,
 				70B070021FDAEAAB0083B87B /* ZTUtil.m */,
+				7031CB9D20B7059F00C59561 /* ZTToast.h */,
+				7031CB9720B6A99D00C59561 /* ZTToast.m */,
 				707CFA3F1FE128CC0086E60B /* ZTExtension.bundle */,
+				7031CB9920B6ABA200C59561 /* ZTToastView.h */,
+				7031CB9A20B6ABA200C59561 /* ZTToastView.m */,
+				7031CB9C20B6FBFA00C59561 /* ZTToastHeader.h */,
+				7031CB9E20B705C200C59561 /* ZTToastManager.h */,
+				7031CB9F20B705C200C59561 /* ZTToastManager.m */,
 			);
 			path = HZExtension;
 			sourceTree = "<group>";
@@ -276,7 +293,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ZT;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = huanglu;
 				TargetAttributes = {
 					703AC07B1FA2BCDB00C9AD42 = {
@@ -388,6 +405,7 @@
 				70725A951FD4F14400CF7117 /* ZTHUDContentView.m in Sources */,
 				70725A921FD4ED0200CF7117 /* ZTHUD.m in Sources */,
 				70E04CB01FBEB68A00EEB106 /* NSString+ZTRegex.m in Sources */,
+				7031CBA020B705C200C59561 /* ZTToastManager.m in Sources */,
 				70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */,
 				700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */,
 				706984D31FA82AE300193388 /* ZTViewController.m in Sources */,
@@ -396,12 +414,14 @@
 				703AC0A31FA2BCE700C9AD42 /* NSArray+Extension.m in Sources */,
 				703AC0A71FA2BCE700C9AD42 /* UIView+ZTExtension.m in Sources */,
 				70E04CB91FBEB80800EEB106 /* UITableView+ZTCategory.m in Sources */,
+				7031CB9B20B6ABA200C59561 /* ZTToastView.m in Sources */,
 				706984CD1FA8203000193388 /* NSObject+ZTSwzzling.m in Sources */,
 				70B070031FDAEAAB0083B87B /* ZTUtil.m in Sources */,
 				703AC0AC1FA2C6C500C9AD42 /* ZTAnimationUtil.m in Sources */,
 				700A59DD1FBEBE9800C6AA31 /* NSDate+ZTCategory.m in Sources */,
 				706984D01FA8228D00193388 /* UIViewController+ZTHook.m in Sources */,
 				703AC0811FA2BCDB00C9AD42 /* AppDelegate.m in Sources */,
+				7031CB9820B6A99D00C59561 /* ZTToast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +461,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -448,6 +469,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -477,7 +499,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -496,6 +518,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -503,6 +526,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
