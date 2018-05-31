@@ -17,18 +17,19 @@ Pod::Spec.new do |s|
 
 
   # HTTP
-   s.subspec 'Extension' do |ex|
+  s.subspec 'Extension' do |ex|
     ex.source_files = 'ZTExtension/HZExtension/**.*' 
     ex.dependency 'MBProgressHUD', '~> 1.0.0'
 
-   end
+  end
 
-   # Serializer
-   s.subspec 'Toast' do |toast|
+  # Serializer
+  s.subspec 'Toast' do |toast|
 
     toast.source_files = 'ZTExtension/toast/**.*'
+    toast.dependency 'ZTExtension/Extension'
 
-   end
+  end
 
   # 提交命令
    # 语法验证
