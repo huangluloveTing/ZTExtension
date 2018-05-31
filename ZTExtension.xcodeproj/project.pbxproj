@@ -173,6 +173,7 @@
 		703AC07E1FA2BCDB00C9AD42 /* ZTExtension */ = {
 			isa = PBXGroup;
 			children = (
+				70B69A3920BFF3D7008AC8DC /* toast */,
 				703AC0A91FA2C6A000C9AD42 /* AnimationUtil */,
 				703AC0951FA2BCE700C9AD42 /* HZExtension */,
 				703AC07F1FA2BCDB00C9AD42 /* AppDelegate.h */,
@@ -239,14 +240,7 @@
 				70B06FFF1FDAE8220083B87B /* UIView+Radius.m */,
 				70B070011FDAEAAB0083B87B /* ZTUtil.h */,
 				70B070021FDAEAAB0083B87B /* ZTUtil.m */,
-				7031CB9D20B7059F00C59561 /* ZTToast.h */,
-				7031CB9720B6A99D00C59561 /* ZTToast.m */,
 				707CFA3F1FE128CC0086E60B /* ZTExtension.bundle */,
-				7031CB9920B6ABA200C59561 /* ZTToastView.h */,
-				7031CB9A20B6ABA200C59561 /* ZTToastView.m */,
-				7031CB9C20B6FBFA00C59561 /* ZTToastHeader.h */,
-				7031CB9E20B705C200C59561 /* ZTToastManager.h */,
-				7031CB9F20B705C200C59561 /* ZTToastManager.m */,
 			);
 			path = HZExtension;
 			sourceTree = "<group>";
@@ -261,6 +255,20 @@
 				703AC0AE1FA2C6E400C9AD42 /* ZTAnimation.m */,
 			);
 			path = AnimationUtil;
+			sourceTree = "<group>";
+		};
+		70B69A3920BFF3D7008AC8DC /* toast */ = {
+			isa = PBXGroup;
+			children = (
+				7031CB9D20B7059F00C59561 /* ZTToast.h */,
+				7031CB9720B6A99D00C59561 /* ZTToast.m */,
+				7031CB9920B6ABA200C59561 /* ZTToastView.h */,
+				7031CB9A20B6ABA200C59561 /* ZTToastView.m */,
+				7031CB9C20B6FBFA00C59561 /* ZTToastHeader.h */,
+				7031CB9E20B705C200C59561 /* ZTToastManager.h */,
+				7031CB9F20B705C200C59561 /* ZTToastManager.m */,
+			);
+			path = toast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
