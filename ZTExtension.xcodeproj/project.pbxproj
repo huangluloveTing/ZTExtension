@@ -12,6 +12,11 @@
 		700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 700A59DF1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m */; };
 		701F1AEC1FF1D98900F707D4 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */; };
 		701F1AED1FF1D98900F707D4 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */; };
+		702644B020C0EC2E008F4CA6 /* ZTImgScannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644AF20C0EC2E008F4CA6 /* ZTImgScannerManager.m */; };
+		702644B520C0ECB5008F4CA6 /* ZTImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644B420C0ECB5008F4CA6 /* ZTImageItem.m */; };
+		702644B820C0EEFD008F4CA6 /* ZTScannerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644B720C0EEFD008F4CA6 /* ZTScannerItem.m */; };
+		702644C020C0F5B5008F4CA6 /* ZTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644BF20C0F5B5008F4CA6 /* ZTCircleView.m */; };
+		702644C320C110E9008F4CA6 /* ZTImageScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644C220C110E9008F4CA6 /* ZTImageScannerView.m */; };
 		7031CB9820B6A99D00C59561 /* ZTToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9720B6A99D00C59561 /* ZTToast.m */; };
 		7031CB9B20B6ABA200C59561 /* ZTToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9A20B6ABA200C59561 /* ZTToastView.m */; };
 		7031CBA020B705C200C59561 /* ZTToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9F20B705C200C59561 /* ZTToastManager.m */; };
@@ -55,6 +60,17 @@
 		701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
 		701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		701F1AEB1FF1D98900F707D4 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
+		702644AE20C0EC2E008F4CA6 /* ZTImgScannerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTImgScannerManager.h; sourceTree = "<group>"; };
+		702644AF20C0EC2E008F4CA6 /* ZTImgScannerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTImgScannerManager.m; sourceTree = "<group>"; };
+		702644B220C0EC91008F4CA6 /* ImageHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageHeader.h; sourceTree = "<group>"; };
+		702644B320C0ECB5008F4CA6 /* ZTImageItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTImageItem.h; sourceTree = "<group>"; };
+		702644B420C0ECB5008F4CA6 /* ZTImageItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTImageItem.m; sourceTree = "<group>"; };
+		702644B620C0EEFD008F4CA6 /* ZTScannerItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTScannerItem.h; sourceTree = "<group>"; };
+		702644B720C0EEFD008F4CA6 /* ZTScannerItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTScannerItem.m; sourceTree = "<group>"; };
+		702644BE20C0F5B5008F4CA6 /* ZTCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTCircleView.h; sourceTree = "<group>"; };
+		702644BF20C0F5B5008F4CA6 /* ZTCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTCircleView.m; sourceTree = "<group>"; };
+		702644C120C110E9008F4CA6 /* ZTImageScannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTImageScannerView.h; sourceTree = "<group>"; };
+		702644C220C110E9008F4CA6 /* ZTImageScannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTImageScannerView.m; sourceTree = "<group>"; };
 		7031CB9720B6A99D00C59561 /* ZTToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTToast.m; sourceTree = "<group>"; };
 		7031CB9920B6ABA200C59561 /* ZTToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTToastView.h; sourceTree = "<group>"; };
 		7031CB9A20B6ABA200C59561 /* ZTToastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTToastView.m; sourceTree = "<group>"; };
@@ -152,6 +168,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		702644AD20C0EBC9008F4CA6 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				702644AE20C0EC2E008F4CA6 /* ZTImgScannerManager.h */,
+				702644AF20C0EC2E008F4CA6 /* ZTImgScannerManager.m */,
+				702644B220C0EC91008F4CA6 /* ImageHeader.h */,
+				702644B320C0ECB5008F4CA6 /* ZTImageItem.h */,
+				702644B420C0ECB5008F4CA6 /* ZTImageItem.m */,
+				702644B620C0EEFD008F4CA6 /* ZTScannerItem.h */,
+				702644B720C0EEFD008F4CA6 /* ZTScannerItem.m */,
+				702644BE20C0F5B5008F4CA6 /* ZTCircleView.h */,
+				702644BF20C0F5B5008F4CA6 /* ZTCircleView.m */,
+				702644C120C110E9008F4CA6 /* ZTImageScannerView.h */,
+				702644C220C110E9008F4CA6 /* ZTImageScannerView.m */,
+			);
+			path = Pictures;
+			sourceTree = "<group>";
+		};
 		703AC0731FA2BCDB00C9AD42 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +207,7 @@
 		703AC07E1FA2BCDB00C9AD42 /* ZTExtension */ = {
 			isa = PBXGroup;
 			children = (
+				702644AD20C0EBC9008F4CA6 /* Pictures */,
 				70B69A3920BFF3D7008AC8DC /* toast */,
 				703AC0A91FA2C6A000C9AD42 /* AnimationUtil */,
 				703AC0951FA2BCE700C9AD42 /* HZExtension */,
@@ -399,10 +434,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702644B020C0EC2E008F4CA6 /* ZTImgScannerManager.m in Sources */,
 				703AC0A51FA2BCE700C9AD42 /* UIBarButtonItem+Extension.m in Sources */,
 				703AC0A41FA2BCE700C9AD42 /* NSDictionary+Extension.m in Sources */,
 				703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */,
 				70E04CB61FBEB7B000EEB106 /* UIResponder+ZTRouter.m in Sources */,
+				702644C320C110E9008F4CA6 /* ZTImageScannerView.m in Sources */,
+				702644B520C0ECB5008F4CA6 /* ZTImageItem.m in Sources */,
+				702644B820C0EEFD008F4CA6 /* ZTScannerItem.m in Sources */,
 				703AC0AF1FA2C6E400C9AD42 /* ZTAnimation.m in Sources */,
 				703AC0A81FA2BCE700C9AD42 /* UIViewController+Extension.m in Sources */,
 				703AC08F1FA2BCDB00C9AD42 /* main.m in Sources */,
@@ -415,6 +454,7 @@
 				70E04CB01FBEB68A00EEB106 /* NSString+ZTRegex.m in Sources */,
 				7031CBA020B705C200C59561 /* ZTToastManager.m in Sources */,
 				70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */,
+				702644C020C0F5B5008F4CA6 /* ZTCircleView.m in Sources */,
 				700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */,
 				706984D31FA82AE300193388 /* ZTViewController.m in Sources */,
 				703AC0A61FA2BCE700C9AD42 /* UIControl+Extension.m in Sources */,
