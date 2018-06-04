@@ -10,7 +10,7 @@
 
 @implementation ZTOritationSupport
 
-- (void) saveCurrentWindowOrientation:(UIInterfaceOrientation)orientation {
++ (void) saveCurrentWindowOrientation:(UIInterfaceOrientation)orientation {
     switch (orientation) {
         case UIInterfaceOrientationLandscapeLeft:
             [[NSUserDefaults standardUserDefaults]setObject:@(Orientations_left) forKey:@"orientationLandscape"];
@@ -29,7 +29,7 @@
     }
 }
 
-- (UIInterfaceOrientationMask) currentWindowOrientation {
++ (UIInterfaceOrientationMask) currentWindowOrientation {
     UIInterfaceOrientationMask  orientationMask  = UIInterfaceOrientationMaskPortrait;
     NSNumber *orientationnum  =[[NSUserDefaults standardUserDefaults]objectForKey:@"orientationLandscape"];
     
