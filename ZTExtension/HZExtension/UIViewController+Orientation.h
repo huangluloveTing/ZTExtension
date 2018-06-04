@@ -10,4 +10,6 @@
 
 @interface UIViewController (Orientation)
 
+- (void)setInterfaceOrientation:(UIInterfaceOrientation )orientation;
+
 @end
