@@ -18,6 +18,7 @@
 #import "ZTImageScannerView.h"
 #import "ZTImageItem.h"
 #import "ZTImgScannerManager.h"
+#import <ReactiveCocoa.h>
 
 @interface ViewController ()
 
@@ -27,7 +28,11 @@
 
 @property (nonatomic , strong) ZTCircleView *circleView;
 
+@property (nonatomic , strong) RACSignal *singal_a;
 
+@property (nonatomic , strong) RACSignal *singal_b;
+
+@property (nonatomic , strong) RACSignal *singal_c;
 
 @end
 
@@ -47,52 +52,38 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.singal_a = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [subscriber sendNext:@"singal a"];
+                sleep(1);
+                [subscriber sendNext:@"singal a next"];
+            });
+        });
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"singa dispose");
+        }];
+    }];
+    self.singal_b = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [subscriber sendNext:@"singal b"];
+//                [subscriber sendCompleted];
+            });
+        });
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"singb dispose");
+        }];
+    }];
     
-//    self.circleView = [ZTCircleView showInView:self.view];
-//    self.circleView.radius = 100;
-    UIButton *butt = [UIButton buttonWithType:UIButtonTypeCustom];
-    butt.frame = CGRectMake(0, 0, 200, 50);
-    [butt setTitle:@"tap " forState:UIControlStateNormal];
-    butt.center = CGPointMake(50, 300);
-    [butt addTarget:self action:@selector(tapbutton) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:butt];
-    butt.backgroundColor = [UIColor redColor];
-    
-    NSMutableArray *temp = [NSMutableArray array];
-    for (int i = 0 ; i < 6; i ++ ) {
-        ZTNetImageItem *item = [[ZTNetImageItem alloc] init];
-        item.des = @"sfalkhfakhfkal身份卡号客服哈洛克和福利卡号发货啦客户返利卡号咖啡哈伦裤回复啦咖啡哈伦裤回复啦发货啦开户费拉客户安理会发了客户发快了回复安抚哈伦裤回复拉客户方发哈老客户法力回复安抚哈伦裤合法来看发哈楼回复啦ahflahf";
-        item.imgUrl = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527856728896&di=4ab77a116883d4f2c893e18035c803d7&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Ffc1f4134970a304eed77712edbc8a786c8175c89.jpg";
-        item.currentIndex = i;
-        item.total = 5;
-        [temp addObject:item];
-        switch (i) {
-            case 0:
-                item.imgUrl = image1;
-                break;
-                
-            case 1:
-                item.imgUrl = image2;
-                break;
-                
-            case 2:
-                item.imgUrl = image3;
-                break;
-                
-            case 3:
-                item.imgUrl = image4;
-                break;
-                
-            case 4:
-                item.imgUrl = image5;
-                break;
-                
-            default:
-                break;
-        }
-    }
-    
-    _imgs = temp;
+    self.singal_c = [_singal_a throttle:2];
+//    [_singal_c subscribeNext:^(id x) {
+//        ");
+//    }];
+//    self.singal_c = [_singal_a combineLatestWith:_singal_b];
+    [_singal_c subscribeNext:^(id x) {
+        NSLog(@"合并信息 ： %@" , x);
+    }];
 }
 
 - (void) tapbutton {

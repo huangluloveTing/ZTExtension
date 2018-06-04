@@ -12,6 +12,8 @@
 		700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 700A59DF1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m */; };
 		701F1AEC1FF1D98900F707D4 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */; };
 		701F1AED1FF1D98900F707D4 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */; };
+		702393B720C4C97A00E4AB4D /* ZTViewController+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 702393B620C4C97A00E4AB4D /* ZTViewController+Orientation.m */; };
+		702393BA20C4C9DA00E4AB4D /* ZTOritationSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 702393B920C4C9DA00E4AB4D /* ZTOritationSupport.m */; };
 		702644B020C0EC2E008F4CA6 /* ZTImgScannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644AF20C0EC2E008F4CA6 /* ZTImgScannerManager.m */; };
 		702644B520C0ECB5008F4CA6 /* ZTImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644B420C0ECB5008F4CA6 /* ZTImageItem.m */; };
 		702644B820C0EEFD008F4CA6 /* ZTScannerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644B720C0EEFD008F4CA6 /* ZTScannerItem.m */; };
@@ -60,6 +62,10 @@
 		701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
 		701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		701F1AEB1FF1D98900F707D4 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
+		702393B520C4C97A00E4AB4D /* ZTViewController+Orientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZTViewController+Orientation.h"; sourceTree = "<group>"; };
+		702393B620C4C97A00E4AB4D /* ZTViewController+Orientation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZTViewController+Orientation.m"; sourceTree = "<group>"; };
+		702393B820C4C9DA00E4AB4D /* ZTOritationSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTOritationSupport.h; sourceTree = "<group>"; };
+		702393B920C4C9DA00E4AB4D /* ZTOritationSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTOritationSupport.m; sourceTree = "<group>"; };
 		702644AE20C0EC2E008F4CA6 /* ZTImgScannerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTImgScannerManager.h; sourceTree = "<group>"; };
 		702644AF20C0EC2E008F4CA6 /* ZTImgScannerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTImgScannerManager.m; sourceTree = "<group>"; };
 		702644B220C0EC91008F4CA6 /* ImageHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageHeader.h; sourceTree = "<group>"; };
@@ -276,6 +282,10 @@
 				70B070011FDAEAAB0083B87B /* ZTUtil.h */,
 				70B070021FDAEAAB0083B87B /* ZTUtil.m */,
 				707CFA3F1FE128CC0086E60B /* ZTExtension.bundle */,
+				702393B520C4C97A00E4AB4D /* ZTViewController+Orientation.h */,
+				702393B620C4C97A00E4AB4D /* ZTViewController+Orientation.m */,
+				702393B820C4C9DA00E4AB4D /* ZTOritationSupport.h */,
+				702393B920C4C9DA00E4AB4D /* ZTOritationSupport.m */,
 			);
 			path = HZExtension;
 			sourceTree = "<group>";
@@ -452,6 +462,8 @@
 				70725A951FD4F14400CF7117 /* ZTHUDContentView.m in Sources */,
 				70725A921FD4ED0200CF7117 /* ZTHUD.m in Sources */,
 				70E04CB01FBEB68A00EEB106 /* NSString+ZTRegex.m in Sources */,
+				702393B720C4C97A00E4AB4D /* ZTViewController+Orientation.m in Sources */,
+				702393BA20C4C9DA00E4AB4D /* ZTOritationSupport.m in Sources */,
 				7031CBA020B705C200C59561 /* ZTToastManager.m in Sources */,
 				70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */,
 				702644C020C0F5B5008F4CA6 /* ZTCircleView.m in Sources */,
