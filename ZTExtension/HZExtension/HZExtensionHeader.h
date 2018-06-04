@@ -16,7 +16,7 @@
 #import "UIBarButtonItem+Extension.h"
 #import "UIView+ZTExtension.h"
 #import "UIViewController+ZTHook.h"
-#import "ZTViewController+Orientation.h"
+#import "UIViewController+Orientation.h"
 
 // 避免宏循环引用
 #ifndef LLWeakObj

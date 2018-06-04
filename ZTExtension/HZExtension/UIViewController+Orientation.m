@@ -1,20 +1,18 @@
 //
-//  ZTViewController+Orientation.m
+//  UIViewController+Orientation.m
 //  ZTExtension
 //
 //  Created by 黄露 on 2018/6/4.
 //  Copyright © 2018年 huanglu. All rights reserved.
 //
 
-#import "ZTViewController+Orientation.h"
+#import "UIViewController+Orientation.h"
 #import "ZTOritationSupport.h"
 
 
-@implementation ZTViewController (Orientation)
+@implementation UIViewController (Orientation)
 
 #pragma mark setOrientations
-
-
 /**第三步:base界面旋转开关控制,指定界面重新开关控制**/
 - (BOOL)shouldAutorotate {
     return NO;
@@ -41,7 +39,7 @@
                 [[UIApplication sharedApplication].delegate application:[UIApplication sharedApplication] supportedInterfaceOrientationsForWindow:self.view.window];
             }
             else {
-//                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
+                //                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
             }
             [self interfaceOrientation:orientation];
             break;
@@ -51,7 +49,7 @@
                 [[UIApplication sharedApplication].delegate application:[UIApplication sharedApplication] supportedInterfaceOrientationsForWindow:self.view.window];
             }
             else {
-//                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
+                //                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
             }
             [self interfaceOrientation:orientation];
             break;
@@ -61,7 +59,7 @@
                 [[UIApplication sharedApplication].delegate application:[UIApplication sharedApplication] supportedInterfaceOrientationsForWindow:self.view.window];
             }
             else {
-//                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
+                //                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
             }
             [self interfaceOrientation:orientation];
             break;
@@ -83,5 +81,4 @@
         [invocation invoke];
     }
 }
-
 @end

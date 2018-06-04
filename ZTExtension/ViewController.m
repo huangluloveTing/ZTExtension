@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "HZExtensionHeader.h"
 #import "UIView+ZTExtension.h"
-#import "ZTViewController.h"
 #import "ZTHUD.h"
 #import "ZTUtil.h"
 #import "ZTToastManager.h"
