@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+ZTHook.h"
-#import "HZExtensionHeader.h"
+#import "NSObject+ZTSwzzling.h"
 #import "NSObject+ZTSwzzling.h"
 
 
@@ -27,28 +27,28 @@
 
 - (void) ZT_viewDidLoad:(BOOL) animation {
     [self ZT_viewDidLoad:animation];
-    ZTLog(@"ZT_viewDidLoad");
+//    ZTLog(@"ZT_viewDidLoad");
     NSLog(@"__function:%s , __line:%c , __class:%@ \n" , __FUNCTION__ , __LINE__ , NSStringFromClass([self class]));
 }
 
 - (void) ZT_viewWillAppear:(BOOL)animation {
     [self ZT_viewWillAppear:animation];
-    ZTLog(@"ZT_viewWillAppear");
+//    ZTLog(@"ZT_viewWillAppear");
 }
 
 - (void) ZT_viewWillDisappear:(BOOL) animation {
     [self ZT_viewWillDisappear:animation];
-    ZTLog(@"ZT_viewWillDisappear");
+//    ZTLog(@"ZT_viewWillDisappear");
 }
 
 - (void) ZT_viewDidAppear:(BOOL)animation {
     [self ZT_viewDidAppear:animation];
-    ZTLog(@"ZT_viewDidAppear");
+//    ZTLog(@"ZT_viewDidAppear");
 }
 
 - (void) ZT_viewDidDisappear:(BOOL)animation {
     [self ZT_viewDidDisappear:animation];
-    ZTLog(@"ZT_viewDidDisappear");
+//    ZTLog(@"ZT_viewDidDisappear");
 }
 
 @end
