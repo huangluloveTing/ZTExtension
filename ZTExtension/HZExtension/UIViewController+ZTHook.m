@@ -8,7 +8,6 @@
 
 #import "UIViewController+ZTHook.h"
 #import "NSObject+ZTSwzzling.h"
-#import "NSObject+ZTSwzzling.h"
 
 
 @implementation UIViewController (ZTHook)
