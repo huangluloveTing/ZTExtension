@@ -13,7 +13,7 @@
 @implementation ZTImgScannerManager
 
 + (void) showLocalImages:(NSArray<ZTLocalImageItem *> *)imgs currentIndex:(NSInteger)index {
-    
+    NSLog(@"暂未实现");
 }
 
 + (void) showNetImages:(NSArray <ZTNetImageItem *> *)imgs currentIndex:(NSInteger)index{
