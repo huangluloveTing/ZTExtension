@@ -281,11 +281,11 @@
 				70B06FFF1FDAE8220083B87B /* UIView+Radius.m */,
 				70B070011FDAEAAB0083B87B /* ZTUtil.h */,
 				70B070021FDAEAAB0083B87B /* ZTUtil.m */,
-				707CFA3F1FE128CC0086E60B /* ZTExtension.bundle */,
 				702393B520C4C97A00E4AB4D /* ZTViewController+Orientation.h */,
 				702393B620C4C97A00E4AB4D /* ZTViewController+Orientation.m */,
 				702393B820C4C9DA00E4AB4D /* ZTOritationSupport.h */,
 				702393B920C4C9DA00E4AB4D /* ZTOritationSupport.m */,
+				707CFA3F1FE128CC0086E60B /* ZTExtension.bundle */,
 			);
 			path = HZExtension;
 			sourceTree = "<group>";

@@ -52,38 +52,38 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.singal_a = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [subscriber sendNext:@"singal a"];
-                sleep(1);
-                [subscriber sendNext:@"singal a next"];
-            });
-        });
-        return [RACDisposable disposableWithBlock:^{
-            NSLog(@"singa dispose");
-        }];
-    }];
-    self.singal_b = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [subscriber sendNext:@"singal b"];
-//                [subscriber sendCompleted];
-            });
-        });
-        return [RACDisposable disposableWithBlock:^{
-            NSLog(@"singb dispose");
-        }];
-    }];
-    
-    self.singal_c = [_singal_a throttle:2];
-//    [_singal_c subscribeNext:^(id x) {
-//        ");
+//    self.singal_a = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                [subscriber sendNext:@"singal a"];
+//                sleep(1);
+//                [subscriber sendNext:@"singal a next"];
+//            });
+//        });
+//        return [RACDisposable disposableWithBlock:^{
+//            NSLog(@"singa dispose");
+//        }];
 //    }];
-//    self.singal_c = [_singal_a combineLatestWith:_singal_b];
-    [_singal_c subscribeNext:^(id x) {
-        NSLog(@"合并信息 ： %@" , x);
-    }];
+//    self.singal_b = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                [subscriber sendNext:@"singal b"];
+////                [subscriber sendCompleted];
+//            });
+//        });
+//        return [RACDisposable disposableWithBlock:^{
+//            NSLog(@"singb dispose");
+//        }];
+//    }];
+//    
+//    self.singal_c = [_singal_a throttle:2];
+////    [_singal_c subscribeNext:^(id x) {
+////        ");
+////    }];
+////    self.singal_c = [_singal_a combineLatestWith:_singal_b];
+//    [_singal_c subscribeNext:^(id x) {
+//        NSLog(@"合并信息 ： %@" , x);
+//    }];
 }
 
 - (void) tapbutton {
