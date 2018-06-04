@@ -14,7 +14,7 @@
 		701F1AED1FF1D98900F707D4 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */; };
 		702393BA20C4C9DA00E4AB4D /* ZTOritationSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 702393B920C4C9DA00E4AB4D /* ZTOritationSupport.m */; };
 		702393BD20C4DD1A00E4AB4D /* UIViewController+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 702393BC20C4DD1A00E4AB4D /* UIViewController+Orientation.m */; };
-		702393C020C4E23600E4AB4D /* UIViewController+ZTHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 702393BF20C4E23600E4AB4D /* UIViewController+ZTHook.m */; };
+		702393C920C4E5CC00E4AB4D /* UIViewCotroller+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 702393C820C4E5CC00E4AB4D /* UIViewCotroller+Hook.m */; };
 		702644B020C0EC2E008F4CA6 /* ZTImgScannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644AF20C0EC2E008F4CA6 /* ZTImgScannerManager.m */; };
 		702644B520C0ECB5008F4CA6 /* ZTImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644B420C0ECB5008F4CA6 /* ZTImageItem.m */; };
 		702644B820C0EEFD008F4CA6 /* ZTScannerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644B720C0EEFD008F4CA6 /* ZTScannerItem.m */; };
@@ -65,8 +65,8 @@
 		702393B920C4C9DA00E4AB4D /* ZTOritationSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTOritationSupport.m; sourceTree = "<group>"; };
 		702393BB20C4DD1A00E4AB4D /* UIViewController+Orientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Orientation.h"; sourceTree = "<group>"; };
 		702393BC20C4DD1A00E4AB4D /* UIViewController+Orientation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Orientation.m"; sourceTree = "<group>"; };
-		702393BE20C4E23600E4AB4D /* UIViewController+ZTHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZTHook.h"; sourceTree = "<group>"; };
-		702393BF20C4E23600E4AB4D /* UIViewController+ZTHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZTHook.m"; sourceTree = "<group>"; };
+		702393C720C4E5CC00E4AB4D /* UIViewCotroller+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewCotroller+Hook.h"; sourceTree = "<group>"; };
+		702393C820C4E5CC00E4AB4D /* UIViewCotroller+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewCotroller+Hook.m"; sourceTree = "<group>"; };
 		702644AE20C0EC2E008F4CA6 /* ZTImgScannerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTImgScannerManager.h; sourceTree = "<group>"; };
 		702644AF20C0EC2E008F4CA6 /* ZTImgScannerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTImgScannerManager.m; sourceTree = "<group>"; };
 		702644B220C0EC91008F4CA6 /* ImageHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageHeader.h; sourceTree = "<group>"; };
@@ -279,8 +279,8 @@
 				707CFA3F1FE128CC0086E60B /* ZTExtension.bundle */,
 				702393BB20C4DD1A00E4AB4D /* UIViewController+Orientation.h */,
 				702393BC20C4DD1A00E4AB4D /* UIViewController+Orientation.m */,
-				702393BE20C4E23600E4AB4D /* UIViewController+ZTHook.h */,
-				702393BF20C4E23600E4AB4D /* UIViewController+ZTHook.m */,
+				702393C720C4E5CC00E4AB4D /* UIViewCotroller+Hook.h */,
+				702393C820C4E5CC00E4AB4D /* UIViewCotroller+Hook.m */,
 			);
 			path = HZExtension;
 			sourceTree = "<group>";
@@ -444,6 +444,7 @@
 				703AC0A41FA2BCE700C9AD42 /* NSDictionary+Extension.m in Sources */,
 				703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */,
 				70E04CB61FBEB7B000EEB106 /* UIResponder+ZTRouter.m in Sources */,
+				702393C920C4E5CC00E4AB4D /* UIViewCotroller+Hook.m in Sources */,
 				702644C320C110E9008F4CA6 /* ZTImageScannerView.m in Sources */,
 				702644B520C0ECB5008F4CA6 /* ZTImageItem.m in Sources */,
 				702393BD20C4DD1A00E4AB4D /* UIViewController+Orientation.m in Sources */,
@@ -458,7 +459,6 @@
 				70725A951FD4F14400CF7117 /* ZTHUDContentView.m in Sources */,
 				70725A921FD4ED0200CF7117 /* ZTHUD.m in Sources */,
 				70E04CB01FBEB68A00EEB106 /* NSString+ZTRegex.m in Sources */,
-				702393C020C4E23600E4AB4D /* UIViewController+ZTHook.m in Sources */,
 				702393BA20C4C9DA00E4AB4D /* ZTOritationSupport.m in Sources */,
 				7031CBA020B705C200C59561 /* ZTToastManager.m in Sources */,
 				70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */,

@@ -15,7 +15,7 @@
 #import "UIControl+Extension.h"
 #import "UIBarButtonItem+Extension.h"
 #import "UIView+ZTExtension.h"
-#import "UIViewController+ZTHook.h"
+#import "UIViewCotroller+Hook.h"
 #import "UIViewController+Orientation.h"
 
 // 避免宏循环引用

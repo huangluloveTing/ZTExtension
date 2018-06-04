@@ -1,5 +1,5 @@
 //
-//  UIViewController+ZTHook.h
+//  UIView+Hook.h
 //  ZTExtension
 //
 //  Created by 黄露 on 2018/6/4.
@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface UIViewController (ZTHook)
+@interface UIViewController (Hook)
 
 - (void) ZT_viewDidLoad:(BOOL) animation;
 
 - (void) ZT_viewWillAppear:(BOOL)animation;
 
-- (void) ZT_viewWillDisappear:(BOOL) animation;
+- (void) ZT_viewWillDisappear:(BOOL) animation ;
 
-- (void) ZT_viewDidAppear:(BOOL)animation;
+- (void) ZT_viewDidAppear:(BOOL)animation ;
 
 - (void) ZT_viewDidDisappear:(BOOL)animation;
+
 @end
