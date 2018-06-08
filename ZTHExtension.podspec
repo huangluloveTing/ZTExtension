@@ -27,6 +27,8 @@ Pod::Spec.new do |s|
   s.subspec 'Toast' do |toast|
     toast.source_files = 'ZTExtension/toast/**.*'
     toast.dependency 'ZTHExtension/Extension'
+    toast.dependency 'SDWebImage'
+    toast.dependency 'SDWebImage/GIF'
 
   end
 
