@@ -15,4 +15,6 @@ typedef NS_ENUM(NSInteger ,ZTToastPosition) {
     ZTToastPosition_Bottom
 };
 
+#define IP_WIDTH_CONST ([UIScreen mainScreen].bounds.size.width)
+
 #endif /* ZTToastHeader_h */

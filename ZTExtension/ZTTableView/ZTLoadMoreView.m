@@ -32,7 +32,7 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
         self.link = [CADisplayLink displayLinkWithTarget:self selector:@selector(startDraw)];
-        self.link.preferredFramesPerSecond = 20;
+        self.link.frameInterval = 2;
         [self.link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
         self.link.paused = YES;
         self.shakeRate = 0.2;
@@ -136,7 +136,9 @@
 
 - (void) stopShake {
     if (![self.link isPaused]) {
-        [self.link setPaused:YES];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.link setPaused:YES];
+        });
     }
 }
 
