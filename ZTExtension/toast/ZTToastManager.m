@@ -8,7 +8,14 @@
 
 #import "ZTToastManager.h"
 #import "ZTToast.h"
+#import "ZTGifLoadingView.h"
 
+static NSData * ylCurrentGifLoadingImage() {
+   NSString *gifPath = [[NSBundle mainBundle] pathForResource:@"ZTExtension" ofType:@"bundle"];
+    NSString *imgPath= [NSString stringWithFormat:@"%@/yl_loading.gif" , gifPath];
+    NSData *data = [NSData dataWithContentsOfFile:imgPath];
+    return data;
+}
 
 static UIImage* bundleImage(NSString *imageName) {
     NSString * bundlePath = [[ NSBundle mainBundle] pathForResource: @"ZTExtension" ofType :@"bundle"];
@@ -59,6 +66,30 @@ static UIImage* bundleImage(NSString *imageName) {
 }
 + (void) warningToastAtBottomWithTitle:(NSString *)title duration:(NSTimeInterval)duration{
     [self warningToastWithTitle:title duration:duration position:ZTToastPosition_Bottom];
+}
+
+#pragma mark - loading
++ (void) showLoadingTitle:(NSString *)title {
+    ZTGifLoadingView *gifView = [ZTGifLoadingView shared];
+    gifView.gifImageData = ylCurrentGifLoadingImage();
+    gifView.text = title;
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    [gifView showOnView:window];
+}
++ (void) showLoadingOnView:(UIView *)targetView Title:(NSString *)title {
+    ZTGifLoadingView *gifView = [ZTGifLoadingView loadingAtView:targetView];
+    gifView.gifImageData = ylCurrentGifLoadingImage();
+    gifView.text = title;
+}
++ (void) hiddenWindowLoading {
+    for (UIView *subView in [[UIApplication sharedApplication].keyWindow subviews]) {
+        if ([subView isKindOfClass:[ZTGifLoadingView class]]) {
+            [subView removeFromSuperview];
+        }
+    }
+}
++ (void) hiddenLoadingAtView:(UIView *)view {
+    [[ZTGifLoadingView shared] hiddeAtView:view];
 }
 
 @end

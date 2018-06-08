@@ -17,9 +17,13 @@
 #import "ZTImageScannerView.h"
 #import "ZTImageItem.h"
 #import "ZTImgScannerManager.h"
-#import <ReactiveCocoa.h>
+#import <FLAnimatedImageView.h>
+#import <FLAnimatedImage.h>
+#import "ZTGifLoadingView.h"
+#import "ZTLoadMoreView.h"
+#import "ZTTableView.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource>
 
 @property (nonatomic , strong) UIView *redView;
 
@@ -27,11 +31,13 @@
 
 @property (nonatomic , strong) ZTCircleView *circleView;
 
-@property (nonatomic , strong) RACSignal *singal_a;
+//@property (nonatomic , strong) RACSignal *singal_a;
+//
+//@property (nonatomic , strong) RACSignal *singal_b;
+//
+//@property (nonatomic , strong) RACSignal *singal_c;
 
-@property (nonatomic , strong) RACSignal *singal_b;
-
-@property (nonatomic , strong) RACSignal *singal_c;
+@property (nonatomic , strong) FLAnimatedImageView *imageView;
 
 @end
 
@@ -47,10 +53,22 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 
 @implementation ViewController {
     NSArray *_imgs;
+    ZTTableView *tableve;
+    int i;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//
+//    self.view.backgroundColor = [UIColor yellowColor];
+////    self.imageView = [[FLAnimatedImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+////    self.imageView.center = self.view.center;
+//    NSData *gifData = [NSData dataWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"loading" withExtension:@"gif"]];
+//    [ZTToastManager showLoadingTitle:@"jiazaizhong"];
+//    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:gifData];
+//    self.imageView.backgroundColor = [UIColor yellowColor];
+//    self.imageView.animatedImage = image;
+//    [self.view addSubview:self.imageView];
 //    self.singal_a = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -83,10 +101,39 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 //    [_singal_c subscribeNext:^(id x) {
 //        NSLog(@"合并信息 ： %@" , x);
 //    }];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(50, 400, 100, 30);
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(tapbutton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+//    ZTLoadMoreView *moreView = [[ZTLoadMoreView alloc] initWithFrame:CGRectMake(100, 100, 100 , 30)];
+//    moreView.circleRadius = 10;
+//    moreView.jump = 10;
+//    [self.view addSubview:moreView];
+//    [moreView startShake];
+    tableve = [[ZTTableView alloc] initWithFrame:CGRectMake(0, 70, CGRectGetWidth(self.view.frame), 300)];
+    [self.view addSubview:tableve];
+    
+    tableve.dataSource = self;
+    tableve.tableFooterView = [[UIView alloc] init];
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell.textLabel.text = @"hell0";
+    }
+    return cell;
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
 }
 
 - (void) tapbutton {
-    [ZTImgScannerManager showNetImages:_imgs currentIndex:3];
+    
 }
 
 - (UIView *)redView {

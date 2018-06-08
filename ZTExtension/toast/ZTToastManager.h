@@ -28,4 +28,10 @@
 + (void) warningToastAtMiddleWithTitle:(NSString *)title duration:(NSTimeInterval)duration;
 + (void) warningToastAtBottomWithTitle:(NSString *)title duration:(NSTimeInterval)duration;
 
+#pragma mark - loading
++ (void) showLoadingTitle:(NSString *)title;    //全局loading，显示在window上，不可点击
++ (void) showLoadingOnView:(UIView *)targetView Title:(NSString *)title; //显示到对应得View上面
++ (void) hiddenLoadingAtView:(UIView *)view;
++ (void) hiddenWindowLoading;
+
 @end

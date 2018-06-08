@@ -20,6 +20,10 @@
 		702644B820C0EEFD008F4CA6 /* ZTScannerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644B720C0EEFD008F4CA6 /* ZTScannerItem.m */; };
 		702644C020C0F5B5008F4CA6 /* ZTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644BF20C0F5B5008F4CA6 /* ZTCircleView.m */; };
 		702644C320C110E9008F4CA6 /* ZTImageScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702644C220C110E9008F4CA6 /* ZTImageScannerView.m */; };
+		702AFD6F20CA1903006105A4 /* ZTTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702AFD6E20CA1903006105A4 /* ZTTableView.m */; };
+		702AFD7220CA193F006105A4 /* ZTLoadMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702AFD7120CA193F006105A4 /* ZTLoadMoreView.m */; };
+		702AFD7520CA2D92006105A4 /* ZTRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 702AFD7420CA2D92006105A4 /* ZTRefreshHeader.m */; };
+		702AFD7820CA4649006105A4 /* ZTRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 702AFD7720CA4649006105A4 /* ZTRefreshFooter.m */; };
 		7031CB9820B6A99D00C59561 /* ZTToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9720B6A99D00C59561 /* ZTToast.m */; };
 		7031CB9B20B6ABA200C59561 /* ZTToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9A20B6ABA200C59561 /* ZTToastView.m */; };
 		7031CBA020B705C200C59561 /* ZTToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9F20B705C200C59561 /* ZTToastManager.m */; };
@@ -37,6 +41,8 @@
 		703AC0A81FA2BCE700C9AD42 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0A21FA2BCE700C9AD42 /* UIViewController+Extension.m */; };
 		703AC0AC1FA2C6C500C9AD42 /* ZTAnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0AB1FA2C6C500C9AD42 /* ZTAnimationUtil.m */; };
 		703AC0AF1FA2C6E400C9AD42 /* ZTAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0AE1FA2C6E400C9AD42 /* ZTAnimation.m */; };
+		706948A020C927C500D9DAA2 /* ZTGifLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7069489F20C927C500D9DAA2 /* ZTGifLoadingView.m */; };
+		706948A220C92AAF00D9DAA2 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 706948A120C92AAF00D9DAA2 /* loading.gif */; };
 		706984CD1FA8203000193388 /* NSObject+ZTSwzzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 706984CC1FA8203000193388 /* NSObject+ZTSwzzling.m */; };
 		70725A921FD4ED0200CF7117 /* ZTHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70725A911FD4ED0200CF7117 /* ZTHUD.m */; };
 		70725A951FD4F14400CF7117 /* ZTHUDContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70725A941FD4F14400CF7117 /* ZTHUDContentView.m */; };
@@ -78,6 +84,15 @@
 		702644BF20C0F5B5008F4CA6 /* ZTCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTCircleView.m; sourceTree = "<group>"; };
 		702644C120C110E9008F4CA6 /* ZTImageScannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTImageScannerView.h; sourceTree = "<group>"; };
 		702644C220C110E9008F4CA6 /* ZTImageScannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTImageScannerView.m; sourceTree = "<group>"; };
+		702AFD6D20CA1903006105A4 /* ZTTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTTableView.h; sourceTree = "<group>"; };
+		702AFD6E20CA1903006105A4 /* ZTTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTTableView.m; sourceTree = "<group>"; };
+		702AFD7020CA193F006105A4 /* ZTLoadMoreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTLoadMoreView.h; sourceTree = "<group>"; };
+		702AFD7120CA193F006105A4 /* ZTLoadMoreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTLoadMoreView.m; sourceTree = "<group>"; };
+		702AFD7320CA2D92006105A4 /* ZTRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTRefreshHeader.h; sourceTree = "<group>"; };
+		702AFD7420CA2D92006105A4 /* ZTRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTRefreshHeader.m; sourceTree = "<group>"; };
+		702AFD7620CA4649006105A4 /* ZTRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTRefreshFooter.h; sourceTree = "<group>"; };
+		702AFD7720CA4649006105A4 /* ZTRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTRefreshFooter.m; sourceTree = "<group>"; };
+		702AFD7920CA4734006105A4 /* ZTRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTRefresh.h; sourceTree = "<group>"; };
 		7031CB9720B6A99D00C59561 /* ZTToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTToast.m; sourceTree = "<group>"; };
 		7031CB9920B6ABA200C59561 /* ZTToastView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTToastView.h; sourceTree = "<group>"; };
 		7031CB9A20B6ABA200C59561 /* ZTToastView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTToastView.m; sourceTree = "<group>"; };
@@ -113,6 +128,9 @@
 		703AC0AD1FA2C6E400C9AD42 /* ZTAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTAnimation.h; sourceTree = "<group>"; };
 		703AC0AE1FA2C6E400C9AD42 /* ZTAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTAnimation.m; sourceTree = "<group>"; };
 		703AC0B31FA2C71B00C9AD42 /* ZTAnimationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTAnimationHeader.h; sourceTree = "<group>"; };
+		7069489E20C927C500D9DAA2 /* ZTGifLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTGifLoadingView.h; sourceTree = "<group>"; };
+		7069489F20C927C500D9DAA2 /* ZTGifLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTGifLoadingView.m; sourceTree = "<group>"; };
+		706948A120C92AAF00D9DAA2 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		706984CB1FA8203000193388 /* NSObject+ZTSwzzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZTSwzzling.h"; sourceTree = "<group>"; };
 		706984CC1FA8203000193388 /* NSObject+ZTSwzzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZTSwzzling.m"; sourceTree = "<group>"; };
 		70725A901FD4ED0200CF7117 /* ZTHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTHUD.h; sourceTree = "<group>"; };
@@ -189,6 +207,22 @@
 			path = Pictures;
 			sourceTree = "<group>";
 		};
+		702AFD6C20CA18E2006105A4 /* ZTTableView */ = {
+			isa = PBXGroup;
+			children = (
+				702AFD6D20CA1903006105A4 /* ZTTableView.h */,
+				702AFD6E20CA1903006105A4 /* ZTTableView.m */,
+				702AFD7320CA2D92006105A4 /* ZTRefreshHeader.h */,
+				702AFD7420CA2D92006105A4 /* ZTRefreshHeader.m */,
+				702AFD7620CA4649006105A4 /* ZTRefreshFooter.h */,
+				702AFD7720CA4649006105A4 /* ZTRefreshFooter.m */,
+				702AFD7020CA193F006105A4 /* ZTLoadMoreView.h */,
+				702AFD7120CA193F006105A4 /* ZTLoadMoreView.m */,
+				702AFD7920CA4734006105A4 /* ZTRefresh.h */,
+			);
+			path = ZTTableView;
+			sourceTree = "<group>";
+		};
 		703AC0731FA2BCDB00C9AD42 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +244,7 @@
 		703AC07E1FA2BCDB00C9AD42 /* ZTExtension */ = {
 			isa = PBXGroup;
 			children = (
+				702AFD6C20CA18E2006105A4 /* ZTTableView */,
 				702644AD20C0EBC9008F4CA6 /* Pictures */,
 				70B69A3920BFF3D7008AC8DC /* toast */,
 				703AC0A91FA2C6A000C9AD42 /* AnimationUtil */,
@@ -219,6 +254,7 @@
 				703AC0821FA2BCDB00C9AD42 /* ViewController.h */,
 				703AC0831FA2BCDB00C9AD42 /* ViewController.m */,
 				70725A9A1FD50BC300CF7117 /* timg.gif */,
+				706948A120C92AAF00D9DAA2 /* loading.gif */,
 				703AC0851FA2BCDB00C9AD42 /* Main.storyboard */,
 				703AC0881FA2BCDB00C9AD42 /* Assets.xcassets */,
 				703AC08A1FA2BCDB00C9AD42 /* LaunchScreen.storyboard */,
@@ -307,6 +343,8 @@
 				7031CB9C20B6FBFA00C59561 /* ZTToastHeader.h */,
 				7031CB9E20B705C200C59561 /* ZTToastManager.h */,
 				7031CB9F20B705C200C59561 /* ZTToastManager.m */,
+				7069489E20C927C500D9DAA2 /* ZTGifLoadingView.h */,
+				7069489F20C927C500D9DAA2 /* ZTGifLoadingView.m */,
 			);
 			path = toast;
 			sourceTree = "<group>";
@@ -376,6 +414,7 @@
 				707CFA401FE128CC0086E60B /* ZTExtension.bundle in Resources */,
 				703AC08C1FA2BCDB00C9AD42 /* LaunchScreen.storyboard in Resources */,
 				70725A9B1FD50BC300CF7117 /* timg.gif in Resources */,
+				706948A220C92AAF00D9DAA2 /* loading.gif in Resources */,
 				703AC0891FA2BCDB00C9AD42 /* Assets.xcassets in Resources */,
 				703AC0871FA2BCDB00C9AD42 /* Main.storyboard in Resources */,
 			);
@@ -390,9 +429,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -441,6 +483,7 @@
 			files = (
 				702644B020C0EC2E008F4CA6 /* ZTImgScannerManager.m in Sources */,
 				703AC0A51FA2BCE700C9AD42 /* UIBarButtonItem+Extension.m in Sources */,
+				702AFD7820CA4649006105A4 /* ZTRefreshFooter.m in Sources */,
 				703AC0A41FA2BCE700C9AD42 /* NSDictionary+Extension.m in Sources */,
 				703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */,
 				70E04CB61FBEB7B000EEB106 /* UIResponder+ZTRouter.m in Sources */,
@@ -462,6 +505,9 @@
 				702393BA20C4C9DA00E4AB4D /* ZTOritationSupport.m in Sources */,
 				7031CBA020B705C200C59561 /* ZTToastManager.m in Sources */,
 				70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */,
+				702AFD7220CA193F006105A4 /* ZTLoadMoreView.m in Sources */,
+				706948A020C927C500D9DAA2 /* ZTGifLoadingView.m in Sources */,
+				702AFD6F20CA1903006105A4 /* ZTTableView.m in Sources */,
 				702644C020C0F5B5008F4CA6 /* ZTCircleView.m in Sources */,
 				700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */,
 				703AC0A61FA2BCE700C9AD42 /* UIControl+Extension.m in Sources */,
@@ -470,6 +516,7 @@
 				703AC0A71FA2BCE700C9AD42 /* UIView+ZTExtension.m in Sources */,
 				70E04CB91FBEB80800EEB106 /* UITableView+ZTCategory.m in Sources */,
 				7031CB9B20B6ABA200C59561 /* ZTToastView.m in Sources */,
+				702AFD7520CA2D92006105A4 /* ZTRefreshHeader.m in Sources */,
 				706984CD1FA8203000193388 /* NSObject+ZTSwzzling.m in Sources */,
 				70B070031FDAEAAB0083B87B /* ZTUtil.m in Sources */,
 				703AC0AC1FA2C6C500C9AD42 /* ZTAnimationUtil.m in Sources */,
