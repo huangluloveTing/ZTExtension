@@ -31,6 +31,10 @@
 - (instancetype) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
+        self.link = [CADisplayLink displayLinkWithTarget:self selector:@selector(startDraw)];
+        self.link.preferredFramesPerSecond = 20;
+        [self.link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+        self.link.paused = YES;
         self.shakeRate = 0.2;
     }
     return self;
@@ -119,9 +123,7 @@
 }
 
 - (void) startShake {
-    self.link = [CADisplayLink displayLinkWithTarget:self selector:@selector(startDraw)];
-    self.link.preferredFramesPerSecond = 20;
-    [self.link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    self.link.paused = NO;
 }
 
 - (void) startDraw {

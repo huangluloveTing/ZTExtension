@@ -23,7 +23,7 @@
 - (void)prepare
 {
     [super prepare];
-    self.backgroundColor = [UIColor colorWithHex:0xf8f8f8];
+    self.backgroundColor = [UIColor colorWithHex:0xf5f5f5];
     // 初始化间距
 }
 
@@ -50,7 +50,7 @@
         _freshHeader = [[ZTLoadMoreView alloc] initWithFrame:CGRectMake(point.x - LOADWIDTH / 2.0, point.y - self.mj_h / 2.0, LOADWIDTH, self.mj_h)];
         
         _freshHeader.circleRadius = 7;
-        _freshHeader.shakeRate = 0.2;
+        _freshHeader.shakeRate = 0.35;
     }
     return _freshHeader;
 }

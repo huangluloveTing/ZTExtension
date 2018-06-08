@@ -22,6 +22,7 @@
 #import "ZTGifLoadingView.h"
 #import "ZTLoadMoreView.h"
 #import "ZTTableView.h"
+#import <Lottie/Lottie.h>
 
 @interface ViewController ()<UITableViewDataSource>
 
@@ -114,15 +115,21 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 //    [moreView startShake];
     tableve = [[ZTTableView alloc] initWithFrame:CGRectMake(0, 70, CGRectGetWidth(self.view.frame), 300)];
     [self.view addSubview:tableve];
-    
+
     tableve.dataSource = self;
     tableve.tableFooterView = [[UIView alloc] init];
     [tableve addHeaderFreshBlock:^{
         NSLog(@"refresh");
     }];
     [tableve addFooterFresh:^{
-        
+
     }];
+//    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"404" inBundle:[NSBundle mainBundle]];
+//    animation.center = self.view.center;
+//    [self.view addSubview:animation];
+//    [animation playWithCompletion:^(BOOL animationFinished) {
+//
+//    }];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -139,7 +146,7 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 }
 
 - (void) tapbutton {
-    
+    [tableve endRefresh];
 }
 
 - (UIView *)redView {

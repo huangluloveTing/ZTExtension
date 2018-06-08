@@ -44,6 +44,7 @@
 		706948A020C927C500D9DAA2 /* ZTGifLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7069489F20C927C500D9DAA2 /* ZTGifLoadingView.m */; };
 		706948A220C92AAF00D9DAA2 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 706948A120C92AAF00D9DAA2 /* loading.gif */; };
 		706984CD1FA8203000193388 /* NSObject+ZTSwzzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 706984CC1FA8203000193388 /* NSObject+ZTSwzzling.m */; };
+		706D383120CA6ACE00D3084B /* 404.json in Resources */ = {isa = PBXBuildFile; fileRef = 706D383020CA6ACE00D3084B /* 404.json */; };
 		70725A921FD4ED0200CF7117 /* ZTHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 70725A911FD4ED0200CF7117 /* ZTHUD.m */; };
 		70725A951FD4F14400CF7117 /* ZTHUDContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70725A941FD4F14400CF7117 /* ZTHUDContentView.m */; };
 		70725A9B1FD50BC300CF7117 /* timg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70725A9A1FD50BC300CF7117 /* timg.gif */; };
@@ -133,6 +134,7 @@
 		706948A120C92AAF00D9DAA2 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		706984CB1FA8203000193388 /* NSObject+ZTSwzzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZTSwzzling.h"; sourceTree = "<group>"; };
 		706984CC1FA8203000193388 /* NSObject+ZTSwzzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZTSwzzling.m"; sourceTree = "<group>"; };
+		706D383020CA6ACE00D3084B /* 404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 404.json; sourceTree = "<group>"; };
 		70725A901FD4ED0200CF7117 /* ZTHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTHUD.h; sourceTree = "<group>"; };
 		70725A911FD4ED0200CF7117 /* ZTHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTHUD.m; sourceTree = "<group>"; };
 		70725A931FD4F14400CF7117 /* ZTHUDContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTHUDContentView.h; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				703AC0801FA2BCDB00C9AD42 /* AppDelegate.m */,
 				703AC0821FA2BCDB00C9AD42 /* ViewController.h */,
 				703AC0831FA2BCDB00C9AD42 /* ViewController.m */,
+				706D383020CA6ACE00D3084B /* 404.json */,
 				70725A9A1FD50BC300CF7117 /* timg.gif */,
 				706948A120C92AAF00D9DAA2 /* loading.gif */,
 				703AC0851FA2BCDB00C9AD42 /* Main.storyboard */,
@@ -413,6 +416,7 @@
 			files = (
 				707CFA401FE128CC0086E60B /* ZTExtension.bundle in Resources */,
 				703AC08C1FA2BCDB00C9AD42 /* LaunchScreen.storyboard in Resources */,
+				706D383120CA6ACE00D3084B /* 404.json in Resources */,
 				70725A9B1FD50BC300CF7117 /* timg.gif in Resources */,
 				706948A220C92AAF00D9DAA2 /* loading.gif in Resources */,
 				703AC0891FA2BCDB00C9AD42 /* Assets.xcassets in Resources */,
