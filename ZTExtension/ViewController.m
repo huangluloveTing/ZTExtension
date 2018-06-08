@@ -117,6 +117,12 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
     
     tableve.dataSource = self;
     tableve.tableFooterView = [[UIView alloc] init];
+    [tableve addHeaderFreshBlock:^{
+        NSLog(@"refresh");
+    }];
+    [tableve addFooterFresh:^{
+        
+    }];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

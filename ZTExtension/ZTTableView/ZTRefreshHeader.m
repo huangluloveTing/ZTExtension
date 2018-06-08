@@ -9,6 +9,7 @@
 #import "ZTRefreshHeader.h"
 #import "ZTLoadMoreView.h"
 #import "ZTRefresh.h"
+#import "UIColor+ZTHex.h"
 
 @interface ZTRefreshHeader()
 
@@ -22,7 +23,7 @@
 - (void)prepare
 {
     [super prepare];
-    
+    self.backgroundColor = [UIColor colorWithHex:0xf8f8f8];
     // 初始化间距
 }
 
@@ -48,7 +49,7 @@
         CGPoint point = CGPointMake(CGRectGetWidth(self.frame) / 2.0, CGRectGetHeight(self.frame) / 2.0);
         _freshHeader = [[ZTLoadMoreView alloc] initWithFrame:CGRectMake(point.x - LOADWIDTH / 2.0, point.y - self.mj_h / 2.0, LOADWIDTH, self.mj_h)];
         
-        _freshHeader.circleRadius = 8;
+        _freshHeader.circleRadius = 7;
         _freshHeader.shakeRate = 0.2;
     }
     return _freshHeader;

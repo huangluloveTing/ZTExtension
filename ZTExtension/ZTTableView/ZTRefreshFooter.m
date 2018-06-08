@@ -9,6 +9,7 @@
 #import "ZTRefreshFooter.h"
 #import "ZTLoadMoreView.h"
 #import "ZTRefresh.h"
+#import "UIColor+ZTHex.h"
 
 @interface ZTRefreshFooter()
 
@@ -22,6 +23,7 @@
 
 - (void) prepare {
     [super prepare];
+    self.backgroundColor = [UIColor colorWithHex:0xf8f8f8];
     self.automaticallyRefresh = YES;
 }
 
@@ -69,7 +71,7 @@
         CGPoint point = CGPointMake(CGRectGetWidth(self.frame) / 2.0, CGRectGetHeight(self.frame) / 2.0);
         _freshHeader = [[ZTLoadMoreView alloc] initWithFrame:CGRectMake(point.x - LOADWIDTH / 2.0, point.y - self.mj_h / 2.0, LOADWIDTH, self.mj_h)];
         
-        _freshHeader.circleRadius = 8;
+        _freshHeader.circleRadius = 6;
         _freshHeader.shakeRate = 0.5;
     }
     return _freshHeader;
