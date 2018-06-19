@@ -17,12 +17,13 @@
 #import "ZTImageScannerView.h"
 #import "ZTImageItem.h"
 #import "ZTImgScannerManager.h"
-#import <FLAnimatedImageView.h>
-#import <FLAnimatedImage.h>
+#import <FLAnimatedImage/FLAnimatedImage.h>
+#import <FLAnimatedImage/FLAnimatedImage.h>
 #import "ZTGifLoadingView.h"
 #import "ZTLoadMoreView.h"
 #import "ZTTableView.h"
 #import <Lottie/Lottie.h>
+#import <YogaKit/UIView+Yoga.h>
 
 @interface ViewController ()<UITableViewDataSource>
 
@@ -102,36 +103,64 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 //    [_singal_c subscribeNext:^(id x) {
 //        NSLog(@"合并信息 ： %@" , x);
 //    }];
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(50, 400, 100, 30);
-    btn.backgroundColor = [UIColor redColor];
-    [btn addTarget:self action:@selector(tapbutton) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
-    
-//    ZTLoadMoreView *moreView = [[ZTLoadMoreView alloc] initWithFrame:CGRectMake(100, 100, 100 , 30)];
-//    moreView.circleRadius = 10;
-//    moreView.jump = 10;
-//    [self.view addSubview:moreView];
-//    [moreView startShake];
-//    tableve = [[ZTTableView alloc] initWithFrame:CGRectMake(0, 70, CGRectGetWidth(self.view.frame), 300)];
-//    [self.view addSubview:tableve];
+//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    btn.frame = CGRectMake(50, 400, 100, 30);
+//    btn.backgroundColor = [UIColor redColor];
+//    [btn addTarget:self action:@selector(tapbutton) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:btn];
 //
-//    tableve.dataSource = self;
-//    tableve.tableFooterView = [[UIView alloc] init];
-//    [tableve addHeaderFreshBlock:^{
-//        NSLog(@"refresh");
+////    ZTLoadMoreView *moreView = [[ZTLoadMoreView alloc] initWithFrame:CGRectMake(100, 100, 100 , 30)];
+////    moreView.circleRadius = 10;
+////    moreView.jump = 10;
+////    [self.view addSubview:moreView];
+////    [moreView startShake];
+////    tableve = [[ZTTableView alloc] initWithFrame:CGRectMake(0, 70, CGRectGetWidth(self.view.frame), 300)];
+////    [self.view addSubview:tableve];
+////
+////    tableve.dataSource = self;
+////    tableve.tableFooterView = [[UIView alloc] init];
+////    [tableve addHeaderFreshBlock:^{
+////        NSLog(@"refresh");
+////    }];
+////    [tableve addFooterFresh:^{
+////
+////    }];
+////
+//    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"404" inBundle:[NSBundle mainBundle]];
+//    animation.loopAnimation = YES;
+//    animation.frame = self.view.bounds;
+//    [self.view addSubview:animation];
+//    [animation playWithCompletion:^(BOOL animationFinished) {
 //    }];
-//    [tableve addFooterFresh:^{
-//
-//    }];
-//
-    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"404" inBundle:[NSBundle mainBundle]];
-    animation.loopAnimation = YES;
-    animation.frame = self.view.bounds;
-    [self.view addSubview:animation];
-    [animation playWithCompletion:^(BOOL animationFinished) {
+    [self.view configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+        layout.isEnabled = YES;
+        layout.flexDirection = YGFlexDirectionRow;
     }];
     
+    UIView *flexView1 = [[UIView alloc] init];
+    flexView1.backgroundColor = [UIColor redColor];
+    [flexView1 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+        layout.isEnabled = YES;
+        layout.width = YGPointValue(30);
+    }];
+    [self.view addSubview:flexView1];
+    
+    UIView *flexView2 = [[UIView alloc] init];
+    flexView2.backgroundColor = [UIColor blueColor];
+    [flexView2 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+        layout.isEnabled = YES;
+        layout.width = YGPointValue(30);
+    }];
+    [self.view addSubview:flexView2];
+    
+    UIView *flexView3 = [[UIView alloc] init];
+    flexView3.backgroundColor = [UIColor yellowColor];
+    [flexView3 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+        layout.isEnabled = YES;
+        layout.flexGrow = 1.0;
+    }];
+    [self.view addSubview:flexView3];
+    [self.view.yoga applyLayoutPreservingOrigin:YES];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

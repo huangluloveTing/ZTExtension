@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1616E0532EFB0EBB3E0AD022 /* libPods-ZTExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE5C9A6FEBA09A3DD010B7B /* libPods-ZTExtension.a */; };
+		52DCEB3E164529FF486B3864 /* Pods_ZTExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D0BC602820B87172876F88 /* Pods_ZTExtension.framework */; };
 		700A59DD1FBEBE9800C6AA31 /* NSDate+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 700A59DC1FBEBE9800C6AA31 /* NSDate+ZTCategory.m */; };
 		700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 700A59DF1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m */; };
 		701F1AEC1FF1D98900F707D4 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */; };
@@ -60,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47D0BC602820B87172876F88 /* Pods_ZTExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZTExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		700A59DB1FBEBE9800C6AA31 /* NSDate+ZTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZTCategory.h"; sourceTree = "<group>"; };
 		700A59DC1FBEBE9800C6AA31 /* NSDate+ZTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZTCategory.m"; sourceTree = "<group>"; };
 		700A59DE1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+ZTCategory.h"; sourceTree = "<group>"; };
@@ -157,7 +158,6 @@
 		70E04CB51FBEB7B000EEB106 /* UIResponder+ZTRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+ZTRouter.m"; sourceTree = "<group>"; };
 		70E04CB71FBEB80800EEB106 /* UITableView+ZTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+ZTCategory.h"; sourceTree = "<group>"; };
 		70E04CB81FBEB80800EEB106 /* UITableView+ZTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ZTCategory.m"; sourceTree = "<group>"; };
-		7FE5C9A6FEBA09A3DD010B7B /* libPods-ZTExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZTExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4946EAF3177F53F848A7AD /* Pods-ZTExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		CF347988B14E2C9558C15BA3 /* Pods-ZTExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,7 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1616E0532EFB0EBB3E0AD022 /* libPods-ZTExtension.a in Frameworks */,
+				52DCEB3E164529FF486B3864 /* Pods_ZTExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +186,7 @@
 		6A32B92BDC31D136F22C474C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7FE5C9A6FEBA09A3DD010B7B /* libPods-ZTExtension.a */,
+				47D0BC602820B87172876F88 /* Pods_ZTExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -469,9 +469,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

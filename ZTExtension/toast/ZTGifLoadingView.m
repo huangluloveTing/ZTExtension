@@ -8,8 +8,8 @@
 
 #import "ZTGifLoadingView.h"
 #import "UIView+ZTExtension.h"
-#import <FLAnimatedImageView.h>
-#import <FLAnimatedImage.h>
+#import <FLAnimatedImage/FLAnimatedImageView.h>
+#import <FLAnimatedImage/FLAnimatedImage.h>
 
 static CGFloat IMG_SIZE_WIDTH = 90;
 

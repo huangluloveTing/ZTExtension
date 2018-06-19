@@ -39,7 +39,7 @@
                 [[UIApplication sharedApplication].delegate application:[UIApplication sharedApplication] supportedInterfaceOrientationsForWindow:self.view.window];
             }
             else {
-                //                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
+                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
             }
             [self interfaceOrientation:orientation];
             break;
@@ -49,7 +49,7 @@
                 [[UIApplication sharedApplication].delegate application:[UIApplication sharedApplication] supportedInterfaceOrientationsForWindow:self.view.window];
             }
             else {
-                //                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
+                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
             }
             [self interfaceOrientation:orientation];
             break;
@@ -59,7 +59,7 @@
                 [[UIApplication sharedApplication].delegate application:[UIApplication sharedApplication] supportedInterfaceOrientationsForWindow:self.view.window];
             }
             else {
-                //                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
+                @throw [NSException exceptionWithName:@"屏幕旋转" reason:@"需要实现 appdelegate的 application:supportedInterfaceOrientationsForWindow:  方法" userInfo:nil];
             }
             [self interfaceOrientation:orientation];
             break;

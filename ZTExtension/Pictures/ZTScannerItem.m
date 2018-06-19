@@ -7,7 +7,7 @@
 //
 
 #import "ZTScannerItem.h"
-#import <FLAnimatedImageView.h>
+#import <FLAnimatedImage/FLAnimatedImage.h>
 #import "ZTImageItem.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ZTCircleView.h"

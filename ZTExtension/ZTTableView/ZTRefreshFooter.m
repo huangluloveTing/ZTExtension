@@ -23,7 +23,8 @@
 
 - (void) prepare {
     [super prepare];
-    self.backgroundColor = [UIColor colorWithHex:0xf8f8f8];
+    self.mj_h = MJRefreshHeaderHeight;
+    self.backgroundColor = [UIColor colorWithHex:0xf5f5f5];
     self.automaticallyRefresh = YES;
 }
 
@@ -39,7 +40,7 @@
 - (void) setState:(MJRefreshState)state {
     [super setState:state];
     if (state == MJRefreshStateIdle) {
-        self.textLabel.text = defaultFooterTips;
+        self.textLabel.text = @"";
         [self.freshHeader stopShake];
         [self hiddenAnimate];
     }
@@ -49,7 +50,7 @@
         [self hiddenAnimate];
     }
     else {
-        self.textLabel.text = defaultFooterTips;
+        self.textLabel.text = @"";
         [self.freshHeader startShake];
         [self hiddenText];
     }
@@ -72,7 +73,7 @@
         _freshHeader = [[ZTLoadMoreView alloc] initWithFrame:CGRectMake(point.x - LOADWIDTH / 2.0, point.y - self.mj_h / 2.0, LOADWIDTH, self.mj_h)];
         
         _freshHeader.circleRadius = 6;
-        _freshHeader.shakeRate = 0.5;
+        _freshHeader.shakeRate = 0.35;
     }
     return _freshHeader;
 }
@@ -81,9 +82,9 @@
     if (!_textLabel) {
         _textLabel = [[UILabel alloc] init];
         _textLabel.textColor = [UIColor lightGrayColor];
-        _textLabel.font = [UIFont systemFontOfSize:16];
+        _textLabel.font = [UIFont systemFontOfSize:15];
         _textLabel.hidden = NO;
-        _textLabel.text = defaultFooterTips;
+        _textLabel.text = @"";
         [_textLabel sizeToFit];
     }
     return  _textLabel;

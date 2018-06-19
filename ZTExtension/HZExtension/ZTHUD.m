@@ -7,7 +7,7 @@
 //
 
 #import "ZTHUD.h"
-#import <MBProgressHUD.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 #import "ZTHUDContentView.h"
 
 #define dSuccess_Image_ZT ([UIImage imageNamed:@"Success_zt"])
