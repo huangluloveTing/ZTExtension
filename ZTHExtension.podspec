@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
     # pictureScanner
   s.subspec 'ZTLoopScrollView' do |ls|
     ls.source_files = 'ZTExtension/ZTLoopScrollView/**.*'
-    ls.dependency 'ZTHExtension/SDWebImage'
+    ls.dependency 'SDWebImage'
     ls.dependency 'YYText'
 
   end
