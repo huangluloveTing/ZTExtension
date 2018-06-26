@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ZTHExtension"
-  s.version      = "1.3.3"
+  s.version      = "1.3.4"
   s.summary      = "常用类的扩展， 方便开发 ！"
 
   s.homepage     = "https://github.com/huangluloveTing/ZTExtension.git"
@@ -46,6 +46,14 @@ Pod::Spec.new do |s|
     table.source_files = 'ZTExtension/ZTTableView/**.*'
     table.dependency 'ZTHExtension/Extension'
     table.dependency 'MJRefresh'
+
+  end
+
+    # pictureScanner
+  s.subspec 'ZTLoopScrollView' do |ls|
+    ls.source_files = 'ZTExtension/ZTLoopScrollView/**.*'
+    ls.dependency 'ZTHExtension/SDWebImage'
+    ls.dependency 'YYText'
 
   end
 

@@ -10,6 +10,8 @@
 		52DCEB3E164529FF486B3864 /* Pods_ZTExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47D0BC602820B87172876F88 /* Pods_ZTExtension.framework */; };
 		700A59DD1FBEBE9800C6AA31 /* NSDate+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 700A59DC1FBEBE9800C6AA31 /* NSDate+ZTCategory.m */; };
 		700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 700A59DF1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m */; };
+		701E0AE020E1C87B00D7CB93 /* ZTLoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 701E0ADC20E1C87B00D7CB93 /* ZTLoopScrollView.m */; };
+		701E0AE420E1CA5800D7CB93 /* NSTimer+ZTLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 701E0AE320E1CA5800D7CB93 /* NSTimer+ZTLoop.m */; };
 		701F1AEC1FF1D98900F707D4 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */; };
 		701F1AED1FF1D98900F707D4 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */; };
 		702393BA20C4C9DA00E4AB4D /* ZTOritationSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 702393B920C4C9DA00E4AB4D /* ZTOritationSupport.m */; };
@@ -65,6 +67,10 @@
 		700A59DC1FBEBE9800C6AA31 /* NSDate+ZTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZTCategory.m"; sourceTree = "<group>"; };
 		700A59DE1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+ZTCategory.h"; sourceTree = "<group>"; };
 		700A59DF1FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+ZTCategory.m"; sourceTree = "<group>"; };
+		701E0ADC20E1C87B00D7CB93 /* ZTLoopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTLoopScrollView.m; sourceTree = "<group>"; };
+		701E0ADE20E1C87B00D7CB93 /* ZTLoopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTLoopScrollView.h; sourceTree = "<group>"; };
+		701E0AE220E1CA5800D7CB93 /* NSTimer+ZTLoop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+ZTLoop.h"; sourceTree = "<group>"; };
+		701E0AE320E1CA5800D7CB93 /* NSTimer+ZTLoop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+ZTLoop.m"; sourceTree = "<group>"; };
 		701F1AE81FF1D98800F707D4 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
 		701F1AE91FF1D98800F707D4 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
 		701F1AEA1FF1D98900F707D4 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
@@ -191,6 +197,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		701E0ADB20E1C87B00D7CB93 /* ZTLoopScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				701E0ADE20E1C87B00D7CB93 /* ZTLoopScrollView.h */,
+				701E0ADC20E1C87B00D7CB93 /* ZTLoopScrollView.m */,
+				701E0AE220E1CA5800D7CB93 /* NSTimer+ZTLoop.h */,
+				701E0AE320E1CA5800D7CB93 /* NSTimer+ZTLoop.m */,
+			);
+			path = ZTLoopScrollView;
+			sourceTree = "<group>";
+		};
 		702644AD20C0EBC9008F4CA6 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +263,7 @@
 		703AC07E1FA2BCDB00C9AD42 /* ZTExtension */ = {
 			isa = PBXGroup;
 			children = (
+				701E0ADB20E1C87B00D7CB93 /* ZTLoopScrollView */,
 				702AFD6C20CA18E2006105A4 /* ZTTableView */,
 				702644AD20C0EBC9008F4CA6 /* Pictures */,
 				70B69A3920BFF3D7008AC8DC /* toast */,
@@ -364,7 +382,6 @@
 				703AC0791FA2BCDB00C9AD42 /* Frameworks */,
 				703AC07A1FA2BCDB00C9AD42 /* Resources */,
 				57AE3D4F7C3AC68C7B06931F /* [CP] Embed Pods Frameworks */,
-				4AC85CC00D1C73C3F940C19B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -427,24 +444,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4AC85CC00D1C73C3F940C19B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZTExtension/Pods-ZTExtension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		55521985FBFB075721D48D67 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,8 +473,7 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
-				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -484,8 +482,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +522,7 @@
 				7031CBA020B705C200C59561 /* ZTToastManager.m in Sources */,
 				70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */,
 				702AFD7220CA193F006105A4 /* ZTLoadMoreView.m in Sources */,
+				701E0AE020E1C87B00D7CB93 /* ZTLoopScrollView.m in Sources */,
 				706948A020C927C500D9DAA2 /* ZTGifLoadingView.m in Sources */,
 				702AFD6F20CA1903006105A4 /* ZTTableView.m in Sources */,
 				702644C020C0F5B5008F4CA6 /* ZTCircleView.m in Sources */,
@@ -534,6 +532,7 @@
 				703AC0A31FA2BCE700C9AD42 /* NSArray+Extension.m in Sources */,
 				703AC0A71FA2BCE700C9AD42 /* UIView+ZTExtension.m in Sources */,
 				70E04CB91FBEB80800EEB106 /* UITableView+ZTCategory.m in Sources */,
+				701E0AE420E1CA5800D7CB93 /* NSTimer+ZTLoop.m in Sources */,
 				7031CB9B20B6ABA200C59561 /* ZTToastView.m in Sources */,
 				702AFD7520CA2D92006105A4 /* ZTRefreshHeader.m in Sources */,
 				706984CD1FA8203000193388 /* NSObject+ZTSwzzling.m in Sources */,

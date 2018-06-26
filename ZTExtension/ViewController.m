@@ -23,7 +23,6 @@
 #import "ZTLoadMoreView.h"
 #import "ZTTableView.h"
 #import <Lottie/Lottie.h>
-#import <YogaKit/UIView+Yoga.h>
 
 @interface ViewController ()<UITableViewDataSource>
 
@@ -132,35 +131,35 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 //    [self.view addSubview:animation];
 //    [animation playWithCompletion:^(BOOL animationFinished) {
 //    }];
-    [self.view configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
-        layout.isEnabled = YES;
-        layout.flexDirection = YGFlexDirectionRow;
-    }];
-    
-    UIView *flexView1 = [[UIView alloc] init];
-    flexView1.backgroundColor = [UIColor redColor];
-    [flexView1 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
-        layout.isEnabled = YES;
-        layout.width = YGPointValue(30);
-    }];
-    [self.view addSubview:flexView1];
-    
-    UIView *flexView2 = [[UIView alloc] init];
-    flexView2.backgroundColor = [UIColor blueColor];
-    [flexView2 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
-        layout.isEnabled = YES;
-        layout.width = YGPointValue(30);
-    }];
-    [self.view addSubview:flexView2];
-    
-    UIView *flexView3 = [[UIView alloc] init];
-    flexView3.backgroundColor = [UIColor yellowColor];
-    [flexView3 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
-        layout.isEnabled = YES;
-        layout.flexGrow = 1.0;
-    }];
-    [self.view addSubview:flexView3];
-    [self.view.yoga applyLayoutPreservingOrigin:YES];
+//    [self.view configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+//        layout.isEnabled = YES;
+//        layout.flexDirection = YGFlexDirectionRow;
+//    }];
+//    
+//    UIView *flexView1 = [[UIView alloc] init];
+//    flexView1.backgroundColor = [UIColor redColor];
+//    [flexView1 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+//        layout.isEnabled = YES;
+//        layout.width = YGPointValue(30);
+//    }];
+//    [self.view addSubview:flexView1];
+//    
+//    UIView *flexView2 = [[UIView alloc] init];
+//    flexView2.backgroundColor = [UIColor blueColor];
+//    [flexView2 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+//        layout.isEnabled = YES;
+//        layout.width = YGPointValue(30);
+//    }];
+//    [self.view addSubview:flexView2];
+//    
+//    UIView *flexView3 = [[UIView alloc] init];
+//    flexView3.backgroundColor = [UIColor yellowColor];
+//    [flexView3 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+//        layout.isEnabled = YES;
+//        layout.flexGrow = 1.0;
+//    }];
+//    [self.view addSubview:flexView3];
+//    [self.view.yoga applyLayoutPreservingOrigin:YES];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
