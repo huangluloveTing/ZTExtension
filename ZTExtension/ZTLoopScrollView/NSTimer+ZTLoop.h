@@ -12,6 +12,7 @@
 
 - (void)pauseTimer;
 - (void)resumeTimer;
+- (void)stopTimer;
 - (void)resumeTimerAfterTimeInterval:(NSTimeInterval)interval;
 
 @end

@@ -29,6 +29,8 @@
 		7031CB9820B6A99D00C59561 /* ZTToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9720B6A99D00C59561 /* ZTToast.m */; };
 		7031CB9B20B6ABA200C59561 /* ZTToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9A20B6ABA200C59561 /* ZTToastView.m */; };
 		7031CBA020B705C200C59561 /* ZTToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7031CB9F20B705C200C59561 /* ZTToastManager.m */; };
+		7039CD1421016BCA00E83514 /* ZTLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7039CD1321016BCA00E83514 /* ZTLoopView.m */; };
+		7039CD1721017FB900E83514 /* ZTLoopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7039CD1621017FB900E83514 /* ZTLoopViewCell.m */; };
 		703AC0811FA2BCDB00C9AD42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0801FA2BCDB00C9AD42 /* AppDelegate.m */; };
 		703AC0841FA2BCDB00C9AD42 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703AC0831FA2BCDB00C9AD42 /* ViewController.m */; };
 		703AC0871FA2BCDB00C9AD42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703AC0851FA2BCDB00C9AD42 /* Main.storyboard */; };
@@ -108,6 +110,10 @@
 		7031CB9D20B7059F00C59561 /* ZTToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTToast.h; sourceTree = "<group>"; };
 		7031CB9E20B705C200C59561 /* ZTToastManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTToastManager.h; sourceTree = "<group>"; };
 		7031CB9F20B705C200C59561 /* ZTToastManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTToastManager.m; sourceTree = "<group>"; };
+		7039CD1221016BCA00E83514 /* ZTLoopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTLoopView.h; sourceTree = "<group>"; };
+		7039CD1321016BCA00E83514 /* ZTLoopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTLoopView.m; sourceTree = "<group>"; };
+		7039CD1521017FB900E83514 /* ZTLoopViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTLoopViewCell.h; sourceTree = "<group>"; };
+		7039CD1621017FB900E83514 /* ZTLoopViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTLoopViewCell.m; sourceTree = "<group>"; };
 		703AC07C1FA2BCDB00C9AD42 /* ZTExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZTExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		703AC07F1FA2BCDB00C9AD42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		703AC0801FA2BCDB00C9AD42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -204,6 +210,10 @@
 				701E0ADC20E1C87B00D7CB93 /* ZTLoopScrollView.m */,
 				701E0AE220E1CA5800D7CB93 /* NSTimer+ZTLoop.h */,
 				701E0AE320E1CA5800D7CB93 /* NSTimer+ZTLoop.m */,
+				7039CD1221016BCA00E83514 /* ZTLoopView.h */,
+				7039CD1321016BCA00E83514 /* ZTLoopView.m */,
+				7039CD1521017FB900E83514 /* ZTLoopViewCell.h */,
+				7039CD1621017FB900E83514 /* ZTLoopViewCell.m */,
 			);
 			path = ZTLoopScrollView;
 			sourceTree = "<group>";
@@ -537,7 +547,9 @@
 				702AFD7520CA2D92006105A4 /* ZTRefreshHeader.m in Sources */,
 				706984CD1FA8203000193388 /* NSObject+ZTSwzzling.m in Sources */,
 				70B070031FDAEAAB0083B87B /* ZTUtil.m in Sources */,
+				7039CD1721017FB900E83514 /* ZTLoopViewCell.m in Sources */,
 				703AC0AC1FA2C6C500C9AD42 /* ZTAnimationUtil.m in Sources */,
+				7039CD1421016BCA00E83514 /* ZTLoopView.m in Sources */,
 				700A59DD1FBEBE9800C6AA31 /* NSDate+ZTCategory.m in Sources */,
 				703AC0811FA2BCDB00C9AD42 /* AppDelegate.m in Sources */,
 				7031CB9820B6A99D00C59561 /* ZTToast.m in Sources */,
