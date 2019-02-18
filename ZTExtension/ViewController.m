@@ -183,7 +183,7 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
     
     [self addRightBarbuttonItemWithTitle:@"stop" TapBlock:^(UIBarButtonItem *barButtonItem) {
         [tableve endRefresh];
-        [ZTToastManager showLoadingTitle:@"努力加载"];
+//        [ZTToastManager showLoadingTitle:@"努力加载"];
     }];
 ////
 //    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"404" inBundle:[NSBundle mainBundle]];

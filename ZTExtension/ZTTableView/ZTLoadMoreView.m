@@ -50,7 +50,7 @@
 }
 
 - (CGFloat) shakeYAtX:(CGFloat)x wareLength:(CGFloat)length  {
-    CGFloat y = ([self jumpDistance] - self.circleRadius * 2) * sin(x/length  * M_PI  + _wave)  + [self jumpDistance];
+    CGFloat y = ([self jumpDistance] - _jump * 2) * sin(x/length  * M_PI  + _wave)  + [self jumpDistance];
     return y;
 }
 

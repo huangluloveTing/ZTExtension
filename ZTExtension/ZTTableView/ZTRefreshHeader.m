@@ -59,6 +59,7 @@
         
         _freshHeader.circleRadius = 6;
         _freshHeader.shakeRate = 0.35;
+        _freshHeader.jump = 8;
     }
     return _freshHeader;
 }
