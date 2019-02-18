@@ -10,4 +10,6 @@
 
 @interface ZTRefreshFooter : MJRefreshAutoFooter
 
+- (void) setShakeTitle:(NSString *)title state:(MJRefreshState)state;
+
 @end

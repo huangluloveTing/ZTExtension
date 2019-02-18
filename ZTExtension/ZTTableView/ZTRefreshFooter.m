@@ -19,11 +19,14 @@
 
 @end
 
-@implementation ZTRefreshFooter
+@implementation ZTRefreshFooter {
+    NSMutableDictionary *_stateTitle;
+}
 
 - (void) prepare {
     [super prepare];
     self.mj_h = MJRefreshHeaderHeight;
+    _stateTitle = [NSMutableDictionary dictionary];
     self.backgroundColor = [UIColor colorWithHex:0xf5f5f5];
     self.automaticallyRefresh = YES;
 }
@@ -41,17 +44,19 @@
     [super setState:state];
     if (state == MJRefreshStateIdle) {
         self.textLabel.text = @"";
+        self.freshHeader.loadTitle = [_stateTitle valueForKey:[NSString stringWithFormat:@"%ld" ,(long)state]] ?: @"";
         [self.freshHeader stopShake];
         [self hiddenAnimate];
     }
     else if (state == MJRefreshStateNoMoreData) {
+        self.freshHeader.loadTitle = [_stateTitle valueForKey:[NSString stringWithFormat:@"%ld" ,(long)state]] ?: @"";
         [self.freshHeader stopShake];
         self.textLabel.text = noMoreDataTips;
         [self hiddenAnimate];
     }
     else {
         self.textLabel.text = @"";
-        [self.freshHeader startShake];
+        [self.freshHeader startShakeWithTitle:[_stateTitle valueForKey:[NSString stringWithFormat:@"%ld" , (long)state]]];
         [self hiddenText];
     }
 }
@@ -64,6 +69,10 @@
 - (void) hiddenText {
     self.freshHeader.hidden = NO;
     self.textLabel.hidden = YES;
+}
+
+- (void) setShakeTitle:(NSString *)title state:(MJRefreshState)state {
+    [_stateTitle setObject:title ?:@"" forKey: [NSString stringWithFormat:@"%ld" ,(long)state]];
 }
 
 #pragma mark - lazy

@@ -273,6 +273,7 @@
 		703AC07E1FA2BCDB00C9AD42 /* ZTExtension */ = {
 			isa = PBXGroup;
 			children = (
+				70C7CB5B2175912400C10AC4 /* HWDownloadManager */,
 				701E0ADB20E1C87B00D7CB93 /* ZTLoopScrollView */,
 				702AFD6C20CA18E2006105A4 /* ZTTableView */,
 				702644AD20C0EBC9008F4CA6 /* Pictures */,
@@ -380,6 +381,13 @@
 			path = toast;
 			sourceTree = "<group>";
 		};
+		70C7CB5B2175912400C10AC4 /* HWDownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HWDownloadManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,7 +417,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ZT;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = huanglu;
 				TargetAttributes = {
 					703AC07B1FA2BCDB00C9AD42 = {
@@ -630,7 +638,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;

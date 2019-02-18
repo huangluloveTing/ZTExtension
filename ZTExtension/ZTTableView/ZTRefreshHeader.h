@@ -10,4 +10,6 @@
 
 @interface ZTRefreshHeader : MJRefreshHeader
 
+- (void) setShakeTitle:(NSString *)title state:(MJRefreshState)state;
+
 @end

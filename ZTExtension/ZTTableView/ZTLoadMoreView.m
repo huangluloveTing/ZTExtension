@@ -19,15 +19,16 @@
 
 @property (nonatomic , strong) UIView *circle_layer_three;
 
+@property (nonatomic , strong) UILabel *tipLabel;
+
 @property (nonatomic , assign) CGFloat wave;
 
 @end
 
 
-
+#define SHAKEVIEW_WIDTH (60)
 
 @implementation ZTLoadMoreView
-
 - (instancetype) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
@@ -35,7 +36,7 @@
         self.link.frameInterval = 2;
         [self.link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
         self.link.paused = YES;
-        self.shakeRate = 0.2;
+        self.shakeRate = 0.3;
     }
     return self;
 }
@@ -54,7 +55,7 @@
 }
 
 - (void) toDrawCircle {
-    CGFloat width = CGRectGetWidth(self.frame);
+    CGFloat width = SHAKEVIEW_WIDTH;
     CGFloat unitWidth = (width - 6 * self.circleRadius) / 2.0;
     
     CGFloat y1 = [self shakeYAtX:self.circleRadius wareLength:width];
@@ -68,7 +69,6 @@
     self.circle_layer_one.center = center_1;
     self.circle_layer_two.center = center_2;
     self.circle_layer_three.center = center_3;
-    
 }
 
 #pragma mark - lazy
@@ -85,7 +85,7 @@
 
 - (UIView *) circle_layer_two {
     if (!_circle_layer_two) {
-        _circle_layer_two = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.frame) / 2.0, CGRectGetHeight(self.frame) / 2.0, self.circleRadius * 2, self.circleRadius * 2)];
+        _circle_layer_two = [[UIView alloc] initWithFrame:CGRectMake(SHAKEVIEW_WIDTH / 2.0, CGRectGetHeight(self.frame) / 2.0, self.circleRadius * 2, self.circleRadius * 2)];
         _circle_layer_two.backgroundColor = [UIColor colorWithHex:0x7ed321];
         _circle_layer_two.layer.masksToBounds = YES;
         _circle_layer_two.layer.cornerRadius = self.circleRadius;
@@ -96,7 +96,7 @@
 
 - (UIView *) circle_layer_three{
     if (!_circle_layer_three) {
-        _circle_layer_three = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.frame) - self.circleRadius, CGRectGetHeight(self.frame) / 2.0, self.circleRadius * 2, self.circleRadius * 2)];
+        _circle_layer_three = [[UIView alloc] initWithFrame:CGRectMake(SHAKEVIEW_WIDTH - self.circleRadius * 3, CGRectGetHeight(self.frame) / 2.0, self.circleRadius * 2, self.circleRadius * 2)];
         _circle_layer_three.backgroundColor = [UIColor colorWithHex:0xff604f];
         _circle_layer_three.layer.masksToBounds = YES;
         _circle_layer_three.layer.cornerRadius = self.circleRadius;
@@ -105,6 +105,17 @@
     return _circle_layer_three;
 }
 
+- (UILabel *) tipLabel {
+    if (!_tipLabel) {
+        _tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(SHAKEVIEW_WIDTH + 10, 0, CGRectGetWidth(self.frame) - SHAKEVIEW_WIDTH - 10, 20)];
+        _tipLabel.textAlignment = NSTextAlignmentCenter;
+        _tipLabel.textColor = [UIColor colorWithHex:0x666666];
+        _tipLabel.font = [UIFont systemFontOfSize:12];
+        _tipLabel.center = CGPointMake(_tipLabel.center.x, CGRectGetHeight(self.frame) / 2.0);
+        [self addSubview:_tipLabel];
+    }
+    return _tipLabel;
+}
 
 - (void) setJump:(CGFloat)jump {
     _jump = jump;
@@ -134,6 +145,12 @@
     [self setNeedsDisplay];
 }
 
+- (void) startShakeWithTitle:(NSString *)title {
+    [self startShake];
+    self.tipLabel.text = title;
+//    [self.tipLabel sizeToFit];
+}
+
 - (void) stopShake {
     if (![self.link isPaused]) {
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -147,6 +164,9 @@
     self.link = nil;
 }
 
-
+- (void) setLoadTitle:(NSString *)loadTitle {
+    _loadTitle = loadTitle;
+    self.tipLabel.text = loadTitle;
+}
 
 @end

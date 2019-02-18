@@ -64,57 +64,57 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
-    YYTextView *textView = [[YYTextView alloc] initWithFrame:CGRectMake(0, 100, 0, 0)];
-    textView.backgroundColor = [UIColor grayColor];
-    textView = [[YYTextView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-    textView.userInteractionEnabled = YES;
-    textView.textVerticalAlignment = YYTextVerticalAlignmentTop;
-    
-    //创建最主要的attribute文本
-    NSMutableAttributedString *contentText = [NSMutableAttributedString new];
-    UIFont *font = [UIFont systemFontOfSize:16];
-    
-    //图片资源
-    UIImage *image = [UIImage imageNamed:@"loading.gif"];
-
-    
-    //添加文本+图片
-    [contentText appendAttributedString:[[NSAttributedString alloc] initWithString:@"这是第一站图片" attributes:nil]];
-    {
-        FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] initWithImage:image];
-        imageView.frame = CGRectMake(0, 0, textView.width - 10, textView.width/image.size.width*image.size.height);
-        NSMutableAttributedString *attachText = [NSMutableAttributedString yy_attachmentStringWithContent:imageView contentMode:UIViewContentModeScaleAspectFit attachmentSize:imageView.size alignToFont:font alignment:YYTextVerticalAlignmentCenter];
-        [contentText appendAttributedString:attachText];
-    }
-    
-    //添加文本+图片
-    [contentText appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n 接下来是第二张" attributes:nil]];
-    
-    {
-        FLAnimatedImageView *imageView2 = [[FLAnimatedImageView alloc] initWithImage:image];
-        
-        imageView2.frame = CGRectMake(0, 0, textView.width - 10, textView.width/image.size.width*image.size.height);
-        NSMutableAttributedString *attachText2 = [NSMutableAttributedString yy_attachmentStringWithContent:imageView2 contentMode:UIViewContentModeScaleAspectFit attachmentSize:imageView2.size alignToFont:font alignment:YYTextVerticalAlignmentCenter];
-        [contentText appendAttributedString:attachText2];
-    }
-    
-    textView.attributedText = contentText;
-    [self.view addSubview:textView];
-    
-    //获取图片资源
-    NSArray *attachments =  textView.textLayout.attachments;
-    for(YYTextAttachment *attachment in attachments)
-    {
-        FLAnimatedImageView *imageView = attachment.content;
-        UIImage *image = imageView.image;
-        NSLog(@"获取到图片:%@",image);
-    }
-    NSArray *attachmentRanges = textView.textLayout.attachmentRanges;
-    for (NSValue *range in attachmentRanges)
-    {
-        NSRange r = [range rangeValue];
-        NSLog(@"资源所在位置：%ld 长度: %ld",r.location,r.length);
-    }
+//    YYTextView *textView = [[YYTextView alloc] initWithFrame:CGRectMake(0, 100, 0, 0)];
+//    textView.backgroundColor = [UIColor grayColor];
+//    textView = [[YYTextView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+//    textView.userInteractionEnabled = YES;
+//    textView.textVerticalAlignment = YYTextVerticalAlignmentTop;
+//
+//    //创建最主要的attribute文本
+//    NSMutableAttributedString *contentText = [NSMutableAttributedString new];
+//    UIFont *font = [UIFont systemFontOfSize:16];
+//
+//    //图片资源
+//    UIImage *image = [UIImage imageNamed:@"loading.gif"];
+//
+//
+//    //添加文本+图片
+//    [contentText appendAttributedString:[[NSAttributedString alloc] initWithString:@"这是第一站图片" attributes:nil]];
+//    {
+//        FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] initWithImage:image];
+//        imageView.frame = CGRectMake(0, 0, textView.width - 10, textView.width/image.size.width*image.size.height);
+//        NSMutableAttributedString *attachText = [NSMutableAttributedString yy_attachmentStringWithContent:imageView contentMode:UIViewContentModeScaleAspectFit attachmentSize:imageView.size alignToFont:font alignment:YYTextVerticalAlignmentCenter];
+//        [contentText appendAttributedString:attachText];
+//    }
+//
+//    //添加文本+图片
+//    [contentText appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n 接下来是第二张" attributes:nil]];
+//
+//    {
+//        FLAnimatedImageView *imageView2 = [[FLAnimatedImageView alloc] initWithImage:image];
+//
+//        imageView2.frame = CGRectMake(0, 0, textView.width - 10, textView.width/image.size.width*image.size.height);
+//        NSMutableAttributedString *attachText2 = [NSMutableAttributedString yy_attachmentStringWithContent:imageView2 contentMode:UIViewContentModeScaleAspectFit attachmentSize:imageView2.size alignToFont:font alignment:YYTextVerticalAlignmentCenter];
+//        [contentText appendAttributedString:attachText2];
+//    }
+//
+//    textView.attributedText = contentText;
+//    [self.view addSubview:textView];
+//
+//    //获取图片资源
+//    NSArray *attachments =  textView.textLayout.attachments;
+//    for(YYTextAttachment *attachment in attachments)
+//    {
+//        FLAnimatedImageView *imageView = attachment.content;
+//        UIImage *image = imageView.image;
+//        NSLog(@"获取到图片:%@",image);
+//    }
+//    NSArray *attachmentRanges = textView.textLayout.attachmentRanges;
+//    for (NSValue *range in attachmentRanges)
+//    {
+//        NSRange r = [range rangeValue];
+//        NSLog(@"资源所在位置：%ld 长度: %ld",r.location,r.length);
+//    }
 
 //    self.view.backgroundColor = [UIColor yellowColor];
 ////    self.imageView = [[FLAnimatedImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
@@ -168,17 +168,23 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 ////    moreView.jump = 10;
 ////    [self.view addSubview:moreView];
 ////    [moreView startShake];
-////    tableve = [[ZTTableView alloc] initWithFrame:CGRectMake(0, 70, CGRectGetWidth(self.view.frame), 300)];
-////    [self.view addSubview:tableve];
+    tableve = [[ZTTableView alloc] initWithFrame:CGRectMake(0, 70, CGRectGetWidth(self.view.frame), 300)];
+    [self.view addSubview:tableve];
 ////
-////    tableve.dataSource = self;
-////    tableve.tableFooterView = [[UIView alloc] init];
-////    [tableve addHeaderFreshBlock:^{
-////        NSLog(@"refresh");
-////    }];
-////    [tableve addFooterFresh:^{
-////
-////    }];
+    tableve.dataSource = self;
+    tableve.tableFooterView = [[UIView alloc] init];
+    [tableve addHeaderFreshBlock:^{
+        NSLog(@"refresh");
+        
+    }];
+    [tableve addFooterFresh:^{
+
+    }];
+    
+    [self addRightBarbuttonItemWithTitle:@"stop" TapBlock:^(UIBarButtonItem *barButtonItem) {
+        [tableve endRefresh];
+        [ZTToastManager showLoadingTitle:@"努力加载"];
+    }];
 ////
 //    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"404" inBundle:[NSBundle mainBundle]];
 //    animation.loopAnimation = YES;

@@ -25,8 +25,11 @@
 //抖动频率（）
 @property (nonatomic , assign) CGFloat shakeRate;
 
+@property (nonatomic , copy) NSString *loadTitle;
+
 //开始抖动
 - (void) startShake;
+- (void) startShakeWithTitle:(NSString *)title;
 //停止抖动
 - (void) stopShake;
 

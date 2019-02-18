@@ -13,10 +13,21 @@
 @implementation ZTTableView
 
 - (void) addHeaderFreshBlock:(ZTRefreshBlock)freshBlock {
-    self.mj_header = [ZTRefreshHeader headerWithRefreshingBlock:freshBlock];
+    ZTRefreshHeader *mj_header = [ZTRefreshHeader headerWithRefreshingBlock:freshBlock];
+    [mj_header setShakeTitle:@"优鲜就在您身边" state:MJRefreshStatePulling];
+    [mj_header setShakeTitle:@"优鲜就在您身边" state:MJRefreshStateIdle];
+    [mj_header setShakeTitle:@"正在努力加载" state:MJRefreshStateRefreshing];
+    [mj_header setShakeTitle:@"优鲜就在您身边" state:MJRefreshStateWillRefresh];
+    self.mj_header = mj_header;
 }
 - (void) addFooterFresh:(ZTRefreshBlock)freshBlock {
-    self.mj_footer = [ZTRefreshFooter footerWithRefreshingBlock:freshBlock];
+    ZTRefreshFooter *mj_footer = [ZTRefreshFooter footerWithRefreshingBlock:freshBlock];
+    [mj_footer setShakeTitle:@"优鲜就在您身边" state:MJRefreshStatePulling];
+    [mj_footer setShakeTitle:@"优鲜就在您身边" state:MJRefreshStateIdle];
+    [mj_footer setShakeTitle:@"优鲜就在您身边" state:MJRefreshStateWillRefresh];
+    [mj_footer setShakeTitle:@"正在努力加载" state:MJRefreshStateRefreshing];
+    [mj_footer setShakeTitle:@"优鲜就在您身边" state:MJRefreshStateNoMoreData];
+    self.mj_footer = mj_footer;
 }
 
 - (void) headerBeginRefresh {

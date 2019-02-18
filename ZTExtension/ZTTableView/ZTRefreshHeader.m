@@ -17,12 +17,15 @@
 
 @end
 
-@implementation ZTRefreshHeader
+@implementation ZTRefreshHeader {
+    NSMutableDictionary *_stateTitle;
+}
 
 #pragma mark - 覆盖父类的方法
 - (void)prepare
 {
     [super prepare];
+    _stateTitle = [NSMutableDictionary dictionary];
     self.backgroundColor = [UIColor colorWithHex:0xf5f5f5];
     // 初始化间距
 }
@@ -37,10 +40,15 @@
 - (void) setState:(MJRefreshState)state {
     [super setState:state];
     if (state == MJRefreshStateIdle) {
+        self.freshHeader.loadTitle = [_stateTitle valueForKey:[NSString stringWithFormat:@"%ld" ,(long)state]] ?: @"";
         [self.freshHeader stopShake];
     } else {
-        [self.freshHeader startShake];
+        [self.freshHeader startShakeWithTitle:[_stateTitle valueForKey:[NSString stringWithFormat:@"%ld" ,(long)state]] ?: @""];
     }
+}
+
+- (void) setShakeTitle:(NSString *)title state:(MJRefreshState)state {
+    [_stateTitle setObject:title ?:@"" forKey: [NSString stringWithFormat:@"%ld" ,(long)state]];
 }
 
 #pragma mark - lazy

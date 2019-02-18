@@ -11,9 +11,9 @@
 #import <FLAnimatedImage/FLAnimatedImageView.h>
 #import <FLAnimatedImage/FLAnimatedImage.h>
 
-static CGFloat IMG_SIZE_WIDTH = 90;
+static CGFloat IMG_SIZE_WIDTH = 100;
 
-static CGFloat IMG_SIZE_HEIGHT = 90;
+static CGFloat IMG_SIZE_HEIGHT = 100;
 
 @interface ZTGifLoadingView()
 
@@ -57,7 +57,7 @@ static ZTGifLoadingView *loadingView;
     [self.maskView addSubview:self.imageView];
     self.imageView.top(0).left(0).right(0).bottom(0).constrain_Width(IMG_SIZE_WIDTH).constrain_Height(IMG_SIZE_HEIGHT);
     [self.maskView addSubview:self.textLabel];
-    self.textLabel.bottom(10).equal_verti_baseLine(self.maskView, 0).equal_width(self.maskView, 0);
+    self.textLabel.bottom(15).equal_verti_baseLine(self.maskView, 0).equal_width(self.maskView, 0);
     [self addSubview:self.maskView];
     self.maskView.equal_verti_baseLine(self, 0).equal_hori_baseLine(self, 0);
 }
@@ -66,7 +66,7 @@ static ZTGifLoadingView *loadingView;
     if (!_imageView) {
         _imageView = [[FLAnimatedImageView alloc] init];
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
-        _imageView.layer.cornerRadius = 8;
+        _imageView.layer.cornerRadius = 10;
         _imageView.layer.masksToBounds = YES;
     }
     return _imageView;
@@ -76,7 +76,7 @@ static ZTGifLoadingView *loadingView;
     if (!_textLabel) {
         _textLabel = [[UILabel alloc] init];
         _textLabel.textColor = [UIColor lightGrayColor];
-        _textLabel.font = [UIFont systemFontOfSize:15];
+        _textLabel.font = [UIFont systemFontOfSize:11];
         _textLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _textLabel;
@@ -85,10 +85,10 @@ static ZTGifLoadingView *loadingView;
 - (UIView *)maskView {
     if (!_maskView) {
         _maskView = [[UIView alloc] init];
-        _maskView.layer.shadowRadius = 8;
+        _maskView.layer.shadowRadius = 10;
         _maskView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
-        _maskView.layer.shadowOpacity = 0.5;
-        _maskView.layer.shadowOffset = CGSizeMake(3, 3);
+        _maskView.layer.shadowOpacity = 0.6;
+        _maskView.layer.shadowOffset = CGSizeMake(4, 4);
     }
     return _maskView;
 }
