@@ -12,7 +12,7 @@
 @implementation ZTEncryUtil
     
     // 加密方法
-+ (NSData *) encrypt:(NSString*)plainText
++ (NSData *) DES3Encrypt:(NSString*)plainText
           secret_key:(nonnull NSString *)key
       initial_vector:(nonnull NSString *)iv {
     NSData* data = [plainText dataUsingEncoding:NSUTF8StringEncoding];
@@ -48,7 +48,7 @@
 }
     
     // 解密方法
-+ (NSString*)decrypt:(NSData *)encryptData
++ (NSString*)DES3Decrypt:(NSData *)encryptData
           secret_key:(nonnull NSString *)key
       initail_sector:(nonnull NSString *)iv {
     size_t plainTextBufferSize = [encryptData length];

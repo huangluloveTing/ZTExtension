@@ -13,25 +13,25 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZTEncryUtil : NSObject
 
 /**
- DES 加密
+ DES3 加密
  @param plainText 加密内容
  @param key 秘钥
  @param iv 初始向量
  @return 加密后的数据
  */
-+ (NSData *) encrypt:(NSString*)plainText
++ (NSData *) DES3Encrypt:(NSString*)plainText
           secret_key:(NSString *)key
       initial_vector:(NSString *)iv;
 // 解密方法
     
 /**
- DES 解谜
+ DES3 解谜
  @param encryptData 带解密的数据
  @param key 秘钥
  @param iv 初始向量
  @return 原始数据
  */
-+ (NSString *)decrypt:(NSData *)encryptData
++ (NSString *)DES3Decrypt:(NSData *)encryptData
            secret_key:(NSString *)key
        initail_sector:(NSString *)iv;
     
