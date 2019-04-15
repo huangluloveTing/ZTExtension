@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   s.subspec 'ZTPlayer' do |pl|
     pl.source_files = 'ZTExtension/ZTPlayer/**.*'
     pl.dependency 'Masonry'
-    pl.source_files = 'ZTExtension/ZTPlayer/ZQPlayerImage.*'
+    pl.resources = 'ZTExtension/ZTPlayer/ZQPlayerImage.bundle'
     pl.dependency 'AVFoundation'
 
   end
