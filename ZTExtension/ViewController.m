@@ -25,6 +25,7 @@
 #import <Lottie/Lottie.h>
 #import <SDWebImage/FLAnimatedImageView+WebCache.h>
 #import <YYText/YYText.h>
+#import "ZTPlayerView.h"
 
 @interface ViewController ()<UITableViewDataSource>
 
@@ -54,6 +55,8 @@ NSString *image4=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 
 NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527856728894&di=fc27a9e499853444dee52d12740045af&imgtype=0&src=http%3A%2F%2Fpic29.nipic.com%2F20130520%2F7487939_211408433130_2.jpg";
 
+NSString *video = @"https://apd-0c188bb5ab2fef2acb91849a22f08a08.v.smtcdns.com/om.tc.qq.com/Asrq36I8jIEbp5uOrda9zu0T3z0TnxxzKD-Y41bHcB60/uwMROfz0r5zEYaQXGdGnC2dfJ7zj45gf7uirZPo4C_o7RdqK/g0545kszfu3.p712.1.mp4?sdtfrom=v1010&guid=0458a27b84d4711880dd8929f2bfbcb8&vkey=9D693C5877F009FD2062C3D36C6DD3B1508DFE381D24D94AB1FB6F52487C6F7990D76885A7B1C6F32EE077F10D4DAC7B076CBE9E8BE62C1EE5462572A7E5A105037A2968804FA4E0743ED6C3263CCD7AA74B7E370BCC8F910191D6FE48CCBBA7DF3379A34427721DF6D96C15CF0EE9BDE40C912BF6DF4F57#t=62";
+
 @implementation ViewController {
     NSArray *_imgs;
     ZTTableView *tableve;
@@ -62,7 +65,21 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    ZTPlayerView *playerView = [[ZTPlayerView alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 200)];
+    [playerView playWithVideoUrl:video];
+    [self.view addSubview:playerView];
+    
+//    _playerMaskView = [[ZQPlayerMaskView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.width*0.56)];
+////    _playerMaskView.delegate = self;
+//    _playerMaskView.isWiFi = YES; // 是否允许自动加载，
+//    [self.view addSubview:_playerMaskView];
+//
+//    // 网络视频
+//    NSString *videoUrl = @"http://183.60.197.29/17/q/t/v/w/qtvwspkejwgqjqeywjfowzdjcjvjzs/hc.yinyuetai.com/A0780162B98038FBED45554E85720E53.mp4?sc=e9bad1bb86f52b6f&br=781&vid=3192743&aid=38959&area=KR&vst=2&ptp=mv&rd=yinyuetai.com";
+//    // 本地视频
+//    // NSString *videoUrl = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4"];
+//    [_playerMaskView playWithVideoUrl:videoUrl];
     
 //    YYTextView *textView = [[YYTextView alloc] initWithFrame:CGRectMake(0, 100, 0, 0)];
 //    textView.backgroundColor = [UIColor grayColor];
@@ -168,23 +185,23 @@ NSString *image5=@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_100
 ////    moreView.jump = 10;
 ////    [self.view addSubview:moreView];
 ////    [moreView startShake];
-    tableve = [[ZTTableView alloc] initWithFrame:CGRectMake(0, 70, CGRectGetWidth(self.view.frame), 300)];
-    [self.view addSubview:tableve];
-////
-    tableve.dataSource = self;
-    tableve.tableFooterView = [[UIView alloc] init];
-    [tableve addHeaderFreshBlock:^{
-        NSLog(@"refresh");
-        
-    }];
-    [tableve addFooterFresh:^{
-
-    }];
-    
-    [self addRightBarbuttonItemWithTitle:@"stop" TapBlock:^(UIBarButtonItem *barButtonItem) {
-        [tableve endRefresh];
-//        [ZTToastManager showLoadingTitle:@"努力加载"];
-    }];
+//    tableve = [[ZTTableView alloc] initWithFrame:CGRectMake(0, 70, CGRectGetWidth(self.view.frame), 300)];
+//    [self.view addSubview:tableve];
+//////
+//    tableve.dataSource = self;
+//    tableve.tableFooterView = [[UIView alloc] init];
+//    [tableve addHeaderFreshBlock:^{
+//        NSLog(@"refresh");
+//
+//    }];
+//    [tableve addFooterFresh:^{
+//
+//    }];
+//
+//    [self addRightBarbuttonItemWithTitle:@"stop" TapBlock:^(UIBarButtonItem *barButtonItem) {
+//        [tableve endRefresh];
+////        [ZTToastManager showLoadingTitle:@"努力加载"];
+//    }];
 ////
 //    LOTAnimationView *animation = [LOTAnimationView animationNamed:@"404" inBundle:[NSBundle mainBundle]];
 //    animation.loopAnimation = YES;

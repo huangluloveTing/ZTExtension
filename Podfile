@@ -9,7 +9,9 @@ pod 'MBProgressHUD', '~> 1.0.0'
 pod 'MJRefresh'
 pod 'lottie-ios'
 pod 'YYText'
+pod 'ZQPlayer'
 #pod 'ReactiveCocoa', :git => 'https://github.com/zhao0/ReactiveCocoa.git', :tag => '2.5.2'
 #pod 'TXScrollLabelView'#跑马灯
+pod 'Masonry'
 
 end
