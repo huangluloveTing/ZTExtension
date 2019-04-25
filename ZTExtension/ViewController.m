@@ -25,7 +25,6 @@
 #import <Lottie/Lottie.h>
 #import <SDWebImage/FLAnimatedImageView+WebCache.h>
 #import <YYText/YYText.h>
-#import "ZTPlayerView.h"
 
 @interface ViewController ()<UITableViewDataSource>
 
@@ -65,10 +64,6 @@ NSString *video = @"https://apd-0c188bb5ab2fef2acb91849a22f08a08.v.smtcdns.com/o
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    ZTPlayerView *playerView = [[ZTPlayerView alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 200)];
-    [playerView playWithVideoUrl:video];
-    [self.view addSubview:playerView];
     
 //    _playerMaskView = [[ZQPlayerMaskView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.width*0.56)];
 ////    _playerMaskView.delegate = self;
