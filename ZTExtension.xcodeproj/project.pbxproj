@@ -58,9 +58,6 @@
 		70B06FFD1FDAE5560083B87B /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B06FFC1FDAE5560083B87B /* NSString+Category.m */; };
 		70B070001FDAE8220083B87B /* UIView+Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B06FFF1FDAE8220083B87B /* UIView+Radius.m */; };
 		70B070031FDAEAAB0083B87B /* ZTUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B070021FDAEAAB0083B87B /* ZTUtil.m */; };
-		70DE7AC8226440050044242F /* ZQPlayerImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 70DE7AC1226440050044242F /* ZQPlayerImage.bundle */; };
-		70DE7AC9226440050044242F /* ZQPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DE7AC2226440050044242F /* ZQPlayer.m */; };
-		70DE7ACE22644B250044242F /* ZTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DE7ACD22644B250044242F /* ZTPlayerView.m */; };
 		70E04CAC1FBE93AB00EEB106 /* UIColor+ZTHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CAB1FBE93AB00EEB106 /* UIColor+ZTHex.m */; };
 		70E04CB01FBEB68A00EEB106 /* NSString+ZTRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CAF1FBEB68A00EEB106 /* NSString+ZTRegex.m */; };
 		70E04CB31FBEB6F800EEB106 /* NSString+ZTConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E04CB21FBEB6F800EEB106 /* NSString+ZTConvert.m */; };
@@ -169,11 +166,6 @@
 		70B06FFF1FDAE8220083B87B /* UIView+Radius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Radius.m"; sourceTree = "<group>"; };
 		70B070011FDAEAAB0083B87B /* ZTUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTUtil.h; sourceTree = "<group>"; };
 		70B070021FDAEAAB0083B87B /* ZTUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTUtil.m; sourceTree = "<group>"; };
-		70DE7AC1226440050044242F /* ZQPlayerImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZQPlayerImage.bundle; sourceTree = "<group>"; };
-		70DE7AC2226440050044242F /* ZQPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQPlayer.m; sourceTree = "<group>"; };
-		70DE7AC5226440050044242F /* ZQPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQPlayer.h; sourceTree = "<group>"; };
-		70DE7ACC22644B250044242F /* ZTPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTPlayerView.h; sourceTree = "<group>"; };
-		70DE7ACD22644B250044242F /* ZTPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTPlayerView.m; sourceTree = "<group>"; };
 		70E04CAA1FBE93AB00EEB106 /* UIColor+ZTHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZTHex.h"; sourceTree = "<group>"; };
 		70E04CAB1FBE93AB00EEB106 /* UIColor+ZTHex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZTHex.m"; sourceTree = "<group>"; };
 		70E04CAE1FBEB68A00EEB106 /* NSString+ZTRegex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZTRegex.h"; sourceTree = "<group>"; };
@@ -287,7 +279,6 @@
 		703AC07E1FA2BCDB00C9AD42 /* ZTExtension */ = {
 			isa = PBXGroup;
 			children = (
-				70DE7A9C2264195A0044242F /* ZTPlayer */,
 				7049537B2228D3A800041B41 /* EncryUtil */,
 				70C7CB5B2175912400C10AC4 /* HWDownloadManager */,
 				701E0ADB20E1C87B00D7CB93 /* ZTLoopScrollView */,
@@ -415,18 +406,6 @@
 			path = HWDownloadManager;
 			sourceTree = "<group>";
 		};
-		70DE7A9C2264195A0044242F /* ZTPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				70DE7AC5226440050044242F /* ZQPlayer.h */,
-				70DE7AC2226440050044242F /* ZQPlayer.m */,
-				70DE7AC1226440050044242F /* ZQPlayerImage.bundle */,
-				70DE7ACC22644B250044242F /* ZTPlayerView.h */,
-				70DE7ACD22644B250044242F /* ZTPlayerView.m */,
-			);
-			path = ZTPlayer;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -495,7 +474,6 @@
 				706948A220C92AAF00D9DAA2 /* loading.gif in Resources */,
 				703AC0891FA2BCDB00C9AD42 /* Assets.xcassets in Resources */,
 				703AC0871FA2BCDB00C9AD42 /* Main.storyboard in Resources */,
-				70DE7AC8226440050044242F /* ZQPlayerImage.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,11 +568,9 @@
 				700A59E01FBEBEDB00C6AA31 /* NSDateFormatter+ZTCategory.m in Sources */,
 				703AC0A61FA2BCE700C9AD42 /* UIControl+Extension.m in Sources */,
 				701F1AEC1FF1D98900F707D4 /* WRCustomNavigationBar.m in Sources */,
-				70DE7AC9226440050044242F /* ZQPlayer.m in Sources */,
 				703AC0A31FA2BCE700C9AD42 /* NSArray+Extension.m in Sources */,
 				703AC0A71FA2BCE700C9AD42 /* UIView+ZTExtension.m in Sources */,
 				70E04CB91FBEB80800EEB106 /* UITableView+ZTCategory.m in Sources */,
-				70DE7ACE22644B250044242F /* ZTPlayerView.m in Sources */,
 				701E0AE420E1CA5800D7CB93 /* NSTimer+ZTLoop.m in Sources */,
 				7031CB9B20B6ABA200C59561 /* ZTToastView.m in Sources */,
 				702AFD7520CA2D92006105A4 /* ZTRefreshHeader.m in Sources */,
