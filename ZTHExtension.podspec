@@ -14,7 +14,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
  
   s.resources = "ZTExtension/HZExtension/*.bundle"
-  s.resources = 'ZTExtension/ZTPlayer/ZQPlayerImage.bundle'
 
 
   # HTTP
@@ -60,15 +59,6 @@ Pod::Spec.new do |s|
     ls.source_files = 'ZTExtension/ZTLoopScrollView/**.*'
     ls.dependency 'SDWebImage'
     ls.dependency 'YYText'
-
-  end
-
-    # player
-  s.subspec 'ZTPlayer' do |pl|
-    pl.source_files = 'ZTExtension/ZTPlayer/**.*'
-    pl.dependency 'Masonry'
-    pl.dependency 'AVFoundation'
-
   end
 
   # 提交命令
