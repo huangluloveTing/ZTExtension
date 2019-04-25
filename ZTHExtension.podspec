@@ -7,8 +7,8 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/huangluloveTing/ZTExtension.git"
   s.license      = 'MIT'
   s.author       = { "Lucky Huang" => "583699255@qq.com" }
-  s.platform     = :ios, "8.2"
-  s.ios.deployment_target = "8.2"
+  s.platform     = :ios, "8.0"
+  s.ios.deployment_target = "8.0"
   s.source       = { :git => "https://github.com/huangluloveTing/ZTExtension.git", :tag => s.version}
  
   s.requires_arc = true
