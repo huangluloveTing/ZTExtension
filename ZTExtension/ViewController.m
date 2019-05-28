@@ -233,6 +233,18 @@ NSString *video = @"https://apd-0c188bb5ab2fef2acb91849a22f08a08.v.smtcdns.com/o
 //    }];
 //    [self.view addSubview:flexView3];
 //    [self.view.yoga applyLayoutPreservingOrigin:YES];
+    
+    NSArray<NSNumber *> *ar = @[@5,@2,@3];
+    BOOL result = [ar any:^BOOL(id obj, NSInteger index) {
+        return [obj integerValue] > 2;
+    }];
+    NSArray *resu = [ar map:^id(NSNumber *obj, NSInteger index) {
+        return [NSString stringWithFormat:@"%@ -- value" , obj];
+    }];
+    NSArray *newA = [resu slice:1];
+    NSLog(@" result = %d" , result);
+    NSLog(@" result = %@" , resu);
+    NSLog(@" result = %@" , newA);
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

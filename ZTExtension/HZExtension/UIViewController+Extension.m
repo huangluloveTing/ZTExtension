@@ -141,7 +141,7 @@
 
 - (NSArray <UIBarButtonItem *> *) addRightBarbuttonItemsWithTitles:(NSArray *)titles TapBlock:(TapRightBarButtonItemsEventBlock)tapBlock {
     if (self.navigationController) {
-        NSArray *items = [titles othreArraryWithRegular:^id(NSString * title, NSInteger index) {
+        NSArray *items = [titles map:^id(NSString * title, NSInteger index) {
             UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(tapRightBarButtonItemAction:)];
             item.tag = index + 100;
             return item;
@@ -169,7 +169,7 @@
 
 - (NSArray <UIBarButtonItem * >*) addLeftBarbuttonItemsWithTitles:(NSArray *)titles TapBlock:(TapLeftBarButtonItemsEventBlock)tapBlock {
     if (self.navigationController) {
-        NSArray *items = [titles othreArraryWithRegular:^id(NSString * title, NSInteger index) {
+        NSArray *items = [titles map:^id(NSString * title, NSInteger index) {
             UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(tapLeftBarButtonItemAction:)];
             item.tag = index + 100;
             return item;

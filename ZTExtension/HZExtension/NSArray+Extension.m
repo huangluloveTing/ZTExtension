@@ -10,42 +10,86 @@
 
 @implementation NSArray (Extension)
 
-- (NSArray *) newArraryWithRegular:(id (^)(id object))block {
-    
-    NSMutableArray *arr = [NSMutableArray array];
-    
-    for (id obj in self) {
-        NSObject *newObj = nil;
+- (NSArray *) map:(id (^)(id, NSInteger))block {
+    __block NSMutableArray *newArr = [NSMutableArray array];
+    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (block) {
-            newObj = block(obj);
-            if (!newObj) {
-                continue;
-            }
+            id newObject = block(obj , idx);
+            [newArr addObject:newObject];
         }
-        [arr addObject:newObj];
-    }
-    
-    return arr;
+    }];
+    return [NSArray arrayWithArray:newArr];
 }
 
-- (NSArray *) othreArraryWithRegular:(id (^)(id, NSInteger))block {
-    
-    NSMutableArray *arr = [NSMutableArray array];
-    if (self.count > 0) {
-        for (int i = 0 ; i < self.count ; i ++) {
-            id obj = [self objectAtIndex:i];
-            NSObject *newObj = nil;
-            if (block) {
-                newObj = block(obj , i);
-                if (!newObj) {
-                    continue;
-                }
+- (NSArray *) filter:(BOOL (^)(id, NSInteger))block {
+    __block NSMutableArray *newArr = [NSMutableArray array];
+    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (block) {
+            BOOL ok = block(obj , idx);
+            if (ok) {
+                [newArr addObject:obj];
             }
-            [arr addObject:newObj];
         }
+    }];
+    return [NSArray arrayWithArray:newArr];
+}
+
+- (id) find:(BOOL (^)(id, NSInteger))block {
+    __block id newObject = nil;
+    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (block) {
+            BOOL ok = block(obj , idx);
+            if (ok) {
+                newObject = obj;
+                *stop = true;
+            }
+        }
+    }];
+    return newObject;
+}
+
+- (NSArray *) findAll:(BOOL (^)(id, NSInteger))block {
+    return [self filter:block];
+}
+
+- (BOOL) some:(BOOL (^)(id, NSInteger))block {
+    id obj = [self find:block];
+    if (obj) {
+        return true;
     }
-    
-    return arr;
+    return false;
+}
+
+- (BOOL) any:(BOOL (^)(id, NSInteger))block {
+    __block BOOL ok = true;
+    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (block) {
+            BOOL result = block(obj , idx);
+            if (!result) {
+                ok = false;
+                *stop = true;
+            }
+        }
+    }];
+    return ok;
+}
+
+- (NSArray *) sort:(NSComparisonResult (^)(id, id))block {
+    return [self sortedArrayUsingComparator:block];
+}
+
+- (NSArray *) slice:(NSInteger)start {
+    return [self slice:start length:self.count];
+}
+
+- (NSArray *) slice:(NSInteger)start length:(NSInteger)length {
+    NSAssert(start < self.count, @"开始位置必须小于数组长度");
+    NSInteger newLength = length;
+    if (start + length > self.count) {
+        newLength = self.count - start;
+    }
+    NSArray *newArr =  [self subarrayWithRange:NSMakeRange(start, newLength)];
+    return newArr;
 }
 
 @end
