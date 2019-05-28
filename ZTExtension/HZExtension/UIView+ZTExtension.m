@@ -371,7 +371,6 @@
 - (UIView *(^)(UIView * , CGFloat ))equal_hori_baseLine {
     return ^UIView *(UIView *toView , CGFloat offset) {
         self.translatesAutoresizingMaskIntoConstraints = NO;
-        self.translatesAutoresizingMaskIntoConstraints = NO;
         NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
                                                                attribute:NSLayoutAttributeCenterY
                                                                relatedBy:NSLayoutRelationEqual
@@ -386,7 +385,6 @@
 
 - (UIView *(^)(UIView * , CGFloat ))equal_verti_baseLine {
     return ^UIView *(UIView *toView , CGFloat offset) {
-        self.translatesAutoresizingMaskIntoConstraints = NO;
         self.translatesAutoresizingMaskIntoConstraints = NO;
         NSLayoutConstraint *con = [NSLayoutConstraint constraintWithItem:self
                                                                attribute:NSLayoutAttributeCenterX
