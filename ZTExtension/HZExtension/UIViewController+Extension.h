@@ -43,6 +43,7 @@ typedef void(^TapLeftBarButtonItemsEventBlock)(UIBarButtonItem *barButtonItem , 
 - (void) popViewControllerAtIndex:(NSInteger)index Animation:(BOOL)animation;
 - (void) popToRootViewControllerAnimation:(BOOL)animation;
 - (void) popViewControllerCurrentBeforeIndes:(NSInteger)index animation:(BOOL)animation;
+- (BOOL) popToClass:(Class)vcClass animation:(BOOL)animation;
 
 //添加navigationItem -- right
 - (UIBarButtonItem *) addRightBarbuttonItemWithTitle:(NSString *)rightTitle

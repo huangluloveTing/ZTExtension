@@ -79,11 +79,28 @@
     if (self.navigationController && self.navigationController.viewControllers.count > index) {
         NSInteger currentIndex = [self.navigationController.viewControllers indexOfObject:self];
         UIViewController *toVC = nil;
-        if (currentIndex > index) {
+        if (currentIndex >= index) {
             toVC = [self.navigationController.viewControllers objectAtIndex:(currentIndex - index)];
         }
         [self.navigationController popToViewController:toVC animated:YES];
     }
+}
+
+- (BOOL) popToClass:(Class)vcClass animation:(BOOL)animation {
+    if (self.navigationController && self.navigationController.viewControllers.count > 0) {
+        NSArray <UIViewController *>*controllers = self.navigationController.viewControllers;
+        UIViewController *popVC = nil;
+        for (UIViewController *childVC in controllers) {
+            if ([childVC isKindOfClass:vcClass]) {
+                popVC = childVC;
+            }
+        }
+        if (popVC) {
+            [self.navigationController popToViewController:popVC animated:animation];
+            return true;
+        }
+    }
+    return false;
 }
 
 
